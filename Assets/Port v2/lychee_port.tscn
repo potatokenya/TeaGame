@@ -33,33 +33,6 @@ tracks/1/keys = {
 "values": [Vector2(-13, 2.08165e-12)]
 }
 
-[sub_resource type="Animation" id="Animation_wqlhi"]
-resource_name = "lychee_port_åben"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("lychee_h:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(17, 2.08165e-12), Vector2(33, 2.08165e-12)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("lychee_v:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-13, 2.08165e-12), Vector2(-33, 2.08165e-12)]
-}
-
 [sub_resource type="Animation" id="Animation_6q3nd"]
 resource_name = "new_animation"
 tracks/0/type = "value"
@@ -87,11 +60,38 @@ tracks/1/keys = {
 "values": [Vector2(-33, 2.08165e-12), Vector2(-13, 2.08165e-12)]
 }
 
+[sub_resource type="Animation" id="Animation_wqlhi"]
+resource_name = "lychee_port_åben"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lychee_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 2.08165e-12), Vector2(33, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lychee_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 2.08165e-12), Vector2(-33, 2.08165e-12)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n7rfl"]
 _data = {
 "RESET": SubResource("Animation_i7c0r"),
-"lychee_port_åben": SubResource("Animation_wqlhi"),
-"new_animation": SubResource("Animation_6q3nd")
+"lychee_port_close": SubResource("Animation_6q3nd"),
+"lychee_port_open": SubResource("Animation_wqlhi")
 }
 
 [node name="lychee_port" type="StaticBody2D"]
@@ -104,7 +104,7 @@ texture = ExtResource("1_0itt3")
 position = Vector2(-13, 2.08165e-12)
 texture = ExtResource("2_57xbr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="lychee_port_collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_e25ts")
 
 [node name="ap_lychee" type="AnimationPlayer" parent="."]

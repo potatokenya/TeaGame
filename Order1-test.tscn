@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bjyk5md4xhbuq"]
+[gd_scene load_steps=41 format=3 uid="uid://smj37nj5cji8"]
 
 [ext_resource type="Texture2D" uid="uid://daj75dpjmigih" path="res://Assets/Tiles/tile_2.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://bk206kockinas" path="res://Assets/Tiles/tile_6.png" id="2"]
@@ -25,7 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://bb7l66mbcsmuq" path="res://Assets/Port v2/taro_port.tscn" id="23_emse0"]
 [ext_resource type="PackedScene" uid="uid://qccir5qkxnno" path="res://Assets/Port v2/tapioka_port.tscn" id="25_gkf6w"]
 [ext_resource type="PackedScene" uid="uid://b08nqdxwjlmbt" path="res://Assets/Port v2/lychee_port.tscn" id="26_lrjud"]
-[ext_resource type="PackedScene" uid="uid://dippf2rv42v1v" path="res://Assets/Port v2/taro_port_2.tscn" id="26_ndps8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qcwlq"]
 texture = ExtResource("9")
@@ -734,14 +733,6 @@ position = Vector2(64, 521)
 [node name="Blueberry_port" parent="." instance=ExtResource("22")]
 position = Vector2(224, 288)
 
-[node name="Taro_port" parent="." instance=ExtResource("23_emse0")]
-position = Vector2(351, 159)
-rotation = 1.5708
-disable_mode = 1
-
-[node name="Taro_port2" parent="." instance=ExtResource("26_ndps8")]
-position = Vector2(479, 418)
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("8")
 format = 2
@@ -794,6 +785,7 @@ position = Vector2(656, 104)
 position = Vector2(120, 192)
 
 [node name="T" parent="." instance=ExtResource("19")]
+visible = false
 position = Vector2(672, 480)
 
 [node name="T2" parent="." instance=ExtResource("19")]
@@ -807,9 +799,12 @@ rotation = 1.5708
 position = Vector2(735, 352)
 rotation = -1.5708
 
+[node name="Taro_port" parent="." instance=ExtResource("23_emse0")]
+position = Vector2(351, 159)
+rotation = 1.5708
+disable_mode = 1
+
 [connection signal="body_entered" from="Blueberry_farve" to="Player_v2" method="_on_blueberry_farve_body_entered"]
 [connection signal="entered_gate" from="Player_v2" to="Blueberry_port" method="_on_player_v_2_entered_gate"]
-[connection signal="entered_gate_tapioka" from="Player_v2" to="tapioka_port" method="_on_player_v_2_entered_gate_tapioka"]
 [connection signal="entered_gate_taro" from="Player_v2" to="Taro_port" method="_on_player_v_2_entered_gate_taro"]
-[connection signal="entered_gate_taro2" from="Player_v2" to="Taro_port2" method="_on_player_v_2_entered_gate_taro_2"]
 [connection signal="body_entered" from="Taro_farve" to="Player_v2" method="_on_taro_farve_body_entered"]

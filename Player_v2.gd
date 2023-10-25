@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 signal entered_gate
 signal entered_gate_taro
+signal entered_gate_taro2
 signal entered_gate_tapioka
 
 var visible_animation_player: AnimationPlayer
@@ -30,11 +31,18 @@ func _physics_process(delta):
 		if collider.name == "Blueberry_port":
 			print("hit")
 			entered_gate.emit()
+			
 	if collision != null:
 		var collider = collision.get_collider()
 		if collider.name == "Taro_port":
 			print("hit")
 			entered_gate_taro.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "Taro_port2":
+			print("hit")
+			entered_gate_taro2.emit()
 	
 	if velocity.y < 0:
 		if visible_animation_player:
