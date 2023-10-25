@@ -1,34 +1,38 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://cavcsy55vxxhh"]
 
-[ext_resource path="res://Assets/bubbletea skygge/blueberry_skygge.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://b8tocagew284n" path="res://Assets/bubbletea skygge/blueberry_skygge.png" id="1"]
 
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 27, 67 )
+[sub_resource type="AtlasTexture" id="5"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 27, 67)
 
-[sub_resource type="AtlasTexture" id=6]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 27, 0, 27, 67 )
+[sub_resource type="AtlasTexture" id="6"]
+atlas = ExtResource("1")
+region = Rect2(27, 0, 27, 67)
 
-[sub_resource type="SpriteFrames" id=7]
-animations = [ {
-"frames": [ SubResource( 5 ), SubResource( 6 ) ],
+[sub_resource type="SpriteFrames" id="7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("5")
+}, {
+"duration": 1.0,
+"texture": SubResource("6")
+}],
 "loop": true,
-"name": "walk2_v2",
+"name": &"walk2_v2",
 "speed": 5.0
-} ]
+}]
 
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id="4"]
 radius = 12.0
 height = 26.0
 
 [node name="Player_blue" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-frames = SubResource( 7 )
-animation = "walk2_v2"
+sprite_frames = SubResource("7")
+animation = &"walk2_v2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 4 )
+shape = SubResource("4")

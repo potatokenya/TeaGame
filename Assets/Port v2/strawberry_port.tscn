@@ -1,0 +1,117 @@
+[gd_scene load_steps=8 format=3 uid="uid://ct0sxn66d3iab"]
+
+[ext_resource type="Texture2D" uid="uid://ciedqgqoat86i" path="res://Assets/Opdelt porte/strawberry_port_h.png" id="1_5e2mm"]
+[ext_resource type="Texture2D" uid="uid://fg4q1se7ykxj" path="res://Assets/Opdelt porte/strawberry_port_v.png" id="2_xifwb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnp31"]
+size = Vector2(66, 20)
+
+[sub_resource type="Animation" id="Animation_lltbc"]
+resource_name = "strawberry_port_open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("strawberry_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 0), Vector2(33, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("strawberry_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 0), Vector2(-33, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_njp0x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("strawberry_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("strawberry_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rvpjn"]
+resource_name = "strawberry_port_closed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("strawberry_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 0), Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("strawberry_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-33, 0), Vector2(-13, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hllm7"]
+_data = {
+"RESET": SubResource("Animation_njp0x"),
+"strawberry_port_closed": SubResource("Animation_rvpjn"),
+"strawberry_port_open": SubResource("Animation_lltbc")
+}
+
+[node name="strawberry_port" type="StaticBody2D"]
+
+[node name="strawberry_h" type="Sprite2D" parent="."]
+position = Vector2(17, 0)
+texture = ExtResource("1_5e2mm")
+
+[node name="strawberry_v" type="Sprite2D" parent="."]
+position = Vector2(-13, 0)
+texture = ExtResource("2_xifwb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_fnp31")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hllm7")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5

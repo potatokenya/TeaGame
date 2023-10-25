@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bjyk5md4xhbuq"]
+[gd_scene load_steps=41 format=3 uid="uid://bjyk5md4xhbuq"]
 
 [ext_resource type="Texture2D" uid="uid://daj75dpjmigih" path="res://Assets/Tiles/tile_2.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://bk206kockinas" path="res://Assets/Tiles/tile_6.png" id="2"]
@@ -23,7 +23,8 @@
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Taro_farve.tscn" id="21"]
 [ext_resource type="PackedScene" uid="uid://vyak1n7l71hf" path="res://Assets/Port v2/Blueberry_port.tscn" id="22"]
 [ext_resource type="PackedScene" uid="uid://bb7l66mbcsmuq" path="res://Assets/Port v2/taro_port.tscn" id="23_emse0"]
-[ext_resource type="Script" path="res://Assets/Port v2/taro_port.gd" id="24_cwko2"]
+[ext_resource type="PackedScene" uid="uid://qccir5qkxnno" path="res://Assets/Port v2/tapioka_port.tscn" id="25_gkf6w"]
+[ext_resource type="PackedScene" uid="uid://b08nqdxwjlmbt" path="res://Assets/Port v2/lychee_port.tscn" id="26_lrjud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qcwlq"]
 texture = ExtResource("9")
@@ -721,6 +722,7 @@ sources/13 = SubResource("TileSetAtlasSource_o1rht")
 offset_right = 1024.0
 offset_bottom = 600.0
 color = Color(0.823529, 0.807843, 0.807843, 1)
+metadata/_edit_lock_ = true
 
 [node name="Blueberry_farve" parent="." instance=ExtResource("20")]
 position = Vector2(258, 521)
@@ -789,11 +791,22 @@ position = Vector2(672, 480)
 [node name="T2" parent="." instance=ExtResource("19")]
 position = Vector2(984, 424)
 
-[node name="Taro_port" parent="." instance=ExtResource("23_emse0")]
-position = Vector2(354, 159)
+[node name="tapioka_port" parent="." instance=ExtResource("25_gkf6w")]
+position = Vector2(737, 545)
 rotation = 1.5708
-script = ExtResource("24_cwko2")
+
+[node name="lychee_port" parent="." instance=ExtResource("26_lrjud")]
+position = Vector2(735, 352)
+rotation = -1.5708
+
+[node name="Taro_port2" parent="." instance=ExtResource("23_emse0")]
+position = Vector2(479, 420)
+
+[node name="Taro_port" parent="." instance=ExtResource("23_emse0")]
+position = Vector2(351, 159)
+rotation = 1.5708
 
 [connection signal="body_entered" from="Blueberry_farve" to="Player_v2" method="_on_blueberry_farve_body_entered"]
 [connection signal="entered_gate" from="Player_v2" to="Blueberry_port" method="_on_player_v_2_entered_gate"]
+[connection signal="entered_gate_taro" from="Player_v2" to="Taro_port" method="_on_player_v_2_entered_gate_taro"]
 [connection signal="body_entered" from="Taro_farve" to="Player_v2" method="_on_taro_farve_body_entered"]

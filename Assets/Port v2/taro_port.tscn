@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bb7l66mbcsmuq"]
+[gd_scene load_steps=9 format=3 uid="uid://bb7l66mbcsmuq"]
 
+[ext_resource type="Script" path="res://Assets/Port v2/taro_port.gd" id="1_6iaju"]
 [ext_resource type="Texture2D" uid="uid://csr37dsoa3vje" path="res://Assets/Opdelt porte/taro_port_h.png" id="1_plmkk"]
 [ext_resource type="Texture2D" uid="uid://3v5dhowmlvef" path="res://Assets/Opdelt porte/taro_port_v.png" id="2_i6lau"]
 
@@ -95,6 +96,7 @@ _data = {
 }
 
 [node name="Taro_port" type="StaticBody2D"]
+script = ExtResource("1_6iaju")
 
 [node name="taro_h" type="Sprite2D" parent="."]
 position = Vector2(17, 2.08165e-12)
@@ -115,3 +117,5 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="close_port"]

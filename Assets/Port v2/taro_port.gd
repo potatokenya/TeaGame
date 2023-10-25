@@ -17,15 +17,15 @@ func close_port():
 
 
 func _on_player_v_2_entered_gate_taro():
-	print("blue_port")
+	print("taro_port")
 	if tea.teac == 'taro':
 		ap_taro.play("taro_port_open")
-		print("tarooo open")
+		print("taro open")
 		timer.start()
 		timer.autostart = false
 		timer.one_shot = true
 		taro_port_collision.set_deferred('disabled', true)
-		$blue_port_collision.disabled = true
+		$taro_port_collision.disabled = true
 	else:
-		$blue_port_collision.disabled = false
+		$taro_port_collision.disabled = false
 		taro_port_collision.set_deferred('disabled', false)

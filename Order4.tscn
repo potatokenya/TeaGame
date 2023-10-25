@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bnoemqcb3b53v"]
+[gd_scene load_steps=36 format=3 uid="uid://bnoemqcb3b53v"]
 
 [ext_resource type="Texture2D" uid="uid://dfa0570fx0vet" path="res://Assets/Tiles/tile_0.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dgtrvyrwjlk1v" path="res://Assets/Tiles/tile_3.png" id="2"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" path="res://Bobas/Tom_kup.tscn" id="18"]
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Milktea_farve.tscn" id="19"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/GB.tscn" id="20"]
+[ext_resource type="PackedScene" uid="uid://ct0sxn66d3iab" path="res://Assets/Port v2/strawberry_port.tscn" id="21_cbedg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8kvcf"]
 texture = ExtResource("1")
@@ -728,3 +729,6 @@ position = Vector2(800, 416)
 
 [node name="pomB" parent="Milktea_farve" instance=ExtResource("17")]
 position = Vector2(-640, 0)
+
+[node name="strawberry_port" parent="." instance=ExtResource("21_cbedg")]
+position = Vector2(993, 191)

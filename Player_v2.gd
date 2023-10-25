@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 signal entered_gate
 signal entered_gate_taro
+signal entered_gate_tapioka
 
 var visible_animation_player: AnimationPlayer
 
