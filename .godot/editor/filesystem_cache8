@@ -1,229 +1,231 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698266379
-Back_btn.gd::GDScript::-1::1698252961::0::1::::<>Button<>::
-Button1.gd::GDScript::-1::1698252961::0::1::::<>Button<>::
-Button2.gd::GDScript::-1::1698252961::0::1::::<>Button<>::
-Button3.gd::GDScript::-1::1698252961::0::1::::<>Button<>::
-Button4.gd::GDScript::-1::1698252961::0::1::::<>Button<>::
-Button5.gd::GDScript::-1::1698252961::0::1::::<>Button<>::
-default_env.tres::Environment::7858439121602260730::1698261519::0::1::::<><>::
-Front_page.tscn::PackedScene::1800504074047865236::1698255624::0::1::::<><>::res://Play_btn.gd<>uid://dbssmbvashbgp::::res://Assets/Font/dynamicfont.tres<>uid://dxqslo0d4pt2w::::res://Assets/REAL stt forside med rigtig størrelse.png<>res://Tutorial_btn.gd
-icon.png::CompressedTexture2D::2905904008933229824::1698252961::1698252996::1::::<><>::
-Menu2.tscn::PackedScene::6176125948734244876::1698252961::0::1::::<><>::uid://dt36eei0rxuvi
-Menu3.tscn::PackedScene::548644798508545074::1698252961::0::1::::<><>::uid://dt36eei0rxuvi
-Menu4.tscn::PackedScene::527428244210949383::1698252961::0::1::::<><>::uid://e3u1kis0pmbb
-Menu5.tscn::PackedScene::1596647726424959513::1698252961::0::1::::<><>::uid://e3u1kis0pmbb
-Menu6.tscn::PackedScene::235214555448993139::1698252961::0::1::::<><>::uid://e3u1kis0pmbb
-Menu.tscn::PackedScene::1975689230409891899::1698252961::0::1::::<><>::uid://dt36eei0rxuvi
-Order1.tscn::PackedScene::3068326722540893636::1698261253::0::1::::<><>::uid://daj75dpjmigih::::res://Assets/Tiles/tile_2.png<>uid://bk206kockinas::::res://Assets/Tiles/tile_6.png<>res://Assets/Font/new_dynamicfont.tres<>uid://3mostu1jqpkm::::res://Assets/Tiles/tile_5.png<>uid://dgtrvyrwjlk1v::::res://Assets/Tiles/tile_3.png<>uid://tlavf0a4he2g::::res://Assets/Tiles/Tile_front.png<>uid://cmgpj6yt83m25::::res://Assets/Tiles/Tile_7.png<>uid://dh1xdxy8qnhdv::::res://Assets/Tiles/tile_4.png<>uid://dfa0570fx0vet::::res://Assets/Tiles/tile_0.png<>uid://dwbefscrwplfe::::res://Assets/Tiles/tile_8.png<>uid://bgvcixpwhgxm8::::res://Assets/Tiles/tile_9.png<>uid://dinpl7hmnr7fd::::res://Assets/Tiles/tile_10.png<>uid://bld0k5hnkcpje::::res://Assets/Talebubler/Level1_talebobble.png<>uid://c6kxgnmpna40::::res://Assets/Kunder/Kunde_taro.png<>uid://wullxft6u31l::::res://Assets/Tiles/tile_11.png<>uid://bnu60hajt5ure::::res://Assets/tile_12.png<>uid://cgtl46emwp6vh::::res://Bobas/Player_v2.tscn<>res://Assets/topping v2/LJ.tscn<>res://Assets/topping v2/T.tscn<>uid://ctonfxy2048sl::::res://Assets/farver v2/Blueberry_farve.tscn<>res://Assets/farver v2/Taro_farve.tscn<>uid://vyak1n7l71hf::::res://Assets/Port v2/Blueberry_port.tscn<>uid://bb7l66mbcsmuq::::res://Assets/Port v2/taro_port.tscn<>uid://qccir5qkxnno::::res://Assets/Port v2/tapioka_port.tscn<>uid://b08nqdxwjlmbt::::res://Assets/Port v2/lychee_port.tscn<>uid://dippf2rv42v1v::::res://Assets/Port v2/taro_port_2.tscn
-Order2.tscn::PackedScene::4717320536461260098::1698252961::0::1::::<><>::uid://dfa0570fx0vet
-Order3.tscn::PackedScene::1986167421278686648::1698252961::0::1::::<><>::uid://dfa0570fx0vet
-Order4.tscn::PackedScene::3328042080588422445::1698255624::0::1::::<><>::uid://dfa0570fx0vet::::res://Assets/Tiles/tile_0.png<>uid://dgtrvyrwjlk1v::::res://Assets/Tiles/tile_3.png<>uid://cmgpj6yt83m25::::res://Assets/Tiles/Tile_7.png<>uid://dh1xdxy8qnhdv::::res://Assets/Tiles/tile_4.png<>uid://dwbefscrwplfe::::res://Assets/Tiles/tile_8.png<>uid://bgvcixpwhgxm8::::res://Assets/Tiles/tile_9.png<>uid://tlavf0a4he2g::::res://Assets/Tiles/Tile_front.png<>uid://3mostu1jqpkm::::res://Assets/Tiles/tile_5.png<>uid://wullxft6u31l::::res://Assets/Tiles/tile_11.png<>uid://dinpl7hmnr7fd::::res://Assets/Tiles/tile_10.png<>uid://c71gvtewrxbuq::::res://Assets/Talebubler/Level4_talebobble.png<>uid://bj2joe7jxyk6c::::res://Assets/Kunder/Kunde_strawberry.png<>res://Assets/Font/new_dynamicfont.tres<>uid://daj75dpjmigih::::res://Assets/Tiles/tile_2.png<>uid://bk206kockinas::::res://Assets/Tiles/tile_6.png<>res://Assets/farver v2/Strawberry_farve.tscn<>res://Assets/topping v2/pomB.tscn<>res://Bobas/Tom_kup.tscn<>res://Assets/farver v2/Milktea_farve.tscn<>res://Assets/topping v2/GB.tscn<>uid://ct0sxn66d3iab::::res://Assets/Port v2/strawberry_port.tscn
-Order5.tscn::PackedScene::6777651304232546637::1698252961::0::1::::<><>::uid://dfa0570fx0vet
-Player.gd::GDScript::-1::1698252961::0::1::::<>AnimatedSprite2D<>::
-Player_v2.gd::GDScript::-1::1698260936::0::1::::<>CharacterBody2D<>::
-Play_btn.gd::GDScript::-1::1698252961::0::1::::<>Button<>::
-tea.gd::GDScript::-1::1698252961::0::1::::<>Node<>::
-test.tscn::PackedScene::8552617871589636841::1698252961::0::1::::<><>::uid://cj73hk4yuhny4
-Tom_kup.gd::GDScript::-1::1698252961::0::1::::<>CharacterBody2D<>::
-Tutorial.tscn::PackedScene::6752733120273517007::1698252961::0::1::::<><>::uid://xfwavb1ltatd
-Tutorial_btn.gd::GDScript::-1::1698252961::0::1::::<>Button<>::
-::res://Assets/::1698252996
-background.jpeg::CompressedTexture2D::5669007971468527574::1698252961::1698252996::1::::<><>::
-Baggrund.png::CompressedTexture2D::8552542250878339210::1698252961::1698252996::1::::<><>::
-keyboard_arrows.png::CompressedTexture2D::1626002172017831505::1698252961::1698252996::1::::<><>::
-lock.png::CompressedTexture2D::782474451273200237::1698252961::1698252996::1::::<><>::
-Menu.png::CompressedTexture2D::275634867482529140::1698252961::1698252996::1::::<><>::
-Play button.png::CompressedTexture2D::3729939642506835147::1698252961::1698252996::1::::<><>::
-prøve.png::CompressedTexture2D::3841702181696967171::1698252961::1698252996::1::::<><>::
-Real beackgroud.jpeg::CompressedTexture2D::4219561033271215077::1698252961::1698252996::1::::<><>::
-REAL stt forside med rigtig størrelse.png::CompressedTexture2D::8807748822544439520::1698252961::1698252996::1::::<><>::
-Spill the tea forside.png::CompressedTexture2D::6580982913254866941::1698252961::1698252996::1::::<><>::
-stjerne_fuldt.png::CompressedTexture2D::4576528477024987908::1698252961::1698252996::1::::<><>::
-Stjerne_tom.png::CompressedTexture2D::5743127145319921349::1698252961::1698252996::1::::<><>::
-tile_12.png::CompressedTexture2D::3342090445791063382::1698252961::1698252996::1::::<><>::
-Tutorial button.png::CompressedTexture2D::7493247526181414131::1698252961::1698252996::1::::<><>::
-::res://Assets/Boba sprite sheets/::1698252997
-tom_kop.png::CompressedTexture2D::2818244152318072323::1698252961::1698252997::1::::<><>::
-::res://Assets/Bobas/::1698252997
-Milktea_LJ.png::CompressedTexture2D::5984857948513923948::1698252961::1698252997::1::::<><>::
-Milktea_T_syrup.png::CompressedTexture2D::1332613200656293214::1698252961::1698252997::1::::<><>::
-Passion_GB.png::CompressedTexture2D::5472314195763499065::1698252961::1698252997::1::::<><>::
-Strawberry_pomB.png::CompressedTexture2D::339819260606446107::1698252961::1698252997::1::::<><>::
-Taro_T.png::CompressedTexture2D::8103804337182118529::1698252961::1698252997::1::::<><>::
-::res://Assets/bubbletea skygge/::1698252997
-blueberry_nede_skygge.png::CompressedTexture2D::8770659335703492516::1698252961::1698252997::1::::<><>::
-blueberry_oppe_skygge.png::CompressedTexture2D::7687491337501938541::1698252961::1698252997::1::::<><>::
-blueberry_skygge.png::CompressedTexture2D::4742729320042913699::1698252961::1698252997::1::::<><>::
-GB_nede_skygge.png::CompressedTexture2D::3528999391114641922::1698252961::1698252997::1::::<><>::
-GB_oppe_skygge.png::CompressedTexture2D::5168591616109901367::1698252961::1698252997::1::::<><>::
-GB_skygge.png::CompressedTexture2D::4913019235324393836::1698252961::1698252997::1::::<><>::
-green_jelly_skygge.png::CompressedTexture2D::7957529580131864289::1698252961::1698252997::1::::<><>::
-green_skygge.png::CompressedTexture2D::3658171395345865168::1698252961::1698252997::1::::<><>::
-milktea_GB_nede_skygge.png::CompressedTexture2D::3076673075931735144::1698252961::1698252997::1::::<><>::
-milktea_GB_oppe_skygge.png::CompressedTexture2D::4837610580700102942::1698252961::1698252997::1::::<><>::
-milktea_GB_skygge.png::CompressedTexture2D::8652965066908494342::1698252961::1698252997::1::::<><>::
-milktea_jelly_skygge.png::CompressedTexture2D::1237278478690926559::1698252961::1698252997::1::::<><>::
-milktea_skygge.png::CompressedTexture2D::6537386528083492752::1698252961::1698252996::1::::<><>::
-milktea_T_sirup_skygge.png::CompressedTexture2D::3657472952431751514::1698252961::1698252996::1::::<><>::
-milktea_T_skygge.png::CompressedTexture2D::8890271224819799490::1698252961::1698252996::1::::<><>::
-Passion.png::CompressedTexture2D::1771056558546322430::1698252961::1698252996::1::::<><>::
-Passion_GB_skygge.png::CompressedTexture2D::3875753962973079017::1698252961::1698252996::1::::<><>::
-passion_oppe_skyge.png::CompressedTexture2D::8512351340965152882::1698252961::1698252996::1::::<><>::
-passion_pomB_sirup_skygge.png::CompressedTexture2D::8607722232201034302::1698252961::1698252996::1::::<><>::
-Passion_skygge.png::CompressedTexture2D::1722229292837691702::1698252961::1698252996::1::::<><>::
-Passion_T_nede_skygge.png::CompressedTexture2D::8014971593096084878::1698252961::1698252996::1::::<><>::
-Passion_T_oppe_skygge.png::CompressedTexture2D::7903592899404240702::1698252961::1698252996::1::::<><>::
-Passion_T_skygge.png::CompressedTexture2D::7713306057745478780::1698252961::1698252996::1::::<><>::
-pomB_nede_skygge.png::CompressedTexture2D::4021054579468568472::1698252961::1698252996::1::::<><>::
-pomB_oppe_skygge.png::CompressedTexture2D::5865995552182695006::1698252961::1698252997::1::::<><>::
-pomB_skygge.png::CompressedTexture2D::8439864542686825913::1698252961::1698252997::1::::<><>::
-pom_nede_skygge.png::CompressedTexture2D::1877057185928501775::1698252961::1698252997::1::::<><>::
-strawberry_gb_nede_skygge.png::CompressedTexture2D::5514041634021184576::1698252961::1698252997::1::::<><>::
-strawberry_gb_oppe_skygge.png::CompressedTexture2D::6927144865718521636::1698252961::1698252997::1::::<><>::
-strawberry_gb_skygge.png::CompressedTexture2D::7203538632187184251::1698252961::1698252997::1::::<><>::
-strawberry_skygge.png::CompressedTexture2D::1146587742116375073::1698252961::1698252997::1::::<><>::
-taro_jelly_skygge.png::CompressedTexture2D::6313816833835013451::1698252961::1698252997::1::::<><>::
-Taro_nede_skygge.png::CompressedTexture2D::7982443872303931778::1698252961::1698252997::1::::<><>::
-Taro_oppe_skygge.png::CompressedTexture2D::4487360810089160828::1698252961::1698252997::1::::<><>::
-Taro_skygge.png::CompressedTexture2D::3487776858539872452::1698252961::1698252997::1::::<><>::
-Taro_T_skygge.png::CompressedTexture2D::2355849659401564673::1698252961::1698252997::1::::<><>::
-tom_nede_skygge.png::CompressedTexture2D::7589439113621632241::1698252961::1698252997::1::::<><>::
-tom_oppe_skygge.png::CompressedTexture2D::522371851383563099::1698252961::1698252997::1::::<><>::
-::res://Assets/enemy/::1698252997
-enemy_bagfra.png::CompressedTexture2D::9062086131252812943::1698252961::1698252997::1::::<><>::
-enemy_foran.png::CompressedTexture2D::5964854265027528200::1698252961::1698252997::1::::<><>::
-enemy_højre.png::CompressedTexture2D::5438134955681172168::1698252961::1698252997::1::::<><>::
-enemy_venstre.png::CompressedTexture2D::7558284713340744648::1698252961::1698252997::1::::<><>::
-::res://Assets/farver og topping/::1698252997
-Blueberry_farve.png::CompressedTexture2D::4766407733785066359::1698252961::1698252997::1::::<><>::
-GB.png::CompressedTexture2D::612390173248555173::1698252961::1698252997::1::::<><>::
-Greenapple_farve.png::CompressedTexture2D::8080664809366553570::1698252961::1698252997::1::::<><>::
-LJ.png::CompressedTexture2D::3544154351838163359::1698252961::1698252997::1::::<><>::
-Milktea_farve.png::CompressedTexture2D::5724227370780466804::1698252961::1698252997::1::::<><>::
-Passion_farve.png::CompressedTexture2D::7099046432338036166::1698252961::1698252997::1::::<><>::
-pomB.png::CompressedTexture2D::2675849078603003547::1698252961::1698252997::1::::<><>::
-Strawberry_farve.png::CompressedTexture2D::6655161290701667287::1698252961::1698252997::1::::<><>::
-Syrup.png::CompressedTexture2D::2058750330021330297::1698252961::1698252997::1::::<><>::
-T.png::CompressedTexture2D::6277732233737608225::1698252961::1698252997::1::::<><>::
-Taro_farve.png::CompressedTexture2D::9057271292432426398::1698252961::1698252997::1::::<><>::
-::res://Assets/farver v2/::1698252961
-Blueberry_farve.gd::GDScript::-1::1698252961::0::1::::<>Area2D<>::
-Blueberry_farve.tscn::PackedScene::6136130181314845515::1698252961::0::1::::<><>::uid://b855blcv3ewex
-Blueberry_farve_v2.gd::GDScript::-1::1698252961::0::1::::<>CharacterBody2D<>::
-Blueberry_farve_v2.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/Blueberry_farve.png<>res://Assets/farver v2/Blueberry_farve_v2.gd
-Greenapple_farve.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/Greenapple_farve.png
-Milktea_farve.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/Milktea_farve.png
-Passion_farve.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/Passion_farve.png
-Strawberry_farve.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/Strawberry_farve.png
-Taro_farve.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/Taro_farve.png
-::res://Assets/Font/::1698252995
-dynamicfont.tres::FontFile::7267724114675640055::1698252961::0::1::::<><>::uid://ew0u3catpr01
-Identidad-ExtraBold.otf::FontFile::327726799608117464::1698252961::1698252995::1::::<><>::
-new_bitmapfont.tres::FontFile::-1::1698252961::0::1::::<><>::
-new_dynamicfont.tres::FontFile::-1::1698252961::0::1::::<><>::res://Assets/Font/Identidad-ExtraBold.otf
-Node2D.tscn::PackedScene::-1::1698252961::0::1::::<><>::
-Start.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/Spill the tea forside.jpg<>res://Assets/Font/new_dynamicfont.tres
-Ubuntu-Regular.ttf::FontFile::8727491547490947261::1698252961::1698252995::1::::<><>::
-Yeah.tres::FontFile::-1::1698252961::0::1::::<><>::
-::res://Assets/Kunder/::1698252997
-Kunde_brownsugar.png::CompressedTexture2D::1844202532791447411::1698252961::1698252997::1::::<><>::
-Kunde_milktea.png::CompressedTexture2D::1648906288813228680::1698252961::1698252997::1::::<><>::
-Kunde_passion.png::CompressedTexture2D::5216849752610532852::1698252961::1698252997::1::::<><>::
-Kunde_strawberry.png::CompressedTexture2D::3074430189812325528::1698252961::1698252997::1::::<><>::
-Kunde_taro.png::CompressedTexture2D::205021976627735435::1698252961::1698252997::1::::<><>::
-mus.png::CompressedTexture2D::2185447823603103989::1698252961::1698252997::1::::<><>::
-Vandpyt.png::CompressedTexture2D::821921322438984990::1698252961::1698252997::1::::<><>::
-::res://Assets/Opdelt porte/::1698252997
-blueberry_h.png::CompressedTexture2D::1310841605260767062::1698252961::1698252997::1::::<><>::
-blueberry_v.png::CompressedTexture2D::3920894891435311025::1698252961::1698252997::1::::<><>::
-brownsugar_h.png::CompressedTexture2D::4455511822235811120::1698252961::1698252997::1::::<><>::
-brownsugar_port_h.png::CompressedTexture2D::7130116659466152944::1698252961::1698252997::1::::<><>::
-brownsugar_port_v.png::CompressedTexture2D::9114227168077218363::1698252961::1698252997::1::::<><>::
-brownsugar_v.png::CompressedTexture2D::4638459370809605385::1698252961::1698252997::1::::<><>::
-greenapple_port_h.png::CompressedTexture2D::247682900647630841::1698252961::1698252997::1::::<><>::
-greenapple_port_v.png::CompressedTexture2D::379957254189130116::1698252961::1698252996::1::::<><>::
-honeymelon_port_h.png::CompressedTexture2D::266832136852765782::1698252961::1698252996::1::::<><>::
-honeymelon_port_v.png::CompressedTexture2D::3651207388724521351::1698252961::1698252996::1::::<><>::
-lychee_port_h.png::CompressedTexture2D::244990031183461933::1698252961::1698252996::1::::<><>::
-lychee_port_v.png::CompressedTexture2D::5020065444120347811::1698252961::1698252996::1::::<><>::
-milktea_port_h.png::CompressedTexture2D::9093242345766592215::1698252961::1698252996::1::::<><>::
-milktea_port_v.png::CompressedTexture2D::3645070228220506071::1698252961::1698252996::1::::<><>::
-passionfruit_port_h.png::CompressedTexture2D::3672267979996847000::1698252961::1698252996::1::::<><>::
-passionfruit_port_v.png::CompressedTexture2D::974543140173218611::1698252961::1698252996::1::::<><>::
-pom_port_h.png::CompressedTexture2D::568102777366681440::1698252961::1698252996::1::::<><>::
-pom_port_v.png::CompressedTexture2D::1360367857645711523::1698252961::1698252996::1::::<><>::
-strawberry_port_h.png::CompressedTexture2D::5342820691681331458::1698252961::1698252996::1::::<><>::
-strawberry_port_v.png::CompressedTexture2D::365121243846269695::1698252961::1698252996::1::::<><>::
-tapioka_port_h.png::CompressedTexture2D::1302390893808128668::1698252961::1698252996::1::::<><>::
-tapioka_port_v.png::CompressedTexture2D::2471261915040936325::1698252961::1698252996::1::::<><>::
-taro_port_h.png::CompressedTexture2D::6073092381905969834::1698252961::1698252996::1::::<><>::
-taro_port_v.png::CompressedTexture2D::2010466812171655609::1698252961::1698252996::1::::<><>::
-::res://Assets/Port/::1698252996
-blueberry_port.png::CompressedTexture2D::6159373228278566064::1698252961::1698252996::1::::<><>::
-blueberry_åbenport.png::CompressedTexture2D::5762718773039661612::1698252961::1698252996::1::::<><>::
-brownsugar_port.png::CompressedTexture2D::1036208001487569256::1698252961::1698252996::1::::<><>::
-brownsugar_åbenport.png::CompressedTexture2D::7222019419179962640::1698252961::1698252996::1::::<><>::
-greenapple_port.png::CompressedTexture2D::8835452645333958444::1698252961::1698252996::1::::<><>::
-greenapple_åbenport.png::CompressedTexture2D::1977461303659822476::1698252961::1698252996::1::::<><>::
-honeymelon_port.png::CompressedTexture2D::5753168064059709094::1698252961::1698252996::1::::<><>::
-honeymelon_åbenport.png::CompressedTexture2D::4777560072319571216::1698252961::1698252996::1::::<><>::
-lychee_port.png::CompressedTexture2D::925710840289194068::1698252961::1698252996::1::::<><>::
-lychee_åbenport.png::CompressedTexture2D::4187489746887737700::1698252961::1698252996::1::::<><>::
-milktea_port.png::CompressedTexture2D::4891000796615329556::1698252961::1698252996::1::::<><>::
-milktea_åbenport.png::CompressedTexture2D::8683966061746056227::1698252961::1698252996::1::::<><>::
-passionfruit_port.png::CompressedTexture2D::4956066657349742653::1698252961::1698252996::1::::<><>::
-passionfruit_åbenport.png::CompressedTexture2D::77805210751604982::1698252961::1698252996::1::::<><>::
-passion_åbenport.png::CompressedTexture2D::4879108803417208258::1698252961::1698252996::1::::<><>::
-pom_port.png::CompressedTexture2D::650826762630168911::1698252961::1698252996::1::::<><>::
-pom_åbenport.png::CompressedTexture2D::1351855361061312968::1698252961::1698252996::1::::<><>::
-strawberry_port.png::CompressedTexture2D::3586638995266276822::1698252961::1698252996::1::::<><>::
-strawberry_åbenport.png::CompressedTexture2D::4243906559816672716::1698252961::1698252996::1::::<><>::
-tapioka_port.png::CompressedTexture2D::3912196236222332428::1698252961::1698252996::1::::<><>::
-tapioka_åbenport.png::CompressedTexture2D::3192083804649262498::1698252961::1698252996::1::::<><>::
-taro_port.png::CompressedTexture2D::4241634415212572375::1698252961::1698252996::1::::<><>::
-taro_åbenport.png::CompressedTexture2D::6559737079616774188::1698252961::1698252996::1::::<><>::
-::res://Assets/Port v2/::1698261519
-Blueberry_port.gd::GDScript::-1::1698252961::0::1::::<>StaticBody2D<>::
-Blueberry_port.tscn::PackedScene::1523530027594646091::1698261519::0::1::::<><>::uid://sw8mtntg8qh7::::res://Assets/Opdelt porte/blueberry_h.png<>res://Assets/Port v2/Blueberry_port.gd<>uid://bv4ktiksiom30::::res://Assets/Opdelt porte/blueberry_v.png
-brownsugar_port.tscn::PackedScene::914582256518576798::1698252961::0::1::::<><>::uid://c8t48kqqxo3ey
-lychee_port.tscn::PackedScene::4210084328248930253::1698252961::0::1::::<><>::uid://dqw7khucb6y0
-milktea_port.tscn::PackedScene::315413407153797206::1698252961::0::1::::<><>::uid://d2s3mxcjusdkh
-strawberry_port.tscn::PackedScene::6159173551596026449::1698261518::0::1::::<><>::uid://ciedqgqoat86i::::res://Assets/Opdelt porte/strawberry_port_h.png<>uid://fg4q1se7ykxj::::res://Assets/Opdelt porte/strawberry_port_v.png
-tapioka_port.gd::GDScript::-1::1698260599::0::1::::<>StaticBody2D<>::
-tapioka_port.tscn::PackedScene::1127286914035744340::1698261519::0::1::::<><>::uid://ss5gna53amsi::::res://Assets/Opdelt porte/tapioka_port_h.png<>res://Assets/Port v2/tapioka_port.gd<>uid://bbhdk8a2mrr54::::res://Assets/Opdelt porte/tapioka_port_v.png
-taro_port.gd::GDScript::-1::1698261027::0::1::::<>StaticBody2D<>::
-taro_port.tscn::PackedScene::2523394508802866744::1698261519::0::1::::<><>::res://Assets/Port v2/taro_port.gd<>uid://csr37dsoa3vje::::res://Assets/Opdelt porte/taro_port_h.png<>uid://3v5dhowmlvef::::res://Assets/Opdelt porte/taro_port_v.png
-::res://Assets/Talebubler/::1698252996
-Level1_talebobble.png::CompressedTexture2D::3166228466850102530::1698252961::1698252996::1::::<><>::
-Level2_talebobble.png::CompressedTexture2D::6233224870141675659::1698252961::1698252996::1::::<><>::
-Level3_talebobble.png::CompressedTexture2D::3467844385160730003::1698252961::1698252996::1::::<><>::
-Level4_talebobble.png::CompressedTexture2D::7072960994183467460::1698252961::1698252996::1::::<><>::
-Level5_talebubble.png::CompressedTexture2D::8670306814656439256::1698252961::1698252996::1::::<><>::
-::res://Assets/Tiles/::1698252996
-tile_0.png::CompressedTexture2D::7511779487532008455::1698252961::1698252996::1::::<><>::
-tile_2.png::CompressedTexture2D::7179838149618908047::1698252961::1698252996::1::::<><>::
-tile_3.png::CompressedTexture2D::7620689268617795609::1698252961::1698252996::1::::<><>::
-tile_4.png::CompressedTexture2D::7705660873000056223::1698252961::1698252996::1::::<><>::
-tile_5.png::CompressedTexture2D::1990943367136378348::1698252961::1698252996::1::::<><>::
-tile_6.png::CompressedTexture2D::3145621150828579174::1698252961::1698252996::1::::<><>::
-Tile_7.png::CompressedTexture2D::5628422250811238324::1698252961::1698252996::1::::<><>::
-tile_8.png::CompressedTexture2D::8705733735122981202::1698252961::1698252996::1::::<><>::
-tile_9.png::CompressedTexture2D::2851042630911638837::1698252961::1698252996::1::::<><>::
-tile_10.png::CompressedTexture2D::7748541801734928453::1698252961::1698252996::1::::<><>::
-tile_11.png::CompressedTexture2D::1586130862437887135::1698252961::1698252996::1::::<><>::
-Tile_front.png::CompressedTexture2D::1356333987365171188::1698252961::1698252996::1::::<><>::
-::res://Assets/topping v2/::1698252961
-GB.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/GB.png
-LJ.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/LJ.png
-pomB.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/pomB.png
-Syrup.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/Syrup.png
-T.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/farver og topping/T.png
-::res://Bobas/::1698261519
-Blueberry_skygge.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/bubbletea skygge/blueberry_skygge.png<>res://Assets/farver v2/Blueberry_farve.gd
-Player.tscn::PackedScene::2260209207191162050::1698255752::0::1::::<><>::uid://buy7jklwevldj::::res://Assets/prøve.png<>uid://b8tocagew284n::::res://Assets/bubbletea skygge/blueberry_skygge.png<>res://Player.gd
-Player_blue.tscn::PackedScene::4816348186793871001::1698255752::0::1::::<><>::uid://b8tocagew284n::::res://Assets/bubbletea skygge/blueberry_skygge.png
-Player_tom.gd::GDScript::-1::1698252961::0::1::::<>Area2D<>::
-Player_tom.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/prøve.png<>res://Assets/bubbletea skygge/blueberry_skygge.png
-Player_v2.tscn::PackedScene::5233918916463527973::1698261519::0::1::::<><>::uid://buy7jklwevldj::::res://Assets/prøve.png<>uid://b8tocagew284n::::res://Assets/bubbletea skygge/blueberry_skygge.png<>res://Player_v2.gd<>uid://bpxrf7vt1geyu::::res://Assets/bubbletea skygge/Taro_skygge.png
-Tom_kup.tscn::PackedScene::-1::1698252961::0::1::::<><>::res://Assets/prøve.png<>res://Assets/bubbletea skygge/blueberry_skygge.png<>res://Tom_kup.gd<>res://Assets/farver v2/Blueberry_farve.gd
+::res://::1698270763
+Back_btn.gd::GDScript::-1::1697382792::0::1::::<>Button<>::
+Button1.gd::GDScript::-1::1697382792::0::1::::<>Button<>::
+Button2.gd::GDScript::-1::1697382792::0::1::::<>Button<>::
+Button3.gd::GDScript::-1::1697382792::0::1::::<>Button<>::
+Button4.gd::GDScript::-1::1697382792::0::1::::<>Button<>::
+Button5.gd::GDScript::-1::1697382792::0::1::::<>Button<>::
+default_env.tres::Environment::7858439121602260730::1698259684::0::1::::<><>::
+Front_page.tscn::PackedScene::1800504074047865236::1698251571::0::1::::<><>::res://Play_btn.gd<>uid://dbssmbvashbgp::::res://Assets/Font/dynamicfont.tres<>uid://dxqslo0d4pt2w::::res://Assets/REAL stt forside med rigtig størrelse.png<>res://Tutorial_btn.gd
+icon.png::CompressedTexture2D::2905904008933229824::1696927796::1698250274::1::::<><>::
+Menu2.tscn::PackedScene::6176125948734244876::1697663388::0::1::::<><>::uid://dt36eei0rxuvi::::res://Assets/Baggrund.png<>uid://dnpsqdkt722gr::::res://Assets/Bobas/Taro_T.png<>uid://crjd0a3jd7cau::::res://Assets/Bobas/Milktea_LJ.png<>uid://cn3ap2so77bd2::::res://Assets/Stjerne_tom.png<>uid://b6g50xhmbq37e::::res://Assets/stjerne_fuldt.png<>uid://lfbifkxw836x::::res://Assets/lock.png<>res://Assets/Font/new_dynamicfont.tres<>uid://dbssmbvashbgp::::res://Assets/Font/dynamicfont.tres<>res://Button2.gd
+Menu3.tscn::PackedScene::548644798508545074::1697664200::0::1::::<><>::uid://dt36eei0rxuvi::::res://Assets/Baggrund.png<>uid://dnpsqdkt722gr::::res://Assets/Bobas/Taro_T.png<>uid://crjd0a3jd7cau::::res://Assets/Bobas/Milktea_LJ.png<>uid://cn3ap2so77bd2::::res://Assets/Stjerne_tom.png<>uid://b6g50xhmbq37e::::res://Assets/stjerne_fuldt.png<>uid://lfbifkxw836x::::res://Assets/lock.png<>uid://cj73hk4yuhny4::::res://Assets/Bobas/Passion_GB.png<>res://Assets/Font/new_dynamicfont.tres<>uid://dbssmbvashbgp::::res://Assets/Font/dynamicfont.tres<>res://Button3.gd
+Menu4.tscn::PackedScene::527428244210949383::1697664312::0::1::::<><>::uid://e3u1kis0pmbb::::res://Assets/Bobas/Strawberry_pomB.png<>uid://dt36eei0rxuvi::::res://Assets/Baggrund.png<>uid://dnpsqdkt722gr::::res://Assets/Bobas/Taro_T.png<>uid://crjd0a3jd7cau::::res://Assets/Bobas/Milktea_LJ.png<>uid://cn3ap2so77bd2::::res://Assets/Stjerne_tom.png<>uid://b6g50xhmbq37e::::res://Assets/stjerne_fuldt.png<>uid://lfbifkxw836x::::res://Assets/lock.png<>uid://cj73hk4yuhny4::::res://Assets/Bobas/Passion_GB.png<>res://Assets/Font/new_dynamicfont.tres<>uid://dbssmbvashbgp::::res://Assets/Font/dynamicfont.tres<>res://Button4.gd
+Menu5.tscn::PackedScene::1596647726424959513::1697664416::0::1::::<><>::uid://e3u1kis0pmbb::::res://Assets/Bobas/Strawberry_pomB.png<>uid://s8r7edgd8qg1::::res://Assets/Bobas/Milktea_T_syrup.png<>uid://dt36eei0rxuvi::::res://Assets/Baggrund.png<>uid://dnpsqdkt722gr::::res://Assets/Bobas/Taro_T.png<>uid://crjd0a3jd7cau::::res://Assets/Bobas/Milktea_LJ.png<>uid://cn3ap2so77bd2::::res://Assets/Stjerne_tom.png<>uid://b6g50xhmbq37e::::res://Assets/stjerne_fuldt.png<>uid://cj73hk4yuhny4::::res://Assets/Bobas/Passion_GB.png<>res://Assets/Font/new_dynamicfont.tres<>uid://dbssmbvashbgp::::res://Assets/Font/dynamicfont.tres<>res://Button5.gd
+Menu6.tscn::PackedScene::235214555448993139::1697664414::0::1::::<><>::uid://e3u1kis0pmbb::::res://Assets/Bobas/Strawberry_pomB.png<>uid://s8r7edgd8qg1::::res://Assets/Bobas/Milktea_T_syrup.png<>uid://dt36eei0rxuvi::::res://Assets/Baggrund.png<>uid://dnpsqdkt722gr::::res://Assets/Bobas/Taro_T.png<>uid://crjd0a3jd7cau::::res://Assets/Bobas/Milktea_LJ.png<>uid://b6g50xhmbq37e::::res://Assets/stjerne_fuldt.png<>uid://cj73hk4yuhny4::::res://Assets/Bobas/Passion_GB.png<>res://Assets/Font/new_dynamicfont.tres<>uid://dbssmbvashbgp::::res://Assets/Font/dynamicfont.tres
+Menu.tscn::PackedScene::1975689230409891899::1698077704::0::1::::<><>::uid://dt36eei0rxuvi::::res://Assets/Baggrund.png<>uid://dbssmbvashbgp::::res://Assets/Font/dynamicfont.tres<>uid://dnpsqdkt722gr::::res://Assets/Bobas/Taro_T.png<>res://Assets/Font/new_dynamicfont.tres<>uid://lfbifkxw836x::::res://Assets/lock.png<>uid://cn3ap2so77bd2::::res://Assets/Stjerne_tom.png<>res://Back_btn.gd<>res://Button1.gd
+Order1-test.tscn::PackedScene::1288769874976295717::1698270736::0::1::::<><>::uid://daj75dpjmigih::::res://Assets/Tiles/tile_2.png<>uid://bk206kockinas::::res://Assets/Tiles/tile_6.png<>res://Assets/Font/new_dynamicfont.tres<>uid://3mostu1jqpkm::::res://Assets/Tiles/tile_5.png<>uid://dgtrvyrwjlk1v::::res://Assets/Tiles/tile_3.png<>uid://tlavf0a4he2g::::res://Assets/Tiles/Tile_front.png<>uid://cmgpj6yt83m25::::res://Assets/Tiles/Tile_7.png<>uid://dh1xdxy8qnhdv::::res://Assets/Tiles/tile_4.png<>uid://dfa0570fx0vet::::res://Assets/Tiles/tile_0.png<>uid://dwbefscrwplfe::::res://Assets/Tiles/tile_8.png<>uid://bgvcixpwhgxm8::::res://Assets/Tiles/tile_9.png<>uid://dinpl7hmnr7fd::::res://Assets/Tiles/tile_10.png<>uid://bld0k5hnkcpje::::res://Assets/Talebubler/Level1_talebobble.png<>uid://c6kxgnmpna40::::res://Assets/Kunder/Kunde_taro.png<>uid://wullxft6u31l::::res://Assets/Tiles/tile_11.png<>uid://bnu60hajt5ure::::res://Assets/tile_12.png<>uid://cgtl46emwp6vh::::res://Bobas/Player_v2.tscn<>res://Assets/topping v2/LJ.tscn<>res://Assets/topping v2/T.tscn<>uid://ctonfxy2048sl::::res://Assets/farver v2/Blueberry_farve.tscn<>res://Assets/farver v2/Taro_farve.tscn<>uid://vyak1n7l71hf::::res://Assets/Port v2/Blueberry_port.tscn<>uid://bb7l66mbcsmuq::::res://Assets/Port v2/taro_port.tscn<>uid://qccir5qkxnno::::res://Assets/Port v2/tapioka_port.tscn<>uid://b08nqdxwjlmbt::::res://Assets/Port v2/lychee_port.tscn
+Order1.tscn::PackedScene::3068326722540893636::1698270736::0::1::::<><>::uid://daj75dpjmigih::::res://Assets/Tiles/tile_2.png<>uid://bk206kockinas::::res://Assets/Tiles/tile_6.png<>res://Assets/Font/new_dynamicfont.tres<>uid://3mostu1jqpkm::::res://Assets/Tiles/tile_5.png<>uid://dgtrvyrwjlk1v::::res://Assets/Tiles/tile_3.png<>uid://tlavf0a4he2g::::res://Assets/Tiles/Tile_front.png<>uid://cmgpj6yt83m25::::res://Assets/Tiles/Tile_7.png<>uid://dh1xdxy8qnhdv::::res://Assets/Tiles/tile_4.png<>uid://dfa0570fx0vet::::res://Assets/Tiles/tile_0.png<>uid://dwbefscrwplfe::::res://Assets/Tiles/tile_8.png<>uid://bgvcixpwhgxm8::::res://Assets/Tiles/tile_9.png<>uid://dinpl7hmnr7fd::::res://Assets/Tiles/tile_10.png<>uid://bld0k5hnkcpje::::res://Assets/Talebubler/Level1_talebobble.png<>uid://c6kxgnmpna40::::res://Assets/Kunder/Kunde_taro.png<>uid://wullxft6u31l::::res://Assets/Tiles/tile_11.png<>uid://bnu60hajt5ure::::res://Assets/tile_12.png<>uid://cgtl46emwp6vh::::res://Bobas/Player_v2.tscn<>res://Assets/topping v2/LJ.tscn<>res://Assets/topping v2/T.tscn<>uid://ctonfxy2048sl::::res://Assets/farver v2/Blueberry_farve.tscn<>res://Assets/farver v2/Taro_farve.tscn<>uid://vyak1n7l71hf::::res://Assets/Port v2/Blueberry_port.tscn<>uid://bb7l66mbcsmuq::::res://Assets/Port v2/taro_port.tscn<>uid://qccir5qkxnno::::res://Assets/Port v2/tapioka_port.tscn<>uid://b08nqdxwjlmbt::::res://Assets/Port v2/lychee_port.tscn<>uid://dippf2rv42v1v::::res://Assets/Port v2/taro_port_2.tscn
+Order2.tscn::PackedScene::4717320536461260098::1698009728::0::1::::<><>::uid://dfa0570fx0vet::::res://Assets/Tiles/tile_0.png<>uid://dgtrvyrwjlk1v::::res://Assets/Tiles/tile_3.png<>uid://cmgpj6yt83m25::::res://Assets/Tiles/Tile_7.png<>uid://dh1xdxy8qnhdv::::res://Assets/Tiles/tile_4.png<>uid://dwbefscrwplfe::::res://Assets/Tiles/tile_8.png<>uid://bgvcixpwhgxm8::::res://Assets/Tiles/tile_9.png<>uid://tlavf0a4he2g::::res://Assets/Tiles/Tile_front.png<>uid://3mostu1jqpkm::::res://Assets/Tiles/tile_5.png<>uid://xq0il80x3gq7::::res://Assets/Kunder/Kunde_milktea.png<>uid://cu2okkggq3iy2::::res://Assets/Talebubler/Level2_talebobble.png<>uid://wullxft6u31l::::res://Assets/Tiles/tile_11.png<>uid://dinpl7hmnr7fd::::res://Assets/Tiles/tile_10.png<>res://Assets/Font/new_dynamicfont.tres<>uid://daj75dpjmigih::::res://Assets/Tiles/tile_2.png<>uid://bk206kockinas::::res://Assets/Tiles/tile_6.png<>uid://bnu60hajt5ure::::res://Assets/tile_12.png<>res://Assets/farver v2/Milktea_farve.tscn<>res://Assets/farver v2/Greenapple_farve.tscn<>res://Bobas/Tom_kup.tscn<>res://Assets/topping v2/LJ.tscn
+Order3.tscn::PackedScene::1986167421278686648::1698009728::0::1::::<><>::uid://dfa0570fx0vet::::res://Assets/Tiles/tile_0.png<>uid://dgtrvyrwjlk1v::::res://Assets/Tiles/tile_3.png<>uid://cmgpj6yt83m25::::res://Assets/Tiles/Tile_7.png<>uid://dh1xdxy8qnhdv::::res://Assets/Tiles/tile_4.png<>uid://dwbefscrwplfe::::res://Assets/Tiles/tile_8.png<>uid://bgvcixpwhgxm8::::res://Assets/Tiles/tile_9.png<>uid://tlavf0a4he2g::::res://Assets/Tiles/Tile_front.png<>uid://3mostu1jqpkm::::res://Assets/Tiles/tile_5.png<>uid://wullxft6u31l::::res://Assets/Tiles/tile_11.png<>uid://dinpl7hmnr7fd::::res://Assets/Tiles/tile_10.png<>uid://bpn35ji6caaxf::::res://Assets/Talebubler/Level3_talebobble.png<>uid://cglc0u0d8uqkq::::res://Assets/Kunder/Kunde_passion.png<>res://Assets/Font/new_dynamicfont.tres<>uid://daj75dpjmigih::::res://Assets/Tiles/tile_2.png<>uid://bk206kockinas::::res://Assets/Tiles/tile_6.png<>uid://bnu60hajt5ure::::res://Assets/tile_12.png<>res://Bobas/Tom_kup.tscn<>res://Assets/topping v2/pomB.tscn<>res://Assets/farver v2/Taro_farve.tscn<>uid://ctonfxy2048sl::::res://Assets/farver v2/Blueberry_farve.tscn<>res://Assets/topping v2/GB.tscn<>res://Assets/farver v2/Passion_farve.tscn
+Order4.tscn::PackedScene::3328042080588422445::1698256183::0::1::::<><>::uid://dfa0570fx0vet::::res://Assets/Tiles/tile_0.png<>uid://dgtrvyrwjlk1v::::res://Assets/Tiles/tile_3.png<>uid://cmgpj6yt83m25::::res://Assets/Tiles/Tile_7.png<>uid://dh1xdxy8qnhdv::::res://Assets/Tiles/tile_4.png<>uid://dwbefscrwplfe::::res://Assets/Tiles/tile_8.png<>uid://bgvcixpwhgxm8::::res://Assets/Tiles/tile_9.png<>uid://tlavf0a4he2g::::res://Assets/Tiles/Tile_front.png<>uid://3mostu1jqpkm::::res://Assets/Tiles/tile_5.png<>uid://wullxft6u31l::::res://Assets/Tiles/tile_11.png<>uid://dinpl7hmnr7fd::::res://Assets/Tiles/tile_10.png<>uid://c71gvtewrxbuq::::res://Assets/Talebubler/Level4_talebobble.png<>uid://bj2joe7jxyk6c::::res://Assets/Kunder/Kunde_strawberry.png<>res://Assets/Font/new_dynamicfont.tres<>uid://daj75dpjmigih::::res://Assets/Tiles/tile_2.png<>uid://bk206kockinas::::res://Assets/Tiles/tile_6.png<>res://Assets/farver v2/Strawberry_farve.tscn<>res://Assets/topping v2/pomB.tscn<>res://Bobas/Tom_kup.tscn<>res://Assets/farver v2/Milktea_farve.tscn<>res://Assets/topping v2/GB.tscn<>uid://ct0sxn66d3iab::::res://Assets/Port v2/strawberry_port.tscn
+Order5.tscn::PackedScene::6777651304232546637::1698009728::0::1::::<><>::uid://dfa0570fx0vet::::res://Assets/Tiles/tile_0.png<>uid://dgtrvyrwjlk1v::::res://Assets/Tiles/tile_3.png<>uid://cmgpj6yt83m25::::res://Assets/Tiles/Tile_7.png<>uid://dh1xdxy8qnhdv::::res://Assets/Tiles/tile_4.png<>uid://dwbefscrwplfe::::res://Assets/Tiles/tile_8.png<>uid://bgvcixpwhgxm8::::res://Assets/Tiles/tile_9.png<>uid://tlavf0a4he2g::::res://Assets/Tiles/Tile_front.png<>uid://3mostu1jqpkm::::res://Assets/Tiles/tile_5.png<>uid://wullxft6u31l::::res://Assets/Tiles/tile_11.png<>uid://dinpl7hmnr7fd::::res://Assets/Tiles/tile_10.png<>uid://dvr7xlt16fsds::::res://Assets/Talebubler/Level5_talebubble.png<>uid://1jl0mxsotpfv::::res://Assets/Kunder/Kunde_brownsugar.png<>uid://bnu60hajt5ure::::res://Assets/tile_12.png<>res://Assets/Font/new_dynamicfont.tres<>uid://daj75dpjmigih::::res://Assets/Tiles/tile_2.png<>uid://bk206kockinas::::res://Assets/Tiles/tile_6.png<>res://Assets/topping v2/Syrup.tscn<>res://Assets/topping v2/pomB.tscn<>res://Bobas/Tom_kup.tscn<>res://Assets/topping v2/T.tscn<>res://Assets/topping v2/GB.tscn<>res://Assets/farver v2/Passion_farve.tscn<>res://Assets/farver v2/Milktea_farve.tscn
+Player.gd::GDScript::-1::1697382792::0::1::::<>AnimatedSprite2D<>::
+Player_v2.gd::GDScript::-1::1698270736::0::1::::<>CharacterBody2D<>::
+Play_btn.gd::GDScript::-1::1697382792::0::1::::<>Button<>::
+tea.gd::GDScript::-1::1698007834::0::1::::<>Node<>::
+test.tscn::PackedScene::8552617871589636841::1698077704::0::1::::<><>::uid://cj73hk4yuhny4::::res://Assets/Bobas/Passion_GB.png
+Tom_kup.gd::GDScript::-1::1697382792::0::1::::<>CharacterBody2D<>::
+Tutorial.tscn::PackedScene::6752733120273517007::1698077706::0::1::::<><>::uid://xfwavb1ltatd::::res://Assets/keyboard_arrows.png<>uid://dt36eei0rxuvi::::res://Assets/Baggrund.png<>res://Assets/Font/new_dynamicfont.tres<>uid://dbssmbvashbgp::::res://Assets/Font/dynamicfont.tres<>uid://d6rwv5llq7sa::::res://Assets/Menu.png<>res://Back_btn.gd
+Tutorial_btn.gd::GDScript::-1::1697382792::0::1::::<>Button<>::
+::res://Assets/::1698250275
+background.jpeg::CompressedTexture2D::5669007971468527574::1696937280::1698250275::1::::<><>::
+Baggrund.png::CompressedTexture2D::8552542250878339210::1696952642::1698250275::1::::<><>::
+keyboard_arrows.png::CompressedTexture2D::1626002172017831505::1696971282::1698250274::1::::<><>::
+lock.png::CompressedTexture2D::782474451273200237::1696969362::1698250274::1::::<><>::
+Menu.png::CompressedTexture2D::275634867482529140::1696973604::1698250274::1::::<><>::
+Play button.png::CompressedTexture2D::3729939642506835147::1696934630::1698250274::1::::<><>::
+prøve.png::CompressedTexture2D::3841702181696967171::1697051282::1698250274::1::::<><>::
+Real beackgroud.jpeg::CompressedTexture2D::4219561033271215077::1696937464::1698250275::1::::<><>::
+REAL stt forside med rigtig størrelse.png::CompressedTexture2D::8807748822544439520::1696952652::1698250275::1::::<><>::
+Spill the tea forside.png::CompressedTexture2D::6580982913254866941::1696943626::1698250275::1::::<><>::
+stjerne_fuldt.png::CompressedTexture2D::4576528477024987908::1696969362::1698250274::1::::<><>::
+Stjerne_tom.png::CompressedTexture2D::5743127145319921349::1696969362::1698250274::1::::<><>::
+tile_12.png::CompressedTexture2D::3342090445791063382::1697035152::1698250274::1::::<><>::
+Tutorial button.png::CompressedTexture2D::7493247526181414131::1696934656::1698250274::1::::<><>::
+::res://Assets/Boba sprite sheets/::1698250274
+tom_kop.png::CompressedTexture2D::2818244152318072323::1697053058::1698250274::1::::<><>::
+::res://Assets/Bobas/::1698250274
+Milktea_LJ.png::CompressedTexture2D::5984857948513923948::1696956462::1698250274::1::::<><>::
+Milktea_T_syrup.png::CompressedTexture2D::1332613200656293214::1696956488::1698250274::1::::<><>::
+Passion_GB.png::CompressedTexture2D::5472314195763499065::1696956502::1698250274::1::::<><>::
+Strawberry_pomB.png::CompressedTexture2D::339819260606446107::1696956452::1698250274::1::::<><>::
+Taro_T.png::CompressedTexture2D::8103804337182118529::1696956442::1698250274::1::::<><>::
+::res://Assets/bubbletea skygge/::1698250275
+blueberry_nede_skygge.png::CompressedTexture2D::8770659335703492516::1697040864::1698250274::1::::<><>::
+blueberry_oppe_skygge.png::CompressedTexture2D::7687491337501938541::1697040874::1698250274::1::::<><>::
+blueberry_skygge.png::CompressedTexture2D::4742729320042913699::1697057776::1698250274::1::::<><>::
+GB_nede_skygge.png::CompressedTexture2D::3528999391114641922::1697052398::1698250274::1::::<><>::
+GB_oppe_skygge.png::CompressedTexture2D::5168591616109901367::1697040836::1698250274::1::::<><>::
+GB_skygge.png::CompressedTexture2D::4913019235324393836::1697052530::1698250274::1::::<><>::
+green_jelly_skygge.png::CompressedTexture2D::7957529580131864289::1697061782::1698250274::1::::<><>::
+green_skygge.png::CompressedTexture2D::3658171395345865168::1697061772::1698250274::1::::<><>::
+milktea_GB_nede_skygge.png::CompressedTexture2D::3076673075931735144::1697061072::1698250275::1::::<><>::
+milktea_GB_oppe_skygge.png::CompressedTexture2D::4837610580700102942::1697040816::1698250275::1::::<><>::
+milktea_GB_skygge.png::CompressedTexture2D::8652965066908494342::1697052152::1698250274::1::::<><>::
+milktea_jelly_skygge.png::CompressedTexture2D::1237278478690926559::1697061790::1698250275::1::::<><>::
+milktea_skygge.png::CompressedTexture2D::6537386528083492752::1697061418::1698250274::1::::<><>::
+milktea_T_sirup_skygge.png::CompressedTexture2D::3657472952431751514::1697060532::1698250274::1::::<><>::
+milktea_T_skygge.png::CompressedTexture2D::8890271224819799490::1697061388::1698250274::1::::<><>::
+Passion.png::CompressedTexture2D::1771056558546322430::1697052828::1698250274::1::::<><>::
+Passion_GB_skygge.png::CompressedTexture2D::3875753962973079017::1697053002::1698250274::1::::<><>::
+passion_oppe_skyge.png::CompressedTexture2D::8512351340965152882::1697040846::1698250274::1::::<><>::
+passion_pomB_sirup_skygge.png::CompressedTexture2D::8607722232201034302::1697061798::1698250274::1::::<><>::
+Passion_skygge.png::CompressedTexture2D::1722229292837691702::1697052882::1698250274::1::::<><>::
+Passion_T_nede_skygge.png::CompressedTexture2D::8014971593096084878::1697040908::1698250274::1::::<><>::
+Passion_T_oppe_skygge.png::CompressedTexture2D::7903592899404240702::1697040918::1698250274::1::::<><>::
+Passion_T_skygge.png::CompressedTexture2D::7713306057745478780::1697058160::1698250274::1::::<><>::
+pomB_nede_skygge.png::CompressedTexture2D::4021054579468568472::1697040780::1698250274::1::::<><>::
+pomB_oppe_skygge.png::CompressedTexture2D::5865995552182695006::1697040794::1698250274::1::::<><>::
+pomB_skygge.png::CompressedTexture2D::8439864542686825913::1697052004::1698250274::1::::<><>::
+pom_nede_skygge.png::CompressedTexture2D::1877057185928501775::1697040856::1698250274::1::::<><>::
+strawberry_gb_nede_skygge.png::CompressedTexture2D::5514041634021184576::1697038360::1698250274::1::::<><>::
+strawberry_gb_oppe_skygge.png::CompressedTexture2D::6927144865718521636::1697040758::1698250274::1::::<><>::
+strawberry_gb_skygge.png::CompressedTexture2D::7203538632187184251::1697051662::1698250274::1::::<><>::
+strawberry_skygge.png::CompressedTexture2D::1146587742116375073::1697061808::1698250275::1::::<><>::
+taro_jelly_skygge.png::CompressedTexture2D::6313816833835013451::1697059896::1698250275::1::::<><>::
+Taro_nede_skygge.png::CompressedTexture2D::7982443872303931778::1697040886::1698250275::1::::<><>::
+Taro_oppe_skygge.png::CompressedTexture2D::4487360810089160828::1697040900::1698250275::1::::<><>::
+Taro_skygge.png::CompressedTexture2D::3487776858539872452::1697058000::1698250275::1::::<><>::
+Taro_T_skygge.png::CompressedTexture2D::2355849659401564673::1697059256::1698250275::1::::<><>::
+tom_nede_skygge.png::CompressedTexture2D::7589439113621632241::1697053058::1698250275::1::::<><>::
+tom_oppe_skygge.png::CompressedTexture2D::522371851383563099::1697038394::1698250275::1::::<><>::
+::res://Assets/enemy/::1698250275
+enemy_bagfra.png::CompressedTexture2D::9062086131252812943::1696964976::1698250275::1::::<><>::
+enemy_foran.png::CompressedTexture2D::5964854265027528200::1696964960::1698250275::1::::<><>::
+enemy_højre.png::CompressedTexture2D::5438134955681172168::1696964916::1698250275::1::::<><>::
+enemy_venstre.png::CompressedTexture2D::7558284713340744648::1696964948::1698250275::1::::<><>::
+::res://Assets/farver og topping/::1698250275
+Blueberry_farve.png::CompressedTexture2D::4766407733785066359::1697046486::1698250275::1::::<><>::
+GB.png::CompressedTexture2D::612390173248555173::1697047266::1698250275::1::::<><>::
+Greenapple_farve.png::CompressedTexture2D::8080664809366553570::1697046662::1698250275::1::::<><>::
+LJ.png::CompressedTexture2D::3544154351838163359::1697046796::1698250275::1::::<><>::
+Milktea_farve.png::CompressedTexture2D::5724227370780466804::1697046348::1698250275::1::::<><>::
+Passion_farve.png::CompressedTexture2D::7099046432338036166::1697046192::1698250275::1::::<><>::
+pomB.png::CompressedTexture2D::2675849078603003547::1697047308::1698250275::1::::<><>::
+Strawberry_farve.png::CompressedTexture2D::6655161290701667287::1697046552::1698250275::1::::<><>::
+Syrup.png::CompressedTexture2D::2058750330021330297::1697047396::1698250275::1::::<><>::
+T.png::CompressedTexture2D::6277732233737608225::1697047328::1698250275::1::::<><>::
+Taro_farve.png::CompressedTexture2D::9057271292432426398::1697046412::1698250275::1::::<><>::
+::res://Assets/farver v2/::1698259627
+Blueberry_farve.gd::GDScript::-1::1697821834::0::1::::<>Area2D<>::
+Blueberry_farve.tscn::PackedScene::6136130181314845515::1698259627::0::1::::<><>::uid://b855blcv3ewex::::res://Assets/farver og topping/Blueberry_farve.png<>res://Assets/farver v2/Blueberry_farve.gd
+Blueberry_farve_v2.gd::GDScript::-1::1697382792::0::1::::<>CharacterBody2D<>::
+Blueberry_farve_v2.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/Blueberry_farve.png<>res://Assets/farver v2/Blueberry_farve_v2.gd
+Greenapple_farve.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/Greenapple_farve.png
+Milktea_farve.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/Milktea_farve.png
+Passion_farve.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/Passion_farve.png
+Strawberry_farve.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/Strawberry_farve.png
+Taro_farve.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/Taro_farve.png
+::res://Assets/Font/::1698250274
+dynamicfont.tres::FontFile::7267724114675640055::1698077704::0::1::::<><>::uid://ew0u3catpr01::::res://Assets/Font/Identidad-ExtraBold.otf
+Identidad-ExtraBold.otf::FontFile::327726799608117464::1695819010::1698250274::1::::<><>::
+new_bitmapfont.tres::FontFile::-1::1697382792::0::1::::<><>::
+new_dynamicfont.tres::FontFile::-1::1697382792::0::1::::<><>::res://Assets/Font/Identidad-ExtraBold.otf
+Node2D.tscn::PackedScene::-1::1697382792::0::1::::<><>::
+Start.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/Spill the tea forside.jpg<>res://Assets/Font/new_dynamicfont.tres
+Ubuntu-Regular.ttf::FontFile::8727491547490947261::1579183130::1698250274::1::::<><>::
+Yeah.tres::FontFile::-1::1697382792::0::1::::<><>::
+::res://Assets/Kunder/::1698250275
+Kunde_brownsugar.png::CompressedTexture2D::1844202532791447411::1696961568::1698250275::1::::<><>::
+Kunde_milktea.png::CompressedTexture2D::1648906288813228680::1696961520::1698250275::1::::<><>::
+Kunde_passion.png::CompressedTexture2D::5216849752610532852::1696961542::1698250275::1::::<><>::
+Kunde_strawberry.png::CompressedTexture2D::3074430189812325528::1696961552::1698250275::1::::<><>::
+Kunde_taro.png::CompressedTexture2D::205021976627735435::1696961480::1698250275::1::::<><>::
+mus.png::CompressedTexture2D::2185447823603103989::1696961686::1698250275::1::::<><>::
+Vandpyt.png::CompressedTexture2D::821921322438984990::1696961650::1698250275::1::::<><>::
+::res://Assets/Opdelt porte/::1698250275
+blueberry_h.png::CompressedTexture2D::1310841605260767062::1697386245::1698250275::1::::<><>::
+blueberry_v.png::CompressedTexture2D::3920894891435311025::1697386193::1698250275::1::::<><>::
+brownsugar_h.png::CompressedTexture2D::4455511822235811120::1697385916::1698250275::1::::<><>::
+brownsugar_port_h.png::CompressedTexture2D::7130116659466152944::1698074544::1698250275::1::::<><>::
+brownsugar_port_v.png::CompressedTexture2D::9114227168077218363::1698074570::1698250275::1::::<><>::
+brownsugar_v.png::CompressedTexture2D::4638459370809605385::1697385883::1698250275::1::::<><>::
+greenapple_port_h.png::CompressedTexture2D::247682900647630841::1698074850::1698250275::1::::<><>::
+greenapple_port_v.png::CompressedTexture2D::379957254189130116::1698074826::1698250274::1::::<><>::
+honeymelon_port_h.png::CompressedTexture2D::266832136852765782::1698074896::1698250274::1::::<><>::
+honeymelon_port_v.png::CompressedTexture2D::3651207388724521351::1698074882::1698250274::1::::<><>::
+lychee_port_h.png::CompressedTexture2D::244990031183461933::1698069136::1698250274::1::::<><>::
+lychee_port_v.png::CompressedTexture2D::5020065444120347811::1698069111::1698250274::1::::<><>::
+milktea_port_h.png::CompressedTexture2D::9093242345766592215::1698074978::1698250274::1::::<><>::
+milktea_port_v.png::CompressedTexture2D::3645070228220506071::1698074923::1698250274::1::::<><>::
+passionfruit_port_h.png::CompressedTexture2D::3672267979996847000::1698075039::1698250274::1::::<><>::
+passionfruit_port_v.png::CompressedTexture2D::974543140173218611::1698075019::1698250274::1::::<><>::
+pom_port_h.png::CompressedTexture2D::568102777366681440::1698074786::1698250274::1::::<><>::
+pom_port_v.png::CompressedTexture2D::1360367857645711523::1698074739::1698250274::1::::<><>::
+strawberry_port_h.png::CompressedTexture2D::5342820691681331458::1698075090::1698250274::1::::<><>::
+strawberry_port_v.png::CompressedTexture2D::365121243846269695::1698075066::1698250274::1::::<><>::
+tapioka_port_h.png::CompressedTexture2D::1302390893808128668::1698069338::1698250274::1::::<><>::
+tapioka_port_v.png::CompressedTexture2D::2471261915040936325::1698069321::1698250274::1::::<><>::
+taro_port_h.png::CompressedTexture2D::6073092381905969834::1698065406::1698250274::1::::<><>::
+taro_port_v.png::CompressedTexture2D::2010466812171655609::1698065495::1698250274::1::::<><>::
+::res://Assets/Port/::1698250274
+blueberry_port.png::CompressedTexture2D::6159373228278566064::1697044184::1698250274::1::::<><>::
+blueberry_åbenport.png::CompressedTexture2D::5762718773039661612::1697044260::1698250274::1::::<><>::
+brownsugar_port.png::CompressedTexture2D::1036208001487569256::1697045614::1698250274::1::::<><>::
+brownsugar_åbenport.png::CompressedTexture2D::7222019419179962640::1697045706::1698250274::1::::<><>::
+greenapple_port.png::CompressedTexture2D::8835452645333958444::1697044728::1698250274::1::::<><>::
+greenapple_åbenport.png::CompressedTexture2D::1977461303659822476::1697044772::1698250274::1::::<><>::
+honeymelon_port.png::CompressedTexture2D::5753168064059709094::1697044020::1698250274::1::::<><>::
+honeymelon_åbenport.png::CompressedTexture2D::4777560072319571216::1697044102::1698250274::1::::<><>::
+lychee_port.png::CompressedTexture2D::925710840289194068::1697045288::1698250274::1::::<><>::
+lychee_åbenport.png::CompressedTexture2D::4187489746887737700::1697045396::1698250274::1::::<><>::
+milktea_port.png::CompressedTexture2D::4891000796615329556::1697043740::1698250274::1::::<><>::
+milktea_åbenport.png::CompressedTexture2D::8683966061746056227::1697043928::1698250274::1::::<><>::
+passionfruit_port.png::CompressedTexture2D::4956066657349742653::1697041706::1698250274::1::::<><>::
+passionfruit_åbenport.png::CompressedTexture2D::77805210751604982::1697041696::1698250274::1::::<><>::
+passion_åbenport.png::CompressedTexture2D::4879108803417208258::1697034386::1698250274::1::::<><>::
+pom_port.png::CompressedTexture2D::650826762630168911::1697045052::1698250274::1::::<><>::
+pom_åbenport.png::CompressedTexture2D::1351855361061312968::1697045120::1698250274::1::::<><>::
+strawberry_port.png::CompressedTexture2D::3586638995266276822::1697041278::1698250274::1::::<><>::
+strawberry_åbenport.png::CompressedTexture2D::4243906559816672716::1697041416::1698250274::1::::<><>::
+tapioka_port.png::CompressedTexture2D::3912196236222332428::1697044858::1698250274::1::::<><>::
+tapioka_åbenport.png::CompressedTexture2D::3192083804649262498::1697044926::1698250274::1::::<><>::
+taro_port.png::CompressedTexture2D::4241634415212572375::1697044306::1698250274::1::::<><>::
+taro_åbenport.png::CompressedTexture2D::6559737079616774188::1697044414::1698250274::1::::<><>::
+::res://Assets/Port v2/::1698270736
+Blueberry_port.gd::GDScript::-1::1698077704::0::1::::<>StaticBody2D<>::
+Blueberry_port.tscn::PackedScene::1523530027594646091::1698259836::0::1::::<><>::uid://sw8mtntg8qh7::::res://Assets/Opdelt porte/blueberry_h.png<>res://Assets/Port v2/Blueberry_port.gd<>uid://bv4ktiksiom30::::res://Assets/Opdelt porte/blueberry_v.png
+brownsugar_port.tscn::PackedScene::914582256518576798::1698077734::0::1::::<><>::uid://c8t48kqqxo3ey::::res://Assets/Opdelt porte/brownsugar_port_h.png<>uid://d2388wjgfy2q6::::res://Assets/Opdelt porte/brownsugar_port_v.png
+lychee_port.gd::GDScript::-1::1698270736::0::1::::<>StaticBody2D<>::
+lychee_port.tscn::PackedScene::4210084328248930253::1698270736::0::1::::<><>::uid://dqw7khucb6y0::::res://Assets/Opdelt porte/lychee_port_h.png<>res://Assets/Port v2/lychee_port.gd<>uid://cdr00ks3qrwrb::::res://Assets/Opdelt porte/lychee_port_v.png
+milktea_port.tscn::PackedScene::315413407153797206::1698076661::0::1::::<><>::uid://d2s3mxcjusdkh::::res://Assets/Opdelt porte/milktea_port_h.png<>uid://br6x1k4rsoif4::::res://Assets/Opdelt porte/milktea_port_v.png
+strawberry_port.tscn::PackedScene::6159173551596026449::1698270736::0::1::::<><>::uid://ciedqgqoat86i::::res://Assets/Opdelt porte/strawberry_port_h.png<>uid://fg4q1se7ykxj::::res://Assets/Opdelt porte/strawberry_port_v.png
+tapioka_port.gd::GDScript::-1::1698270736::0::1::::<>StaticBody2D<>::
+tapioka_port.tscn::PackedScene::1127286914035744340::1698270736::0::1::::<><>::uid://ss5gna53amsi::::res://Assets/Opdelt porte/tapioka_port_h.png<>res://Assets/Port v2/tapioka_port.gd<>uid://bbhdk8a2mrr54::::res://Assets/Opdelt porte/tapioka_port_v.png
+taro_port.gd::GDScript::-1::1698270736::0::1::::<>StaticBody2D<>::
+taro_port.tscn::PackedScene::2523394508802866744::1698270736::0::1::::<><>::res://Assets/Port v2/taro_port.gd<>uid://csr37dsoa3vje::::res://Assets/Opdelt porte/taro_port_h.png<>uid://3v5dhowmlvef::::res://Assets/Opdelt porte/taro_port_v.png
+::res://Assets/Talebubler/::1698250274
+Level1_talebobble.png::CompressedTexture2D::3166228466850102530::1697025698::1698250274::1::::<><>::
+Level2_talebobble.png::CompressedTexture2D::6233224870141675659::1697025708::1698250274::1::::<><>::
+Level3_talebobble.png::CompressedTexture2D::3467844385160730003::1697025718::1698250274::1::::<><>::
+Level4_talebobble.png::CompressedTexture2D::7072960994183467460::1697025746::1698250274::1::::<><>::
+Level5_talebubble.png::CompressedTexture2D::8670306814656439256::1697025756::1698250274::1::::<><>::
+::res://Assets/Tiles/::1698250274
+tile_0.png::CompressedTexture2D::7511779487532008455::1696969282::1698250274::1::::<><>::
+tile_2.png::CompressedTexture2D::7179838149618908047::1696968356::1698250274::1::::<><>::
+tile_3.png::CompressedTexture2D::7620689268617795609::1696969282::1698250274::1::::<><>::
+tile_4.png::CompressedTexture2D::7705660873000056223::1697028098::1698250274::1::::<><>::
+tile_5.png::CompressedTexture2D::1990943367136378348::1697028980::1698250274::1::::<><>::
+tile_6.png::CompressedTexture2D::3145621150828579174::1697029372::1698250274::1::::<><>::
+Tile_7.png::CompressedTexture2D::5628422250811238324::1697029524::1698250274::1::::<><>::
+tile_8.png::CompressedTexture2D::8705733735122981202::1697030764::1698250274::1::::<><>::
+tile_9.png::CompressedTexture2D::2851042630911638837::1697031372::1698250274::1::::<><>::
+tile_10.png::CompressedTexture2D::7748541801734928453::1697031652::1698250274::1::::<><>::
+tile_11.png::CompressedTexture2D::1586130862437887135::1697035182::1698250274::1::::<><>::
+Tile_front.png::CompressedTexture2D::1356333987365171188::1696968144::1698250274::1::::<><>::
+::res://Assets/topping v2/::1697061868
+GB.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/GB.png
+LJ.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/LJ.png
+pomB.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/pomB.png
+Syrup.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/Syrup.png
+T.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/farver og topping/T.png
+::res://Bobas/::1698259836
+Blueberry_skygge.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/bubbletea skygge/blueberry_skygge.png<>res://Assets/farver v2/Blueberry_farve.gd
+Player.tscn::PackedScene::2260209207191162050::1698256183::0::1::::<><>::uid://buy7jklwevldj::::res://Assets/prøve.png<>uid://b8tocagew284n::::res://Assets/bubbletea skygge/blueberry_skygge.png<>res://Player.gd
+Player_blue.tscn::PackedScene::4816348186793871001::1698256183::0::1::::<><>::uid://b8tocagew284n::::res://Assets/bubbletea skygge/blueberry_skygge.png
+Player_tom.gd::GDScript::-1::1697382792::0::1::::<>Area2D<>::
+Player_tom.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/prøve.png<>res://Assets/bubbletea skygge/blueberry_skygge.png
+Player_v2.tscn::PackedScene::5233918916463527973::1698259684::0::1::::<><>::uid://buy7jklwevldj::::res://Assets/prøve.png<>uid://b8tocagew284n::::res://Assets/bubbletea skygge/blueberry_skygge.png<>res://Player_v2.gd<>uid://bpxrf7vt1geyu::::res://Assets/bubbletea skygge/Taro_skygge.png
+Tom_kup.tscn::PackedScene::-1::1697382792::0::1::::<><>::res://Assets/prøve.png<>res://Assets/bubbletea skygge/blueberry_skygge.png<>res://Tom_kup.gd<>res://Assets/farver v2/Blueberry_farve.gd

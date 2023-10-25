@@ -1,12 +1,13 @@
 res://default_env.tres
-res://Assets/Port v2/strawberry_port.tscn
+res://Menu.tscn
 res://Assets/Port v2/taro_port.gd
+res://Assets/Port v2/strawberry_port.tscn
 res://Assets/Port v2/taro_port.tscn
-res://Assets/Port v2/Blueberry_port.tscn
 res://Bobas/Player_v2.tscn
 res://Assets/Port v2/tapioka_port.tscn
-res://Menu.tscn
 res://Order2.tscn
 res://Order1-test.tscn
 res://Assets/Port v2/lychee_port.tscn
+res://Assets/Port v2/Blueberry_port.tscn
+res://Button1.gd
 res://Assets/Port v2/lychee_port.gd

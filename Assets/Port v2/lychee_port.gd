@@ -11,7 +11,7 @@ func _process(_delta):
 	pass
 
 func close_port():
-	ap_lychee.play("lychee_port_closed")
+	ap_lychee.play("lychee_port_close")
 	lychee_port_collision.set_deferred('disabled', false)
 
 

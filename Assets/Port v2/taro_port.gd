@@ -11,7 +11,7 @@ func _process(_delta):
 	pass
 
 func close_port():
-	ap_taro.play("taro_port_closed")
+	ap_taro.play("taro_port_close")
 	taro_port_collision.set_deferred('disabled', false)
 
 
