@@ -1,0 +1,295 @@
+[gd_scene load_steps=12 format=3 uid="uid://3fbkv2de4ggp"]
+
+[ext_resource type="Texture2D" uid="uid://dt36eei0rxuvi" path="res://Assets/Baggrund.png" id="1"]
+[ext_resource type="FontFile" uid="uid://dbssmbvashbgp" path="res://Assets/Font/dynamicfont.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://dnpsqdkt722gr" path="res://Assets/Bobas/Taro_T.png" id="3"]
+[ext_resource type="FontFile" path="res://Assets/Font/new_dynamicfont.tres" id="4"]
+[ext_resource type="Texture2D" uid="uid://lfbifkxw836x" path="res://Assets/lock.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cn3ap2so77bd2" path="res://Assets/Stjerne_tom.png" id="6"]
+[ext_resource type="Script" path="res://Back_btn.gd" id="7"]
+[ext_resource type="Script" path="res://Button1.gd" id="8"]
+
+[sub_resource type="StyleBoxFlat" id="1"]
+bg_color = Color(0.937255, 0.937255, 0.937255, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="2"]
+bg_color = Color(0.937255, 0.937255, 0.937255, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="3"]
+bg_color = Color(0.807843, 0.647059, 0.972549, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.321569, 0.282353, 0.282353, 0.6)
+shadow_size = 6
+
+[node name="Menu" type="Node2D"]
+
+[node name="Baggrund" type="Sprite2D" parent="."]
+position = Vector2(512, 301)
+texture = ExtResource("1")
+metadata/_edit_lock_ = true
+
+[node name="Order list" type="Label" parent="."]
+offset_left = 442.0
+offset_top = 40.0
+offset_right = 586.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 30
+text = "Order list"
+
+[node name="Order 1" type="Label" parent="."]
+offset_left = 182.0
+offset_top = 127.0
+offset_right = 242.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2")
+text = "Order 1"
+
+[node name="Order 2" type="Label" parent="."]
+offset_left = 480.0
+offset_top = 127.0
+offset_right = 543.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2")
+text = "Order 2"
+
+[node name="Order 3" type="Label" parent="."]
+offset_left = 784.0
+offset_top = 127.0
+offset_right = 847.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2")
+text = "Order 3"
+
+[node name="Order 2" type="Label" parent="Order 3"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 127.0
+offset_right = 543.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2")
+text = "Order 2"
+
+[node name="Order 4" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 357.0
+offset_right = 343.0
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2")
+text = "Order 4"
+
+[node name="Order 5" type="Label" parent="."]
+offset_left = 678.0
+offset_top = 357.0
+offset_right = 741.0
+offset_bottom = 380.0
+pivot_offset = Vector2(-170.667, -106.667)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2")
+text = "Order 5"
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 80.0
+offset_top = 168.0
+offset_right = 330.0
+offset_bottom = 318.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.976471, 0.976471, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("1")
+script = ExtResource("8")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 392.0
+offset_top = 168.0
+offset_right = 642.0
+offset_bottom = 318.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.976471, 0.976471, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("2")
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 696.0
+offset_top = 168.0
+offset_right = 946.0
+offset_bottom = 318.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.976471, 0.976471, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("2")
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 184.0
+offset_top = 392.0
+offset_right = 434.0
+offset_bottom = 542.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.976471, 0.976471, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("2")
+
+[node name="Button8" type="Button" parent="."]
+offset_left = 592.0
+offset_top = 392.0
+offset_right = 842.0
+offset_bottom = 542.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0.976471, 0.976471, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 88.0
+offset_top = 192.0
+offset_right = 235.0
+offset_bottom = 213.0
+rotation = -0.13439
+theme_override_colors/font_color = Color(0.470588, 0.305882, 0.878431, 1)
+theme_override_fonts/font = ExtResource("4")
+text = "Taro with tapioca"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 401.0
+offset_top = 195.0
+offset_right = 548.0
+offset_bottom = 218.0
+rotation = -0.13439
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4")
+text = "Milktea with jelly"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 185.0
+offset_top = 427.0
+offset_right = 432.0
+offset_bottom = 450.0
+rotation = -0.13439
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4")
+text = "Strawberry milk with bubbles"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 705.0
+offset_top = 198.0
+offset_right = 917.0
+offset_bottom = 221.0
+rotation = -0.13439
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4")
+text = "Passionfruit with bubbles"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 596.0
+offset_top = 423.0
+offset_right = 808.0
+offset_bottom = 446.0
+rotation = -0.13439
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4")
+text = "Brownsugar with tapioca"
+
+[node name="TaroT" type="Sprite2D" parent="."]
+position = Vector2(208, 256)
+texture = ExtResource("3")
+
+[node name="Lock" type="Sprite2D" parent="."]
+position = Vector2(514, 258)
+scale = Vector2(0.356667, 0.356667)
+texture = ExtResource("5")
+
+[node name="Lock2" type="Sprite2D" parent="."]
+position = Vector2(824, 256)
+scale = Vector2(0.356667, 0.356667)
+texture = ExtResource("5")
+
+[node name="Lock3" type="Sprite2D" parent="."]
+position = Vector2(308, 476)
+scale = Vector2(0.356667, 0.356667)
+texture = ExtResource("5")
+
+[node name="Lock4" type="Sprite2D" parent="."]
+position = Vector2(718, 477)
+scale = Vector2(0.356667, 0.356667)
+texture = ExtResource("5")
+
+[node name="StjerneTom" type="Sprite2D" parent="."]
+position = Vector2(280, 312)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6")
+
+[node name="StjerneTom2" type="Sprite2D" parent="."]
+position = Vector2(592, 312)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6")
+
+[node name="StjerneTom3" type="Sprite2D" parent="."]
+position = Vector2(896, 309)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6")
+
+[node name="StjerneTom4" type="Sprite2D" parent="."]
+position = Vector2(792, 528)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6")
+
+[node name="StjerneTom5" type="Sprite2D" parent="."]
+position = Vector2(384, 528)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6")
+
+[node name="Back_btn" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 184.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("3")
+text = "BACK"
+script = ExtResource("7")
+
+[connection signal="pressed" from="Button1" to="Button1" method="_on_Button1_pressed"]
+[connection signal="pressed" from="Back_btn" to="Back_btn" method="_on_Back_btn_pressed"]

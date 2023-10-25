@@ -1,0 +1,173 @@
+[gd_scene load_steps=15 format=3 uid="uid://cgtl46emwp6vh"]
+
+[ext_resource type="Texture2D" uid="uid://buy7jklwevldj" path="res://Assets/prøve.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b8tocagew284n" path="res://Assets/bubbletea skygge/blueberry_skygge.png" id="2"]
+[ext_resource type="Script" path="res://Player_v2.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://bpxrf7vt1geyu" path="res://Assets/bubbletea skygge/Taro_skygge.png" id="4_wy1ci"]
+
+[sub_resource type="Animation" id="13"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="14"]
+resource_name = "real"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sqey3"]
+_data = {
+"RESET": SubResource("13"),
+"real": SubResource("14")
+}
+
+[sub_resource type="CapsuleShape2D" id="4"]
+radius = 13.0
+height = 56.0
+
+[sub_resource type="Animation" id="11"]
+resource_name = "New Anim"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player_blue/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="12"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player_blue/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j7vr6"]
+_data = {
+"New Anim": SubResource("11"),
+"RESET": SubResource("12")
+}
+
+[sub_resource type="Animation" id="Animation_o0n8t"]
+resource_name = "taro_ani"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_q6wy8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mv46p"]
+_data = {
+"RESET": SubResource("Animation_q6wy8"),
+"taro_ani": SubResource("Animation_o0n8t")
+}
+
+[node name="Player_v2" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("3")
+
+[node name="Tom" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+hframes = 2
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Tom"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_sqey3")
+}
+
+[node name="Tom_c" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 2)
+shape = SubResource("4")
+
+[node name="Player_blue" type="Area2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Player_blue"]
+texture = ExtResource("2")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_blue"]
+shape = SubResource("4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player_blue"]
+root_node = NodePath("../../Tom")
+libraries = {
+"": SubResource("AnimationLibrary_j7vr6")
+}
+
+[node name="Player_taro" type="Area2D" parent="."]
+visible = false
+
+[node name="taro" type="Sprite2D" parent="Player_taro"]
+texture = ExtResource("4_wy1ci")
+hframes = 2
+
+[node name="taro_collision" type="CollisionShape2D" parent="Player_taro"]
+position = Vector2(0, 3)
+shape = SubResource("4")
+
+[node name="taro_ani" type="AnimationPlayer" parent="Player_taro"]
+libraries = {
+"": SubResource("AnimationLibrary_mv46p")
+}

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt37mqank1jqv"]
+
+[ext_resource type="Texture2D" uid="uid://cj73hk4yuhny4" path="res://Assets/Bobas/Passion_GB.png" id="1_wi8sy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hd3pp"]
+radius = 26.0
+height = 108.0
+
+[node name="test" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wi8sy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_hd3pp")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/farver og topping/Taro_farve.png" type="Texture2D" id=1]
+
+[node name="Taro_farve" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array( 16, 0, 16, 16, 8, 24, -8, 24, -16, 16, -16, 8, -16, 0, 0, -24 )

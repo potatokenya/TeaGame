@@ -1,0 +1,117 @@
+[gd_scene load_steps=8 format=3 uid="uid://eq12vrw3ikfe"]
+
+[ext_resource type="Texture2D" uid="uid://d2s3mxcjusdkh" path="res://Assets/Opdelt porte/milktea_port_h.png" id="1_p7g2s"]
+[ext_resource type="Texture2D" uid="uid://br6x1k4rsoif4" path="res://Assets/Opdelt porte/milktea_port_v.png" id="2_phdqc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rfqd"]
+size = Vector2(65, 20)
+
+[sub_resource type="Animation" id="Animation_sw1i5"]
+resource_name = "milktea_port_open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 2.08165e-12), Vector2(33, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("milktea_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 2.08165e-12), Vector2(-33, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_5eiuh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("milktea_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_6god3"]
+resource_name = "milktea_port_closed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 2.08165e-12), Vector2(17, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("milktea_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-33, 2.08165e-12), Vector2(-13, 2.08165e-12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rn83b"]
+_data = {
+"RESET": SubResource("Animation_5eiuh"),
+"milktea_port_closed": SubResource("Animation_6god3"),
+"milktea_port_open": SubResource("Animation_sw1i5")
+}
+
+[node name="milktea_port" type="StaticBody2D"]
+
+[node name="milktea_h" type="Sprite2D" parent="."]
+position = Vector2(17, 2.08165e-12)
+texture = ExtResource("1_p7g2s")
+
+[node name="milktea_v" type="Sprite2D" parent="."]
+position = Vector2(-13, 2.08165e-12)
+texture = ExtResource("2_phdqc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_7rfqd")
+
+[node name="ap_milktea" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rn83b")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5

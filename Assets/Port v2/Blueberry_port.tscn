@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=3 uid="uid://vyak1n7l71hf"]
+
+[ext_resource type="Texture2D" uid="uid://sw8mtntg8qh7" path="res://Assets/Opdelt porte/blueberry_h.png" id="1_56ijq"]
+[ext_resource type="Script" path="res://Assets/Port v2/Blueberry_port.gd" id="1_ngkxc"]
+[ext_resource type="Texture2D" uid="uid://bv4ktiksiom30" path="res://Assets/Opdelt porte/blueberry_v.png" id="2_rfy63"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(66, 13)
+
+[sub_resource type="Animation" id="Animation_pqtpr"]
+resource_name = "Blue_port_close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 2.08165e-12), Vector2(17, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blue_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-33, 2.08165e-12), Vector2(-15, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nexk6"]
+resource_name = "Blue_port_open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 0), Vector2(33, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blue_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-15, 0), Vector2(-33, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_y4ihe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blue_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-15, 2.08165e-12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iqokh"]
+_data = {
+"Blue_port_close": SubResource("Animation_pqtpr"),
+"Blue_port_open": SubResource("Animation_nexk6"),
+"RESET": SubResource("Animation_y4ihe")
+}
+
+[node name="Blueberry_port" type="StaticBody2D"]
+disable_mode = 1
+script = ExtResource("1_ngkxc")
+
+[node name="blue_h" type="Sprite2D" parent="."]
+position = Vector2(17, 2.08165e-12)
+texture = ExtResource("1_56ijq")
+
+[node name="blue_v" type="Sprite2D" parent="."]
+position = Vector2(-15, 2.08165e-12)
+texture = ExtResource("2_rfy63")
+
+[node name="blue_port_collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("1")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="blue_port_animationplayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_iqokh")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="close_port"]

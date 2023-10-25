@@ -1,0 +1,117 @@
+[gd_scene load_steps=8 format=3 uid="uid://qccir5qkxnno"]
+
+[ext_resource type="Texture2D" uid="uid://ss5gna53amsi" path="res://Assets/Opdelt porte/tapioka_port_h.png" id="1_dtbxq"]
+[ext_resource type="Texture2D" uid="uid://bbhdk8a2mrr54" path="res://Assets/Opdelt porte/tapioka_port_v.png" id="2_ffq03"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wj864"]
+size = Vector2(67, 22)
+
+[sub_resource type="Animation" id="Animation_k43j2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tapioka_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tapioka_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_wuye7"]
+resource_name = "tapioka_port_closed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tapioka_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 2.08165e-12), Vector2(17, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tapioka_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-33, 2.08165e-12), Vector2(-13, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_wagaf"]
+resource_name = "tapioka_port_åben"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tapioka_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 2.08165e-12), Vector2(33, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tapioka_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 2.08165e-12), Vector2(-33, 2.08165e-12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fj4um"]
+_data = {
+"RESET": SubResource("Animation_k43j2"),
+"tapioka_port_closed": SubResource("Animation_wuye7"),
+"tapioka_port_open": SubResource("Animation_wagaf")
+}
+
+[node name="tapioka_port" type="StaticBody2D"]
+
+[node name="tapioka_h" type="Sprite2D" parent="."]
+position = Vector2(17, 2.08165e-12)
+texture = ExtResource("1_dtbxq")
+
+[node name="tapioka_v" type="Sprite2D" parent="."]
+position = Vector2(-13, 2.08165e-12)
+texture = ExtResource("2_ffq03")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_wj864")
+
+[node name="ap_tapioka" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fj4um")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
