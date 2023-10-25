@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b08nqdxwjlmbt"]
+[gd_scene load_steps=9 format=3 uid="uid://b08nqdxwjlmbt"]
 
 [ext_resource type="Texture2D" uid="uid://dqw7khucb6y0" path="res://Assets/Opdelt porte/lychee_port_h.png" id="1_0itt3"]
+[ext_resource type="Script" path="res://Assets/Port v2/lychee_port.gd" id="1_33mrt"]
 [ext_resource type="Texture2D" uid="uid://cdr00ks3qrwrb" path="res://Assets/Opdelt porte/lychee_port_v.png" id="2_57xbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e25ts"]
@@ -95,6 +96,7 @@ _data = {
 }
 
 [node name="lychee_port" type="StaticBody2D"]
+script = ExtResource("1_33mrt")
 
 [node name="lychee_h" type="Sprite2D" parent="."]
 position = Vector2(17, 2.08165e-12)
@@ -111,3 +113,7 @@ shape = SubResource("RectangleShape2D_e25ts")
 libraries = {
 "": SubResource("AnimationLibrary_n7rfl")
 }
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="close_port"]

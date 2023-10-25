@@ -30,8 +30,3 @@ func _on_player_v_2_entered_gate_taro():
 		$taro_port_collision.disabled = false
 		taro_port_collision.set_deferred('disabled', false)
 		
-		
-
-
-func _on_player_v_2_entered_gate_taro_2():
-	pass # Replace with function body.
