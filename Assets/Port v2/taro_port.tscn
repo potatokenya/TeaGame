@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://3v5dhowmlvef" path="res://Assets/Opdelt porte/taro_port_v.png" id="2_i6lau"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ibbs"]
-size = Vector2(64, 13)
+size = Vector2(64, 19)
 
 [sub_resource type="Animation" id="Animation_ptvvp"]
 length = 0.001

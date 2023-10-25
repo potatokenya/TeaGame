@@ -30,6 +30,11 @@ func _physics_process(delta):
 		if collider.name == "Blueberry_port":
 			print("hit")
 			entered_gate.emit()
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "Taro_port":
+			print("hit")
+			entered_gate_taro.emit()
 	
 	if velocity.y < 0:
 		if visible_animation_player:
@@ -55,7 +60,7 @@ func _on_blueberry_farve_body_entered(_body):
 @onready var taro_sprite = $Player_taro
 @onready var taro_animation_player = $Player_taro/taro_ani
 
-func _on_taro_farve_body_entered(body):
+func _on_taro_farve_body_entered(_body):
 	print("Body entered")
 	blue_sprite.hide()
 	taro_sprite.show()

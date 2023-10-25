@@ -805,6 +805,7 @@ position = Vector2(479, 420)
 [node name="Taro_port" parent="." instance=ExtResource("23_emse0")]
 position = Vector2(351, 159)
 rotation = 1.5708
+disable_mode = 1
 
 [connection signal="body_entered" from="Blueberry_farve" to="Player_v2" method="_on_blueberry_farve_body_entered"]
 [connection signal="entered_gate" from="Player_v2" to="Blueberry_port" method="_on_player_v_2_entered_gate"]

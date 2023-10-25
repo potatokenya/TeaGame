@@ -29,3 +29,5 @@ func _on_player_v_2_entered_gate_taro():
 	else:
 		$taro_port_collision.disabled = false
 		taro_port_collision.set_deferred('disabled', false)
+		
+		
