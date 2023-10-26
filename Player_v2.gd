@@ -9,6 +9,10 @@ signal entered_gate_taro
 signal entered_gate_taro_2
 signal entered_gate_tapioka
 signal entered_gate_lychee
+signal entered_gate_honeymelon
+signal entered_gate_lychee_2
+signal entered_gate_milktea
+
 
 var visible_animation_player: AnimationPlayer
 
@@ -56,12 +60,22 @@ func _physics_process(delta):
 		if collider.name == "lychee_port":
 			print("hit")
 			entered_gate_lychee.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "lychee_port_2":
+			print("hit")
+			entered_gate_lychee_2.emit()
 	
 	if velocity.y < 0:
 		if visible_animation_player:
 			visible_animation_player.play("real")
 	
-	
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "honeymelon_port":
+			print("hit")
+			entered_gate_honeymelon.emit()
 	
 		
 @onready var tom_sprite = $Tom
@@ -90,3 +104,10 @@ func _on_taro_farve_body_entered(_body):
 	print(tea.teac)
 
 
+
+func _on_entered_gate_honeymelon():
+	pass # Replace with function body.
+
+
+func _on_entered_gate_lychee_2():
+	pass # Replace with function body.

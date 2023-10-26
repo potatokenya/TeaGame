@@ -1,0 +1,120 @@
+[gd_scene load_steps=9 format=3 uid="uid://covxduarojlfm"]
+
+[ext_resource type="Texture2D" uid="uid://d2ixlmx3eogs" path="res://Assets/Opdelt porte/honeymelon_port_h.png" id="1_rcc5n"]
+[ext_resource type="Script" path="res://Assets/Port v2/honeymelon_port.gd" id="1_tlxw1"]
+[ext_resource type="Texture2D" uid="uid://bsaw38guvml2v" path="res://Assets/Opdelt porte/honeymelon_port_v.png" id="2_n8ae8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oohua"]
+size = Vector2(65, 20)
+
+[sub_resource type="Animation" id="Animation_h66vv"]
+resource_name = "honeymelon_port_open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honeymelon_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 0), Vector2(33, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("honeymelon_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 0), Vector2(-33, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_plfel"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honeymelon_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("honeymelon_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uwbk7"]
+resource_name = "honeymelon_port_close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honeymelon_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 0), Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("honeymelon_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-33, 0), Vector2(-13, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p68k0"]
+_data = {
+"RESET": SubResource("Animation_plfel"),
+"honeymelon_port_close": SubResource("Animation_uwbk7"),
+"honeymelon_port_open": SubResource("Animation_h66vv")
+}
+
+[node name="honeymelon_port" type="StaticBody2D"]
+script = ExtResource("1_tlxw1")
+
+[node name="honeymelon_h" type="Sprite2D" parent="."]
+position = Vector2(17, 0)
+texture = ExtResource("1_rcc5n")
+
+[node name="honeymelon_v" type="Sprite2D" parent="."]
+position = Vector2(-13, 0)
+texture = ExtResource("2_n8ae8")
+
+[node name="honeymelon_port_collision" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_oohua")
+
+[node name="ap_honeymelon" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p68k0")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="close_port"]
