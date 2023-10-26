@@ -683,6 +683,9 @@ rotation = 1.5708
 [node name="GB_port_4" parent="." instance=ExtResource("23_rydly")]
 position = Vector2(991, 192)
 
+[node name="GB_port_5" parent="." instance=ExtResource("24_ibxw8")]
+position = Vector2(30, 483)
+
 [node name="Player_v2" parent="." instance=ExtResource("2_n1eho")]
 position = Vector2(375, 419)
 
@@ -744,9 +747,7 @@ position = Vector2(812, 415)
 [node name="pomB" parent="Milktea_farve" instance=ExtResource("17")]
 position = Vector2(-640, 0)
 
-[node name="GB_port_5" parent="." instance=ExtResource("24_ibxw8")]
-position = Vector2(30, 483)
-
 [connection signal="entered_gate_GB_3" from="Player_v2" to="GB_port_3" method="_on_player_v_2_entered_gate_gb_3"]
 [connection signal="entered_gate_GB_4" from="Player_v2" to="GB_port_4" method="_on_player_v_2_entered_gate_gb_4"]
+[connection signal="entered_gate_GB_5" from="Player_v2" to="GB_port_5" method="_on_player_v_2_entered_gate_gb_5"]
 [connection signal="entered_gate_strawberry" from="Player_v2" to="strawberry_port" method="_on_player_v_2_entered_gate_strawberry"]
