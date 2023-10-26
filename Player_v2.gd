@@ -17,6 +17,9 @@ signal entered_gate_blueberry_2
 signal entered_gate_taro_3
 signal entered_gate_pom
 signal entered_gate_passion
+signal entered_gate_passion_2
+signal entered_gate_GB
+
 
 
 var visible_animation_player: AnimationPlayer
@@ -114,6 +117,17 @@ func _physics_process(delta):
 			print("hit")
 			entered_gate_passion.emit()
 			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "passion_2":
+			print("hit")
+			entered_gate_passion_2.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "GB":
+			print("hit")
+			entered_gate_GB.emit()
 			
 			
 	if velocity.y < 0:

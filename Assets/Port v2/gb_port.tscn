@@ -1,0 +1,120 @@
+[gd_scene load_steps=9 format=3 uid="uid://c2tx5p381q4pm"]
+
+[ext_resource type="Script" path="res://Assets/Port v2/GB_port.gd" id="1_55b8j"]
+[ext_resource type="Texture2D" uid="uid://dr8kif3xk2ef" path="res://Assets/Opdelt porte/greenapple_port_h.png" id="2_3hx6q"]
+[ext_resource type="Texture2D" uid="uid://fob3ttumi237" path="res://Assets/Opdelt porte/greenapple_port_v.png" id="3_fp26d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_434k8"]
+size = Vector2(67, 20)
+
+[sub_resource type="Animation" id="Animation_545o1"]
+resource_name = "GB_port_close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GB_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 0), Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GB_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-33, 0), Vector2(-13, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_okqtn"]
+resource_name = "GB_port_open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GB_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 0), Vector2(33, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GB_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 0), Vector2(-33, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_atcg4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GB_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GB_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1q8wd"]
+_data = {
+"GB_port_close": SubResource("Animation_545o1"),
+"GB_port_open": SubResource("Animation_okqtn"),
+"RESET": SubResource("Animation_atcg4")
+}
+
+[node name="GB_port" type="StaticBody2D"]
+script = ExtResource("1_55b8j")
+
+[node name="GB_h" type="Sprite2D" parent="."]
+position = Vector2(17, 0)
+texture = ExtResource("2_3hx6q")
+
+[node name="GB_v" type="Sprite2D" parent="."]
+position = Vector2(-13, 0)
+texture = ExtResource("3_fp26d")
+
+[node name="GB_port_collision" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_434k8")
+
+[node name="ap_GB" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1q8wd")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="close_port"]
