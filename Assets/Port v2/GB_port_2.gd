@@ -1,6 +1,5 @@
 extends StaticBody2D
 
-
 @onready var ap_GB_2 = $ap_GB_2
 @onready var timer = $Timer
 @onready var GB_port_collision_2 = $GB_port_collision_2

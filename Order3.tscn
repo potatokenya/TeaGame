@@ -817,6 +817,7 @@ position = Vector2(960, -448)
 position = Vector2(32, 352)
 
 [connection signal="entered_gate_GB" from="Player_v2" to="GB_port" method="_on_player_v_2_entered_gate_gb"]
+[connection signal="entered_gate_GB_2" from="Player_v2" to="GB_port_2" method="_on_player_v_2_entered_gate_gb_2"]
 [connection signal="entered_gate_blueberry_2" from="Player_v2" to="blueberry_port_2" method="_on_player_v_2_entered_gate_blueberry_2"]
 [connection signal="entered_gate_passion" from="Player_v2" to="passion_port" method="_on_player_v_2_entered_gate_passion"]
 [connection signal="entered_gate_passion_2" from="Player_v2" to="passion_port_2" method="_on_player_v_2_entered_gate_passion_2"]

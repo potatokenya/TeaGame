@@ -1,7 +1,9 @@
-[gd_scene load_steps=36 format=3 uid="uid://bnoemqcb3b53v"]
+[gd_scene load_steps=39 format=3 uid="uid://bnoemqcb3b53v"]
 
 [ext_resource type="Texture2D" uid="uid://dfa0570fx0vet" path="res://Assets/Tiles/tile_0.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dgtrvyrwjlk1v" path="res://Assets/Tiles/tile_3.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://cgtl46emwp6vh" path="res://Bobas/Player_v2.tscn" id="2_n1eho"]
+[ext_resource type="PackedScene" uid="uid://tb1qr3pd43fa" path="res://Assets/Port v2/gb_port_3.tscn" id="2_ylp0q"]
 [ext_resource type="Texture2D" uid="uid://cmgpj6yt83m25" path="res://Assets/Tiles/Tile_7.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dh1xdxy8qnhdv" path="res://Assets/Tiles/tile_4.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dwbefscrwplfe" path="res://Assets/Tiles/tile_8.png" id="5"]
@@ -17,10 +19,11 @@
 [ext_resource type="Texture2D" uid="uid://bk206kockinas" path="res://Assets/Tiles/tile_6.png" id="15"]
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Strawberry_farve.tscn" id="16"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/pomB.tscn" id="17"]
-[ext_resource type="PackedScene" path="res://Bobas/Tom_kup.tscn" id="18"]
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Milktea_farve.tscn" id="19"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/GB.tscn" id="20"]
 [ext_resource type="PackedScene" uid="uid://ct0sxn66d3iab" path="res://Assets/Port v2/strawberry_port.tscn" id="21_cbedg"]
+[ext_resource type="PackedScene" uid="uid://bhj8wegucpjjr" path="res://Assets/Port v2/gb_port_4.tscn" id="23_rydly"]
+[ext_resource type="PackedScene" uid="uid://c2gspsx0d42uh" path="res://Assets/Port v2/gb_port_5.tscn" id="24_ibxw8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8kvcf"]
 texture = ExtResource("1")
@@ -669,6 +672,20 @@ offset_right = 1024.0
 offset_bottom = 600.0
 color = Color(0.823529, 0.807843, 0.807843, 1)
 
+[node name="strawberry_port" parent="." instance=ExtResource("21_cbedg")]
+position = Vector2(735, 543)
+rotation = 1.5708
+
+[node name="GB_port_3" parent="." instance=ExtResource("2_ylp0q")]
+position = Vector2(736, 416)
+rotation = 1.5708
+
+[node name="GB_port_4" parent="." instance=ExtResource("23_rydly")]
+position = Vector2(991, 192)
+
+[node name="Player_v2" parent="." instance=ExtResource("2_n1eho")]
+position = Vector2(375, 419)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("8")
 format = 2
@@ -715,9 +732,6 @@ position = Vector2(496, 112)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("11")
 
-[node name="Tom_kup" parent="." instance=ExtResource("18")]
-position = Vector2(352, 424)
-
 [node name="GB" parent="." instance=ExtResource("20")]
 position = Vector2(608, 544)
 
@@ -725,10 +739,14 @@ position = Vector2(608, 544)
 position = Vector2(896, 96)
 
 [node name="Milktea_farve" parent="." instance=ExtResource("19")]
-position = Vector2(800, 416)
+position = Vector2(812, 415)
 
 [node name="pomB" parent="Milktea_farve" instance=ExtResource("17")]
 position = Vector2(-640, 0)
 
-[node name="strawberry_port" parent="." instance=ExtResource("21_cbedg")]
-position = Vector2(993, 191)
+[node name="GB_port_5" parent="." instance=ExtResource("24_ibxw8")]
+position = Vector2(30, 483)
+
+[connection signal="entered_gate_GB_3" from="Player_v2" to="GB_port_3" method="_on_player_v_2_entered_gate_gb_3"]
+[connection signal="entered_gate_GB_4" from="Player_v2" to="GB_port_4" method="_on_player_v_2_entered_gate_gb_4"]
+[connection signal="entered_gate_strawberry" from="Player_v2" to="strawberry_port" method="_on_player_v_2_entered_gate_strawberry"]

@@ -19,6 +19,11 @@ signal entered_gate_pom
 signal entered_gate_passion
 signal entered_gate_passion_2
 signal entered_gate_GB
+signal entered_gate_GB_2
+signal entered_gate_GB_3
+signal entered_gate_GB_4
+signal entered_gate_GB_5
+signal entered_gate_strawberry
 
 
 
@@ -128,6 +133,37 @@ func _physics_process(delta):
 		if collider.name == "GB":
 			print("hit")
 			entered_gate_GB.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "GB_2":
+			print("hit")
+			entered_gate_GB_2.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "GB_3":
+			print("hit")
+			entered_gate_GB_3.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "GB_4":
+			print("hit")
+			entered_gate_GB_4.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "GB_5":
+			print("hit")
+			entered_gate_GB_5.emit()
+			
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "strawberry":
+			print("hit")
+			entered_gate_strawberry.emit()
 			
 			
 	if velocity.y < 0:
