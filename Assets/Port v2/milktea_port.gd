@@ -1,4 +1,5 @@
-extends Sprite2D
+extends StaticBody2D
+
 @onready var ap_milktea = $ap_milktea
 @onready var timer = $Timer
 @onready var milktea_port_collision = $milktea_port_collision
@@ -30,3 +31,4 @@ func _on_player_v_2_entered_gate_milktea():
 		$milktea_port_collision.disabled = false
 		milktea_port_collision.set_deferred('disabled', false)
 		
+

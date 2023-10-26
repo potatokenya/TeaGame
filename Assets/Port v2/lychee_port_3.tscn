@@ -1,0 +1,120 @@
+[gd_scene load_steps=9 format=3 uid="uid://kpm1rilupwp"]
+
+[ext_resource type="Script" path="res://Assets/Port v2/lychee_port_3.gd" id="1_8hkbl"]
+[ext_resource type="Texture2D" uid="uid://dqw7khucb6y0" path="res://Assets/Opdelt porte/lychee_port_h.png" id="1_jieqn"]
+[ext_resource type="Texture2D" uid="uid://cdr00ks3qrwrb" path="res://Assets/Opdelt porte/lychee_port_v.png" id="2_ur4ip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uldsq"]
+size = Vector2(67, 20)
+
+[sub_resource type="Animation" id="Animation_qxb77"]
+resource_name = "lychee_port_open_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lychee_h_3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 0), Vector2(33, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lychee_v_3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 0), Vector2(-33, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v5l3a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lychee_h_3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lychee_v_3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2j2s8"]
+resource_name = "lychee_port_close_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lychee_h_3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 0), Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lychee_v_3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-33, 0), Vector2(-13, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j6wgk"]
+_data = {
+"RESET": SubResource("Animation_v5l3a"),
+"lychee_port_close_3": SubResource("Animation_2j2s8"),
+"lychee_port_open_3": SubResource("Animation_qxb77")
+}
+
+[node name="lychee_port_3" type="StaticBody2D"]
+script = ExtResource("1_8hkbl")
+
+[node name="lychee_h_3" type="Sprite2D" parent="."]
+position = Vector2(17, 0)
+texture = ExtResource("1_jieqn")
+
+[node name="lychee_v_3" type="Sprite2D" parent="."]
+position = Vector2(-13, 0)
+texture = ExtResource("2_ur4ip")
+
+[node name="lychee_port_collision_3" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_uldsq")
+
+[node name="ap_lychee_3" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j6wgk")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="close_port"]

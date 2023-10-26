@@ -1,6 +1,7 @@
-[gd_scene load_steps=38 format=3 uid="uid://3kd5fwkpwu1u"]
+[gd_scene load_steps=40 format=3 uid="uid://3kd5fwkpwu1u"]
 
 [ext_resource type="Texture2D" uid="uid://dfa0570fx0vet" path="res://Assets/Tiles/tile_0.png" id="1"]
+[ext_resource type="PackedScene" uid="uid://cgtl46emwp6vh" path="res://Bobas/Player_v2.tscn" id="1_ibxeh"]
 [ext_resource type="Texture2D" uid="uid://dgtrvyrwjlk1v" path="res://Assets/Tiles/tile_3.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://cmgpj6yt83m25" path="res://Assets/Tiles/Tile_7.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dh1xdxy8qnhdv" path="res://Assets/Tiles/tile_4.png" id="4"]
@@ -16,12 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://daj75dpjmigih" path="res://Assets/Tiles/tile_2.png" id="14"]
 [ext_resource type="Texture2D" uid="uid://bk206kockinas" path="res://Assets/Tiles/tile_6.png" id="15"]
 [ext_resource type="Texture2D" uid="uid://bnu60hajt5ure" path="res://Assets/tile_12.png" id="16"]
-[ext_resource type="PackedScene" path="res://Bobas/Tom_kup.tscn" id="17"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/pomB.tscn" id="18"]
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Taro_farve.tscn" id="19"]
 [ext_resource type="PackedScene" uid="uid://ctonfxy2048sl" path="res://Assets/farver v2/Blueberry_farve.tscn" id="20"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/GB.tscn" id="21"]
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Passion_farve.tscn" id="22"]
+[ext_resource type="PackedScene" uid="uid://ct0sxn66d3iab" path="res://Assets/Port v2/strawberry_port.tscn" id="23_85mp6"]
+[ext_resource type="PackedScene" uid="uid://c62ipiuqujjya" path="res://Assets/Port v2/blueberry_port_2.tscn" id="24_niqc3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eoc87"]
 texture = ExtResource("1")
@@ -720,6 +722,13 @@ offset_right = 1024.0
 offset_bottom = 600.0
 color = Color(0.823529, 0.807843, 0.807843, 1)
 
+[node name="strawberry_port" parent="." instance=ExtResource("23_85mp6")]
+position = Vector2(350, 223)
+rotation = 1.5708
+
+[node name="Player_v2" parent="." instance=ExtResource("1_ibxeh")]
+position = Vector2(64, 187)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("8")
 format = 2
@@ -766,9 +775,6 @@ position = Vector2(704, 512)
 scale = Vector2(0.2, 0.2)
 polygon = PackedVector2Array(51, -259.1, 51, -257.8, 72, -247.8, 72, -246.5, 89, -234.5, 89, -233.4, 103, -220.4, 103, -218.3, 120, -197.2, 120, -195, 129, -179, 129, -175.9, 134, -162.3, 134, 28.5, 96.1, 28.5, 83, 32.1, 83, 30.4, 55, 28.6, 55, 32.1, 66, 87.3, 66, 149.5, 63.2, 149.5, 42, 151.3, 42, 234.5, 43.6, 234.5, 61, 245.4, 61, 249.6, 59.7, 258.5, 57.6, 258.5, 48.6, 264.5, 10.2, 264.5, 5, 263, 5, 261.4, -1, 256.3, -3.3, 256.5, -13.7, 264.5, -51.2, 264.5, -59, 261.9, -59, 260.2, -65, 253.2, -65, 248.8, -57, 238.5, -54.1, 238.5, -42, 235, -42, 151.3, -65, 149.3, -65, 88.3, -53.5, 28.5, -78, 28.5, -93, 32, -93, 30.4, -134, 28.5, -134, -165.6, -129.6, -184.5, -128.3, -184.5, -119.3, -204.5, -118.1, -204.5, -108.1, -219.5, -106.9, -219.5, -90.9, -236.5, -88.7, -236.5, -75.7, -247.5, -73.5, -247.5, -56.5, -257.5, -53.3, -257.5, -29.7, -264.5, 29, -264.5)
 
-[node name="Tom_kup" parent="." instance=ExtResource("17")]
-position = Vector2(48, 200)
-
 [node name="Blueberry_farve" parent="." instance=ExtResource("20")]
 position = Vector2(32, 544)
 
@@ -783,3 +789,6 @@ position = Vector2(960, -448)
 
 [node name="Taro_farve" parent="." instance=ExtResource("19")]
 position = Vector2(32, 352)
+
+[node name="blueberry_port_2" parent="." instance=ExtResource("24_niqc3")]
+position = Vector2(356, 422)

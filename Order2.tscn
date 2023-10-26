@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b8hdtyrmdwb6a"]
+[gd_scene load_steps=41 format=3 uid="uid://b8hdtyrmdwb6a"]
 
 [ext_resource type="Texture2D" uid="uid://dfa0570fx0vet" path="res://Assets/Tiles/tile_0.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://covxduarojlfm" path="res://Assets/Port v2/honeymelon_port.tscn" id="1_iwbjf"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cmgpj6yt83m25" path="res://Assets/Tiles/Tile_7.png" id="3"]
 [ext_resource type="PackedScene" uid="uid://bfy3si1bidwxu" path="res://Assets/Port v2/milktea_port.tscn" id="3_8if5e"]
 [ext_resource type="Texture2D" uid="uid://dh1xdxy8qnhdv" path="res://Assets/Tiles/tile_4.png" id="4"]
+[ext_resource type="Script" path="res://Assets/Port v2/milktea_port.gd" id="4_ag6ea"]
+[ext_resource type="PackedScene" uid="uid://kpm1rilupwp" path="res://Assets/Port v2/lychee_port_3.tscn" id="4_kjpi1"]
 [ext_resource type="Texture2D" uid="uid://dwbefscrwplfe" path="res://Assets/Tiles/tile_8.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://bgvcixpwhgxm8" path="res://Assets/Tiles/tile_9.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://tlavf0a4he2g" path="res://Assets/Tiles/Tile_front.png" id="7"]
@@ -732,6 +734,11 @@ rotation = 1.5708
 [node name="milktea_port" parent="." instance=ExtResource("3_8if5e")]
 position = Vector2(349, 479)
 rotation = 1.5708
+script = ExtResource("4_ag6ea")
+
+[node name="lychee_port_3" parent="." instance=ExtResource("4_kjpi1")]
+position = Vector2(159, 480)
+rotation = 1.5708
 
 [node name="Player_v2" parent="." instance=ExtResource("20_m2mt2")]
 position = Vector2(939, 170)
@@ -791,5 +798,7 @@ position = Vector2(544, 544)
 [node name="LJ" parent="." instance=ExtResource("20")]
 position = Vector2(984, 544)
 
-[connection signal="entered_gate_honeymelon" from="Player_v2" to="Player_v2" method="_on_entered_gate_honeymelon"]
-[connection signal="entered_gate_lychee_2" from="Player_v2" to="Player_v2" method="_on_entered_gate_lychee_2"]
+[connection signal="entered_gate_honeymelon" from="Player_v2" to="honeymelon_port" method="_on_player_v_2_entered_gate_honeymelon"]
+[connection signal="entered_gate_lychee_2" from="Player_v2" to="lychee_port_2" method="_on_player_v_2_entered_gate_lychee_2"]
+[connection signal="entered_gate_lychee_3" from="Player_v2" to="lychee_port_3" method="_on_player_v_2_entered_gate_lychee_3"]
+[connection signal="entered_gate_milktea" from="Player_v2" to="milktea_port" method="_on_player_v_2_entered_gate_milktea"]

@@ -1,6 +1,6 @@
 Timer
 AnimationPlayer
-AnimationTree
 CollisionShape2D
 Sprite2D
 StaticBody2D
+AnimationTree

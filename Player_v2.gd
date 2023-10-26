@@ -12,6 +12,8 @@ signal entered_gate_lychee
 signal entered_gate_honeymelon
 signal entered_gate_lychee_2
 signal entered_gate_milktea
+signal entered_gate_lychee_3
+signal entered_gate_strawberry
 
 
 var visible_animation_player: AnimationPlayer
@@ -79,6 +81,18 @@ func _physics_process(delta):
 			print("hit")
 			entered_gate_milktea.emit()
 			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "lychee_port_3":
+			print("hit")
+			entered_gate_lychee_3.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "strawberry_port":
+			print("hit")
+			entered_gate_strawberry.emit()
+			
 			
 			
 	if velocity.y < 0:
@@ -112,12 +126,3 @@ func _on_taro_farve_body_entered(_body):
 	taro_animation_player.play("taro_ani")
 	tea.teac = 'taro'
 	print(tea.teac)
-
-
-
-func _on_entered_gate_honeymelon():
-	pass # Replace with function body.
-
-
-func _on_entered_gate_lychee_2():
-	pass # Replace with function body.
