@@ -66,16 +66,26 @@ func _physics_process(delta):
 		if collider.name == "lychee_port_2":
 			print("hit")
 			entered_gate_lychee_2.emit()
-	
-	if velocity.y < 0:
-		if visible_animation_player:
-			visible_animation_player.play("real")
-	
+			
 	if collision != null:
 		var collider = collision.get_collider()
 		if collider.name == "honeymelon_port":
 			print("hit")
 			entered_gate_honeymelon.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "milktea_port":
+			print("hit")
+			entered_gate_milktea.emit()
+			
+			
+			
+	if velocity.y < 0:
+		if visible_animation_player:
+			visible_animation_player.play("real")
+	
+
 	
 		
 @onready var tom_sprite = $Tom
