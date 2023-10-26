@@ -1,18 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://c62ipiuqujjya"]
+[gd_scene load_steps=9 format=3 uid="uid://dw0mscejnfjne"]
 
-[ext_resource type="Script" path="res://Assets/Port v2/blueberry_port_2.gd" id="1_bl1ov"]
-[ext_resource type="Texture2D" uid="uid://sw8mtntg8qh7" path="res://Assets/Opdelt porte/blueberry_h.png" id="1_su4id"]
-[ext_resource type="Texture2D" uid="uid://bv4ktiksiom30" path="res://Assets/Opdelt porte/blueberry_v.png" id="2_qru37"]
+[ext_resource type="Script" path="res://Assets/Port v2/taro_port_3.gd" id="1_rqrd0"]
+[ext_resource type="Texture2D" uid="uid://csr37dsoa3vje" path="res://Assets/Opdelt porte/taro_port_h.png" id="2_p3wag"]
+[ext_resource type="Texture2D" uid="uid://3v5dhowmlvef" path="res://Assets/Opdelt porte/taro_port_v.png" id="3_mubyv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ww86"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ap2d"]
 size = Vector2(66, 20)
 
-[sub_resource type="Animation" id="Animation_7ylap"]
-resource_name = "blueberry_port_open_2"
+[sub_resource type="Animation" id="Animation_mr15m"]
+resource_name = "taro_port_open_3"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("blueberry_h_2:position")
+tracks/0/path = NodePath("taro_h_3:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,7 +24,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("blueberry_v_2:position")
+tracks/1/path = NodePath("taro_v_3:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -34,12 +34,12 @@ tracks/1/keys = {
 "values": [Vector2(-13, 0), Vector2(-33, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_8224c"]
+[sub_resource type="Animation" id="Animation_e48cs"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("blueberry_h_2:position")
+tracks/0/path = NodePath("taro_h_3:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -51,7 +51,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("blueberry_v_2:position")
+tracks/1/path = NodePath("taro_v_3:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -61,12 +61,12 @@ tracks/1/keys = {
 "values": [Vector2(-13, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_uyomw"]
-resource_name = "blueberry_port_close_2"
+[sub_resource type="Animation" id="Animation_70fjo"]
+resource_name = "taro_port_close_3"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("blueberry_h_2:position")
+tracks/0/path = NodePath("taro_h_3:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,7 +78,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("blueberry_v_2:position")
+tracks/1/path = NodePath("taro_v_3:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -88,31 +88,31 @@ tracks/1/keys = {
 "values": [Vector2(-33, 0), Vector2(-13, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ndf3m"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5wtgp"]
 _data = {
-"RESET": SubResource("Animation_8224c"),
-"blueberry_port_close_2": SubResource("Animation_uyomw"),
-"blueberry_port_open_2": SubResource("Animation_7ylap")
+"RESET": SubResource("Animation_e48cs"),
+"taro_port_close_3": SubResource("Animation_70fjo"),
+"taro_port_open_3": SubResource("Animation_mr15m")
 }
 
-[node name="blueberry_port_2" type="StaticBody2D"]
-script = ExtResource("1_bl1ov")
+[node name="taro_port_3" type="StaticBody2D"]
+script = ExtResource("1_rqrd0")
 
-[node name="blueberry_h_2" type="Sprite2D" parent="."]
+[node name="taro_h_3" type="Sprite2D" parent="."]
 position = Vector2(17, 0)
-texture = ExtResource("1_su4id")
+texture = ExtResource("2_p3wag")
 
-[node name="blueberry_v_2" type="Sprite2D" parent="."]
+[node name="taro_v_3" type="Sprite2D" parent="."]
 position = Vector2(-13, 0)
-texture = ExtResource("2_qru37")
+texture = ExtResource("3_mubyv")
 
-[node name="blueberry_port_collision_2" type="CollisionShape2D" parent="."]
+[node name="taro_port_collision_3" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
-shape = SubResource("RectangleShape2D_4ww86")
+shape = SubResource("RectangleShape2D_0ap2d")
 
-[node name="ap_blueberry_2" type="AnimationPlayer" parent="."]
+[node name="ap_taro_3" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ndf3m")
+"": SubResource("AnimationLibrary_5wtgp")
 }
 
 [node name="Timer" type="Timer" parent="."]

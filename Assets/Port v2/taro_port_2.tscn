@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ct8fd4qewqsb2"]
 
 [ext_resource type="Texture2D" uid="uid://csr37dsoa3vje" path="res://Assets/Opdelt porte/taro_port_h.png" id="1_6iywj"]
-[ext_resource type="Script" path="res://taro_port_2.gd" id="1_noj5p"]
+[ext_resource type="Script" path="res://Assets/Port v2/taro_port_2.gd" id="1_noj5p"]
 [ext_resource type="Texture2D" uid="uid://3v5dhowmlvef" path="res://Assets/Opdelt porte/taro_port_v.png" id="2_3m375"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5br4"]

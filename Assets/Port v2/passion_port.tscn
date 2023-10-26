@@ -1,18 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://c62ipiuqujjya"]
+[gd_scene load_steps=9 format=3 uid="uid://ja7kj1p25fki"]
 
-[ext_resource type="Script" path="res://Assets/Port v2/blueberry_port_2.gd" id="1_bl1ov"]
-[ext_resource type="Texture2D" uid="uid://sw8mtntg8qh7" path="res://Assets/Opdelt porte/blueberry_h.png" id="1_su4id"]
-[ext_resource type="Texture2D" uid="uid://bv4ktiksiom30" path="res://Assets/Opdelt porte/blueberry_v.png" id="2_qru37"]
+[ext_resource type="Script" path="res://Assets/Port v2/passion_port.gd" id="1_20d2o"]
+[ext_resource type="Texture2D" uid="uid://bsk4ym8d4uxfc" path="res://Assets/Opdelt porte/passionfruit_port_h.png" id="1_k3u1a"]
+[ext_resource type="Texture2D" uid="uid://n5ct3dt11sr0" path="res://Assets/Opdelt porte/passionfruit_port_v.png" id="2_cm23f"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ww86"]
-size = Vector2(66, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yqch"]
+size = Vector2(64, 20)
 
-[sub_resource type="Animation" id="Animation_7ylap"]
-resource_name = "blueberry_port_open_2"
+[sub_resource type="Animation" id="Animation_mm3im"]
+resource_name = "passion_port_open"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("blueberry_h_2:position")
+tracks/0/path = NodePath("passion_h:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,7 +24,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("blueberry_v_2:position")
+tracks/1/path = NodePath("passion_v:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -34,39 +34,39 @@ tracks/1/keys = {
 "values": [Vector2(-13, 0), Vector2(-33, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_8224c"]
+[sub_resource type="Animation" id="Animation_les4g"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("blueberry_h_2:position")
+tracks/0/path = NodePath("passion_v:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(17, 0)]
+"values": [Vector2(-13, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("blueberry_v_2:position")
+tracks/1/path = NodePath("passion_h:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-13, 0)]
+"values": [Vector2(17, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_uyomw"]
-resource_name = "blueberry_port_close_2"
+[sub_resource type="Animation" id="Animation_bb7u0"]
+resource_name = "passion_port_close"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("blueberry_h_2:position")
+tracks/0/path = NodePath("passion_h:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,7 +78,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("blueberry_v_2:position")
+tracks/1/path = NodePath("passion_v:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -88,31 +88,31 @@ tracks/1/keys = {
 "values": [Vector2(-33, 0), Vector2(-13, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ndf3m"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2djaj"]
 _data = {
-"RESET": SubResource("Animation_8224c"),
-"blueberry_port_close_2": SubResource("Animation_uyomw"),
-"blueberry_port_open_2": SubResource("Animation_7ylap")
+"RESET": SubResource("Animation_les4g"),
+"passion_port_close": SubResource("Animation_bb7u0"),
+"passion_port_open": SubResource("Animation_mm3im")
 }
 
-[node name="blueberry_port_2" type="StaticBody2D"]
-script = ExtResource("1_bl1ov")
+[node name="passion_port" type="StaticBody2D"]
+script = ExtResource("1_20d2o")
 
-[node name="blueberry_h_2" type="Sprite2D" parent="."]
+[node name="passion_h" type="Sprite2D" parent="."]
 position = Vector2(17, 0)
-texture = ExtResource("1_su4id")
+texture = ExtResource("1_k3u1a")
 
-[node name="blueberry_v_2" type="Sprite2D" parent="."]
+[node name="passion_v" type="Sprite2D" parent="."]
 position = Vector2(-13, 0)
-texture = ExtResource("2_qru37")
+texture = ExtResource("2_cm23f")
 
-[node name="blueberry_port_collision_2" type="CollisionShape2D" parent="."]
+[node name="passion_port_collision" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
-shape = SubResource("RectangleShape2D_4ww86")
+shape = SubResource("RectangleShape2D_0yqch")
 
-[node name="ap_blueberry_2" type="AnimationPlayer" parent="."]
+[node name="ap_passion" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ndf3m")
+"": SubResource("AnimationLibrary_2djaj")
 }
 
 [node name="Timer" type="Timer" parent="."]

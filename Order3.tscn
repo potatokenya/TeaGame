@@ -1,8 +1,9 @@
-[gd_scene load_steps=40 format=3 uid="uid://3kd5fwkpwu1u"]
+[gd_scene load_steps=42 format=3 uid="uid://3kd5fwkpwu1u"]
 
 [ext_resource type="Texture2D" uid="uid://dfa0570fx0vet" path="res://Assets/Tiles/tile_0.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://cgtl46emwp6vh" path="res://Bobas/Player_v2.tscn" id="1_ibxeh"]
 [ext_resource type="Texture2D" uid="uid://dgtrvyrwjlk1v" path="res://Assets/Tiles/tile_3.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://dw0mscejnfjne" path="res://Assets/Port v2/taro_port_3.tscn" id="2_ixfts"]
 [ext_resource type="Texture2D" uid="uid://cmgpj6yt83m25" path="res://Assets/Tiles/Tile_7.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dh1xdxy8qnhdv" path="res://Assets/Tiles/tile_4.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dwbefscrwplfe" path="res://Assets/Tiles/tile_8.png" id="5"]
@@ -22,8 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://ctonfxy2048sl" path="res://Assets/farver v2/Blueberry_farve.tscn" id="20"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/GB.tscn" id="21"]
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Passion_farve.tscn" id="22"]
-[ext_resource type="PackedScene" uid="uid://ct0sxn66d3iab" path="res://Assets/Port v2/strawberry_port.tscn" id="23_85mp6"]
 [ext_resource type="PackedScene" uid="uid://c62ipiuqujjya" path="res://Assets/Port v2/blueberry_port_2.tscn" id="24_niqc3"]
+[ext_resource type="PackedScene" uid="uid://bw6y0lhuun6d" path="res://Assets/Port v2/pom_port.tscn" id="25_7ipjs"]
+[ext_resource type="PackedScene" uid="uid://ja7kj1p25fki" path="res://Assets/Port v2/passion_port.tscn" id="26_etjrq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eoc87"]
 texture = ExtResource("1")
@@ -722,9 +724,20 @@ offset_right = 1024.0
 offset_bottom = 600.0
 color = Color(0.823529, 0.807843, 0.807843, 1)
 
-[node name="strawberry_port" parent="." instance=ExtResource("23_85mp6")]
-position = Vector2(350, 223)
+[node name="blueberry_port_2" parent="." instance=ExtResource("24_niqc3")]
+position = Vector2(351, 415)
 rotation = 1.5708
+
+[node name="taro_port_3" parent="." instance=ExtResource("2_ixfts")]
+position = Vector2(351, 223)
+rotation = 1.5708
+
+[node name="pom_port" parent="." instance=ExtResource("25_7ipjs")]
+position = Vector2(672, 96)
+rotation = 1.5708
+
+[node name="passion_port" parent="." instance=ExtResource("26_etjrq")]
+position = Vector2(478, 292)
 
 [node name="Player_v2" parent="." instance=ExtResource("1_ibxeh")]
 position = Vector2(64, 187)
@@ -790,5 +803,7 @@ position = Vector2(960, -448)
 [node name="Taro_farve" parent="." instance=ExtResource("19")]
 position = Vector2(32, 352)
 
-[node name="blueberry_port_2" parent="." instance=ExtResource("24_niqc3")]
-position = Vector2(356, 422)
+[connection signal="entered_gate_blueberry_2" from="Player_v2" to="blueberry_port_2" method="_on_player_v_2_entered_gate_blueberry_2"]
+[connection signal="entered_gate_passion" from="Player_v2" to="passion_port" method="_on_player_v_2_entered_gate_passion"]
+[connection signal="entered_gate_pom" from="Player_v2" to="pom_port" method="_on_player_v_2_entered_gate_pom"]
+[connection signal="entered_gate_taro_3" from="Player_v2" to="taro_port_3" method="_on_player_v_2_entered_gate_taro_3"]

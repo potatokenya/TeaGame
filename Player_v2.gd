@@ -13,7 +13,10 @@ signal entered_gate_honeymelon
 signal entered_gate_lychee_2
 signal entered_gate_milktea
 signal entered_gate_lychee_3
-signal entered_gate_strawberry
+signal entered_gate_blueberry_2
+signal entered_gate_taro_3
+signal entered_gate_pom
+signal entered_gate_passion
 
 
 var visible_animation_player: AnimationPlayer
@@ -89,9 +92,27 @@ func _physics_process(delta):
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "strawberry_port":
+		if collider.name == "blueberry_port_2":
 			print("hit")
-			entered_gate_strawberry.emit()
+			entered_gate_blueberry_2.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "taro_port_3":
+			print("hit")
+			entered_gate_taro_3.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "pom":
+			print("hit")
+			entered_gate_pom.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "passion":
+			print("hit")
+			entered_gate_passion.emit()
 			
 			
 			
