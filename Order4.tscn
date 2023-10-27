@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bnoemqcb3b53v"]
+[gd_scene load_steps=43 format=3 uid="uid://bnoemqcb3b53v"]
 
 [ext_resource type="Texture2D" uid="uid://dfa0570fx0vet" path="res://Assets/Tiles/tile_0.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dgtrvyrwjlk1v" path="res://Assets/Tiles/tile_3.png" id="2"]
@@ -11,7 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bgvcixpwhgxm8" path="res://Assets/Tiles/tile_9.png" id="6"]
 [ext_resource type="PackedScene" uid="uid://cssgt6att7jar" path="res://pom_port_3.tscn" id="6_aqjnu"]
 [ext_resource type="Texture2D" uid="uid://tlavf0a4he2g" path="res://Assets/Tiles/Tile_front.png" id="7"]
+[ext_resource type="PackedScene" uid="uid://dp0551fjfb08u" path="res://Assets/Port v2/milktea_port_2.tscn" id="7_ewr2d"]
 [ext_resource type="Texture2D" uid="uid://3mostu1jqpkm" path="res://Assets/Tiles/tile_5.png" id="8"]
+[ext_resource type="PackedScene" uid="uid://e8mr5ys7gou" path="res://Assets/Port v2/milktea_port_3.tscn" id="8_im4qw"]
 [ext_resource type="Texture2D" uid="uid://wullxft6u31l" path="res://Assets/Tiles/tile_11.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://dinpl7hmnr7fd" path="res://Assets/Tiles/tile_10.png" id="10"]
 [ext_resource type="Texture2D" uid="uid://c71gvtewrxbuq" path="res://Assets/Talebubler/Level4_talebobble.png" id="11"]
@@ -694,6 +696,13 @@ position = Vector2(94.9999, 291)
 [node name="pom_port_3" parent="." instance=ExtResource("6_aqjnu")]
 position = Vector2(672, 285)
 
+[node name="milktea_port_2" parent="." instance=ExtResource("7_ewr2d")]
+position = Vector2(871, 415)
+rotation = 1.5708
+
+[node name="milktea_port_3" parent="." instance=ExtResource("8_im4qw")]
+position = Vector2(799, 192)
+
 [node name="Player_v2" parent="." instance=ExtResource("2_n1eho")]
 position = Vector2(375, 419)
 
@@ -758,6 +767,8 @@ position = Vector2(172, 415)
 [connection signal="entered_gate_GB_3" from="Player_v2" to="GB_port_3" method="_on_player_v_2_entered_gate_gb_3"]
 [connection signal="entered_gate_GB_4" from="Player_v2" to="GB_port_4" method="_on_player_v_2_entered_gate_gb_4"]
 [connection signal="entered_gate_GB_5" from="Player_v2" to="GB_port_5" method="_on_player_v_2_entered_gate_gb_5"]
+[connection signal="entered_gate_milktea_2" from="Player_v2" to="milktea_port_2" method="_on_player_v_2_entered_gate_milktea_2"]
+[connection signal="entered_gate_milktea_3" from="Player_v2" to="milktea_port_3" method="_on_player_v_2_entered_gate_milktea_3"]
 [connection signal="entered_gate_pom_2" from="Player_v2" to="pom_port_2" method="_on_player_v_2_entered_gate_pom_2"]
 [connection signal="entered_gate_pom_3" from="Player_v2" to="pom_port_3" method="_on_player_v_2_entered_gate_pom_3"]
 [connection signal="entered_gate_strawberry" from="Player_v2" to="strawberry_port" method="_on_player_v_2_entered_gate_strawberry"]

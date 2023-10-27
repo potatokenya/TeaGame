@@ -1,8 +1,8 @@
 res://default_env.tres
 res://Assets/Port v2/taro_port.gd
-res://pom_port_2.gd
-res://pom_port_2.tscn
+res://milktea_port_2.gd
+res://Assets/Port v2/milktea_port_2.tscn
 res://Player_v2.gd
+res://milktea_port_3.gd
 res://Order4.tscn
-res://pom_port_3.gd
-res://pom_port_3.tscn
+res://Assets/Port v2/milktea_port_3.tscn

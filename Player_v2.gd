@@ -26,6 +26,8 @@ signal entered_gate_GB_5
 signal entered_gate_strawberry
 signal entered_gate_pom_2
 signal entered_gate_pom_3
+signal entered_gate_milktea_2
+signal entered_gate_milktea_3
 
 
 var visible_animation_player: AnimationPlayer
@@ -177,6 +179,19 @@ func _physics_process(delta):
 		if collider.name == "pom_3":
 			print("hit")
 			entered_gate_pom_3.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "milktea_port_2":
+			print("hit")
+			entered_gate_milktea_2.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "milktea_port_3":
+			print("hit")
+			entered_gate_milktea_3.emit()
+			
 			
 			
 	if velocity.y < 0:
