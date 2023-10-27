@@ -1,6 +1,6 @@
 Timer
-AnimationPlayer
 CollisionShape2D
+AnimationPlayer
 Sprite2D
 StaticBody2D
 ColorRect

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bnoemqcb3b53v"]
+[gd_scene load_steps=41 format=3 uid="uid://bnoemqcb3b53v"]
 
 [ext_resource type="Texture2D" uid="uid://dfa0570fx0vet" path="res://Assets/Tiles/tile_0.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dgtrvyrwjlk1v" path="res://Assets/Tiles/tile_3.png" id="2"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cmgpj6yt83m25" path="res://Assets/Tiles/Tile_7.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dh1xdxy8qnhdv" path="res://Assets/Tiles/tile_4.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dwbefscrwplfe" path="res://Assets/Tiles/tile_8.png" id="5"]
+[ext_resource type="PackedScene" uid="uid://b0l14xs4hynye" path="res://pom_port_2.tscn" id="5_qjwl4"]
 [ext_resource type="Texture2D" uid="uid://bgvcixpwhgxm8" path="res://Assets/Tiles/tile_9.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://cssgt6att7jar" path="res://pom_port_3.tscn" id="6_aqjnu"]
 [ext_resource type="Texture2D" uid="uid://tlavf0a4he2g" path="res://Assets/Tiles/Tile_front.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://3mostu1jqpkm" path="res://Assets/Tiles/tile_5.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://wullxft6u31l" path="res://Assets/Tiles/tile_11.png" id="9"]
@@ -684,7 +686,13 @@ rotation = 1.5708
 position = Vector2(991, 192)
 
 [node name="GB_port_5" parent="." instance=ExtResource("24_ibxw8")]
-position = Vector2(30, 483)
+position = Vector2(31, 483)
+
+[node name="pom_port_2" parent="." instance=ExtResource("5_qjwl4")]
+position = Vector2(94.9999, 291)
+
+[node name="pom_port_3" parent="." instance=ExtResource("6_aqjnu")]
+position = Vector2(672, 285)
 
 [node name="Player_v2" parent="." instance=ExtResource("2_n1eho")]
 position = Vector2(375, 419)
@@ -744,10 +752,12 @@ position = Vector2(896, 96)
 [node name="Milktea_farve" parent="." instance=ExtResource("19")]
 position = Vector2(812, 415)
 
-[node name="pomB" parent="Milktea_farve" instance=ExtResource("17")]
-position = Vector2(-640, 0)
+[node name="pomB" parent="." instance=ExtResource("17")]
+position = Vector2(172, 415)
 
 [connection signal="entered_gate_GB_3" from="Player_v2" to="GB_port_3" method="_on_player_v_2_entered_gate_gb_3"]
 [connection signal="entered_gate_GB_4" from="Player_v2" to="GB_port_4" method="_on_player_v_2_entered_gate_gb_4"]
 [connection signal="entered_gate_GB_5" from="Player_v2" to="GB_port_5" method="_on_player_v_2_entered_gate_gb_5"]
+[connection signal="entered_gate_pom_2" from="Player_v2" to="pom_port_2" method="_on_player_v_2_entered_gate_pom_2"]
+[connection signal="entered_gate_pom_3" from="Player_v2" to="pom_port_3" method="_on_player_v_2_entered_gate_pom_3"]
 [connection signal="entered_gate_strawberry" from="Player_v2" to="strawberry_port" method="_on_player_v_2_entered_gate_strawberry"]
