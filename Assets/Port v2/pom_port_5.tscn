@@ -1,0 +1,120 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqn5jtsakef1n"]
+
+[ext_resource type="Script" path="res://Assets/Port v2/pom_port_5.gd" id="1_ttalr"]
+[ext_resource type="Texture2D" uid="uid://idgtmvfimo8g" path="res://Assets/Opdelt porte/pom_port_h.png" id="2_acwws"]
+[ext_resource type="Texture2D" uid="uid://tm8cbg4ltv8f" path="res://Assets/Opdelt porte/pom_port_v.png" id="3_vns6b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rln7x"]
+size = Vector2(67, 20)
+
+[sub_resource type="Animation" id="Animation_ecm3k"]
+resource_name = "pom_port_open_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pom_h_5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 0), Vector2(33, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pom_v_5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 0), Vector2(-33, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ee67t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pom_h_5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pom_v_5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-13, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rnv30"]
+resource_name = "pom_port_close_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pom_h_5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 0), Vector2(17, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pom_v_5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-33, 0), Vector2(-13, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cplgu"]
+_data = {
+"RESET": SubResource("Animation_ee67t"),
+"pom_port_close_5": SubResource("Animation_rnv30"),
+"pom_port_open_5": SubResource("Animation_ecm3k")
+}
+
+[node name="pom_port_5" type="StaticBody2D"]
+script = ExtResource("1_ttalr")
+
+[node name="pom_h_5" type="Sprite2D" parent="."]
+position = Vector2(17, 0)
+texture = ExtResource("2_acwws")
+
+[node name="pom_v_5" type="Sprite2D" parent="."]
+position = Vector2(-13, 0)
+texture = ExtResource("3_vns6b")
+
+[node name="pom_port_collision_5" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_rln7x")
+
+[node name="ap_pom_5" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cplgu")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="close_port"]

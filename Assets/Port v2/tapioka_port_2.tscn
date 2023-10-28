@@ -1,18 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://cssgt6att7jar"]
+[gd_scene load_steps=9 format=3 uid="uid://cb728j1w4w2t2"]
 
-[ext_resource type="Script" path="res://pom_port_3.gd" id="1_v2n2i"]
-[ext_resource type="Texture2D" uid="uid://idgtmvfimo8g" path="res://Assets/Opdelt porte/pom_port_h.png" id="2_7hsp6"]
-[ext_resource type="Texture2D" uid="uid://tm8cbg4ltv8f" path="res://Assets/Opdelt porte/pom_port_v.png" id="3_rr2ko"]
+[ext_resource type="Script" path="res://Assets/Port v2/tapioka_port_2.gd" id="1_fcsih"]
+[ext_resource type="Texture2D" uid="uid://ss5gna53amsi" path="res://Assets/Opdelt porte/tapioka_port_h.png" id="2_g1g6t"]
+[ext_resource type="Texture2D" uid="uid://bbhdk8a2mrr54" path="res://Assets/Opdelt porte/tapioka_port_v.png" id="3_3xoth"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qn6r"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tj2ij"]
 size = Vector2(67, 20)
 
-[sub_resource type="Animation" id="Animation_4xsrb"]
-resource_name = "pom_port_open_3"
+[sub_resource type="Animation" id="Animation_ye578"]
+resource_name = "tapioka_port_open_2"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("pom_h_3:position")
+tracks/0/path = NodePath("tapioka_h_2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,7 +24,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("pom_v_3:position")
+tracks/1/path = NodePath("tapioka_v_2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -34,12 +34,12 @@ tracks/1/keys = {
 "values": [Vector2(-13, 0), Vector2(-33, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_sw5o3"]
+[sub_resource type="Animation" id="Animation_o53cx"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("pom_h_3:position")
+tracks/0/path = NodePath("tapioka_h_2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -51,7 +51,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("pom_v_3:position")
+tracks/1/path = NodePath("tapioka_v_2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -61,12 +61,12 @@ tracks/1/keys = {
 "values": [Vector2(-13, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_yyilr"]
-resource_name = "pom_port_close_3"
+[sub_resource type="Animation" id="Animation_raov6"]
+resource_name = "tapioka_port_close_2"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("pom_h_3:position")
+tracks/0/path = NodePath("tapioka_h_2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,7 +78,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("pom_v_3:position")
+tracks/1/path = NodePath("tapioka_v_2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -88,31 +88,31 @@ tracks/1/keys = {
 "values": [Vector2(-33, 0), Vector2(-13, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5q2ss"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nffmy"]
 _data = {
-"RESET": SubResource("Animation_sw5o3"),
-"pom_port_close_3": SubResource("Animation_yyilr"),
-"pom_port_open_3": SubResource("Animation_4xsrb")
+"RESET": SubResource("Animation_o53cx"),
+"tapioka_port_close_2": SubResource("Animation_raov6"),
+"tapioka_port_open_2": SubResource("Animation_ye578")
 }
 
-[node name="pom_port_3" type="StaticBody2D"]
-script = ExtResource("1_v2n2i")
+[node name="tapioka_port_2" type="StaticBody2D"]
+script = ExtResource("1_fcsih")
 
-[node name="pom_h_3" type="Sprite2D" parent="."]
+[node name="tapioka_h_2" type="Sprite2D" parent="."]
 position = Vector2(17, 0)
-texture = ExtResource("2_7hsp6")
+texture = ExtResource("2_g1g6t")
 
-[node name="pom_v_3" type="Sprite2D" parent="."]
+[node name="tapioka_v_2" type="Sprite2D" parent="."]
 position = Vector2(-13, 0)
-texture = ExtResource("3_rr2ko")
+texture = ExtResource("3_3xoth")
 
-[node name="pom_port_collision_3" type="CollisionShape2D" parent="."]
+[node name="tapioka_port_collision_2" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
-shape = SubResource("RectangleShape2D_1qn6r")
+shape = SubResource("RectangleShape2D_tj2ij")
 
-[node name="ap_pom_3" type="AnimationPlayer" parent="."]
+[node name="ap_tapioka_2" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_5q2ss")
+"": SubResource("AnimationLibrary_nffmy")
 }
 
 [node name="Timer" type="Timer" parent="."]

@@ -1,12 +1,20 @@
-[gd_scene load_steps=39 format=3 uid="uid://c3te6rleaqlc4"]
+[gd_scene load_steps=46 format=3 uid="uid://c3te6rleaqlc4"]
 
 [ext_resource type="Texture2D" uid="uid://dfa0570fx0vet" path="res://Assets/Tiles/tile_0.png" id="1"]
+[ext_resource type="PackedScene" uid="uid://bncrri4axhcir" path="res://Assets/Port v2/pom_port_4.tscn" id="1_878gd"]
+[ext_resource type="PackedScene" uid="uid://cgtl46emwp6vh" path="res://Bobas/Player_v2.tscn" id="1_xexpy"]
 [ext_resource type="Texture2D" uid="uid://dgtrvyrwjlk1v" path="res://Assets/Tiles/tile_3.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://dqn5jtsakef1n" path="res://Assets/Port v2/pom_port_5.tscn" id="2_tmklk"]
 [ext_resource type="Texture2D" uid="uid://cmgpj6yt83m25" path="res://Assets/Tiles/Tile_7.png" id="3"]
+[ext_resource type="PackedScene" uid="uid://bie27uv2yebvf" path="res://Assets/Port v2/pom_port_6.tscn" id="3_wp4vf"]
 [ext_resource type="Texture2D" uid="uid://dh1xdxy8qnhdv" path="res://Assets/Tiles/tile_4.png" id="4"]
+[ext_resource type="PackedScene" uid="uid://drwjvfsmt1lk" path="res://Assets/Port v2/passion_port_3.tscn" id="4_2k5f7"]
 [ext_resource type="Texture2D" uid="uid://dwbefscrwplfe" path="res://Assets/Tiles/tile_8.png" id="5"]
+[ext_resource type="PackedScene" uid="uid://bkmlf7qnbjcqd" path="res://Assets/Port v2/passion_port_4.tscn" id="5_oeol2"]
 [ext_resource type="Texture2D" uid="uid://bgvcixpwhgxm8" path="res://Assets/Tiles/tile_9.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://dw24yvds8amvd" path="res://Assets/Port v2/passion_port_5.tscn" id="6_3gtvd"]
 [ext_resource type="Texture2D" uid="uid://tlavf0a4he2g" path="res://Assets/Tiles/Tile_front.png" id="7"]
+[ext_resource type="PackedScene" uid="uid://cb728j1w4w2t2" path="res://Assets/Port v2/tapioka_port_2.tscn" id="7_jiieh"]
 [ext_resource type="Texture2D" uid="uid://3mostu1jqpkm" path="res://Assets/Tiles/tile_5.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://wullxft6u31l" path="res://Assets/Tiles/tile_11.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://dinpl7hmnr7fd" path="res://Assets/Tiles/tile_10.png" id="10"]
@@ -18,7 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://bk206kockinas" path="res://Assets/Tiles/tile_6.png" id="16"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/Syrup.tscn" id="17"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/pomB.tscn" id="18"]
-[ext_resource type="PackedScene" path="res://Bobas/Tom_kup.tscn" id="19"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/T.tscn" id="20"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/GB.tscn" id="21"]
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Passion_farve.tscn" id="22"]
@@ -721,6 +728,33 @@ offset_right = 1024.0
 offset_bottom = 600.0
 color = Color(0.823529, 0.807843, 0.807843, 1)
 
+[node name="pom_port_4" parent="." instance=ExtResource("1_878gd")]
+position = Vector2(864, 421)
+
+[node name="pom_port_5" parent="." instance=ExtResource("2_tmklk")]
+position = Vector2(672, 228)
+
+[node name="pom_port_6" parent="." instance=ExtResource("3_wp4vf")]
+position = Vector2(353, 224)
+rotation = 1.5708
+
+[node name="passion_port_3" parent="." instance=ExtResource("4_2k5f7")]
+position = Vector2(990, 422)
+
+[node name="passion_port_4" parent="." instance=ExtResource("5_oeol2")]
+position = Vector2(736, 159)
+rotation = 1.5708
+
+[node name="passion_port_5" parent="." instance=ExtResource("6_3gtvd")]
+position = Vector2(158, 286)
+
+[node name="tapioka_port_2" parent="." instance=ExtResource("7_jiieh")]
+position = Vector2(353, 353)
+rotation = 1.5708
+
+[node name="Player_v2" parent="." instance=ExtResource("1_xexpy")]
+position = Vector2(961, 129)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("8")
 format = 2
@@ -785,5 +819,10 @@ position = Vector2(640, -328)
 [node name="pomB" parent="T/Syrup" instance=ExtResource("18")]
 position = Vector2(704, 0)
 
-[node name="Tom_kup" parent="T/Syrup" instance=ExtResource("19")]
-position = Vector2(760, -432)
+[connection signal="entered_gate_passion_3" from="Player_v2" to="passion_port_3" method="_on_player_v_2_entered_gate_passion_3"]
+[connection signal="entered_gate_passion_4" from="Player_v2" to="passion_port_4" method="_on_player_v_2_entered_gate_passion_4"]
+[connection signal="entered_gate_passion_5" from="Player_v2" to="passion_port_5" method="_on_player_v_2_entered_gate_passion_5"]
+[connection signal="entered_gate_pom_4" from="Player_v2" to="pom_port_4" method="_on_player_v_2_entered_gate_pom_4"]
+[connection signal="entered_gate_pom_5" from="Player_v2" to="pom_port_5" method="_on_player_v_2_entered_gate_pom_5"]
+[connection signal="entered_gate_pom_6" from="Player_v2" to="pom_port_6" method="_on_player_v_2_entered_gate_pom_6"]
+[connection signal="entered_gate_tapioka_2" from="Player_v2" to="tapioka_port_2" method="_on_player_v_2_entered_gate_tapioka_2"]

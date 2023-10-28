@@ -28,7 +28,14 @@ signal entered_gate_pom_2
 signal entered_gate_pom_3
 signal entered_gate_milktea_2
 signal entered_gate_milktea_3
-
+signal entered_gate_pom_4
+signal entered_gate_pom_5
+signal entered_gate_pom_6
+signal entered_gate_passion_3
+signal entered_gate_passion_4
+signal entered_gate_passion_5
+signal entered_gate_tapioka_2
+signal entered_gate_syrup
 
 var visible_animation_player: AnimationPlayer
 
@@ -192,6 +199,54 @@ func _physics_process(delta):
 			print("hit")
 			entered_gate_milktea_3.emit()
 			
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "pom_4":
+			print("hit")
+			entered_gate_pom_4.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "pom_5":
+			print("hit")
+			entered_gate_pom_5.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "pom_6":
+			print("hit")
+			entered_gate_pom_6.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "passion_3":
+			print("hit")
+			entered_gate_passion_3.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "passion_4":
+			print("hit")
+			entered_gate_passion_4.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "passion_5":
+			print("hit")
+			entered_gate_passion_5.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "tapioka_2":
+			print("hit")
+			entered_gate_tapioka_2.emit()
+			
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "syrup":
+			print("hit")
+			entered_gate_syrup.emit()
 			
 			
 	if velocity.y < 0:
