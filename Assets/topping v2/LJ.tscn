@@ -6,6 +6,7 @@
 radius = 16.0
 
 [node name="LJ" type="Area2D"]
+disable_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1")

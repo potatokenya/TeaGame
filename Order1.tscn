@@ -17,15 +17,15 @@
 [ext_resource type="Texture2D" uid="uid://wullxft6u31l" path="res://Assets/Tiles/tile_11.png" id="15"]
 [ext_resource type="Texture2D" uid="uid://bnu60hajt5ure" path="res://Assets/tile_12.png" id="16"]
 [ext_resource type="PackedScene" uid="uid://cgtl46emwp6vh" path="res://Bobas/Player_v2.tscn" id="17"]
-[ext_resource type="PackedScene" path="res://Assets/topping v2/LJ.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://duqhddqm3cp1j" path="res://Assets/topping v2/LJ.tscn" id="18"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/T.tscn" id="19"]
 [ext_resource type="PackedScene" uid="uid://ctonfxy2048sl" path="res://Assets/farver v2/Blueberry_farve.tscn" id="20"]
-[ext_resource type="PackedScene" path="res://Assets/farver v2/Taro_farve.tscn" id="21"]
+[ext_resource type="PackedScene" uid="uid://6rfmtkkrtwp6" path="res://Assets/farver v2/Taro_farve.tscn" id="21"]
 [ext_resource type="PackedScene" uid="uid://vyak1n7l71hf" path="res://Assets/Port v2/Blueberry_port.tscn" id="22"]
 [ext_resource type="PackedScene" uid="uid://bb7l66mbcsmuq" path="res://Assets/Port v2/taro_port.tscn" id="23_emse0"]
 [ext_resource type="PackedScene" uid="uid://qccir5qkxnno" path="res://Assets/Port v2/tapioka_port.tscn" id="25_gkf6w"]
 [ext_resource type="PackedScene" uid="uid://b08nqdxwjlmbt" path="res://Assets/Port v2/lychee_port.tscn" id="26_lrjud"]
-[ext_resource type="PackedScene" uid="uid://dippf2rv42v1v" path="res://Assets/Port v2/taro_port_2.tscn" id="26_ndps8"]
+[ext_resource type="PackedScene" uid="uid://ct8fd4qewqsb2" path="res://Assets/Port v2/taro_port_2.tscn" id="26_ndps8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qcwlq"]
 texture = ExtResource("9")
@@ -730,6 +730,8 @@ position = Vector2(258, 521)
 
 [node name="Player_v2" parent="." instance=ExtResource("17")]
 position = Vector2(64, 521)
+collision_layer = 3
+collision_mask = 7
 
 [node name="Blueberry_port" parent="." instance=ExtResource("22")]
 position = Vector2(224, 288)
@@ -741,6 +743,19 @@ disable_mode = 1
 
 [node name="Taro_port2" parent="." instance=ExtResource("26_ndps8")]
 position = Vector2(479, 418)
+
+[node name="LJ" parent="." instance=ExtResource("18")]
+position = Vector2(656, 104)
+disable_mode = 1
+
+[node name="Taro_farve" parent="." instance=ExtResource("21")]
+position = Vector2(120, 192)
+
+[node name="T" parent="." instance=ExtResource("19")]
+position = Vector2(672, 480)
+
+[node name="T2" parent="." instance=ExtResource("19")]
+position = Vector2(984, 425)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("8")
@@ -787,18 +802,6 @@ position = Vector2(968, 112)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("13")
 
-[node name="LJ" parent="." instance=ExtResource("18")]
-position = Vector2(656, 104)
-
-[node name="Taro_farve" parent="." instance=ExtResource("21")]
-position = Vector2(120, 192)
-
-[node name="T" parent="." instance=ExtResource("19")]
-position = Vector2(672, 480)
-
-[node name="T2" parent="." instance=ExtResource("19")]
-position = Vector2(984, 424)
-
 [node name="tapioka_port" parent="." instance=ExtResource("25_gkf6w")]
 position = Vector2(737, 545)
 rotation = 1.5708
@@ -811,5 +814,7 @@ rotation = -1.5708
 [connection signal="entered_gate" from="Player_v2" to="Blueberry_port" method="_on_player_v_2_entered_gate"]
 [connection signal="entered_gate_tapioka" from="Player_v2" to="tapioka_port" method="_on_player_v_2_entered_gate_tapioka"]
 [connection signal="entered_gate_taro" from="Player_v2" to="Taro_port" method="_on_player_v_2_entered_gate_taro"]
-[connection signal="entered_gate_taro2" from="Player_v2" to="Taro_port2" method="_on_player_v_2_entered_gate_taro_2"]
+[connection signal="body_entered" from="LJ" to="Player_v2" method="_on_lj_body_entered"]
 [connection signal="body_entered" from="Taro_farve" to="Player_v2" method="_on_taro_farve_body_entered"]
+[connection signal="body_entered" from="T" to="Player_v2" method="_on_t_body_entered"]
+[connection signal="body_entered" from="T2" to="Player_v2" method="_on_t_2_body_entered"]

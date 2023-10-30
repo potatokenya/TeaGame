@@ -3,16 +3,22 @@ extends CharacterBody2D
 @export var vel = Vector2.ZERO
 @export var newCharacterPath: NodePath
 
-
+#order 1 signals
 signal entered_gate
 signal entered_gate_taro
 signal entered_gate_taro_2
 signal entered_gate_tapioka
 signal entered_gate_lychee
+signal entered_gate_tapioka_3
+
+
+#order 2 signals
 signal entered_gate_honeymelon
 signal entered_gate_lychee_2
-signal entered_gate_milktea
+signal entered_gate_milktea_1
 signal entered_gate_lychee_3
+
+
 signal entered_gate_blueberry_2
 signal entered_gate_taro_3
 signal entered_gate_pom
@@ -42,6 +48,7 @@ var visible_animation_player: AnimationPlayer
 func _ready():
 	visible_animation_player = $Tom/AnimationPlayer1
 	print(tea.teac)
+	print(tea.topping)
 	
 func _physics_process(delta):
 	var move_dir = Vector2()
@@ -53,7 +60,7 @@ func _physics_process(delta):
 	velocity = move_dir * move_speed
 	var collision = move_and_collide(velocity * delta)
 	
-	#han lavede det her
+	#order 1 signals
 	if collision != null:
 		var collider = collision.get_collider()
 		if collider.name == "Blueberry_port":
@@ -83,7 +90,20 @@ func _physics_process(delta):
 		if collider.name == "lychee_port":
 			print("hit")
 			entered_gate_lychee.emit()
-			
+	
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "tapioka_port_3":
+			print("hit")
+			entered_gate_tapioka_3.emit()
+
+	if collision != null:
+		var collider = collision.get_collider()
+		if collider.name == "Kunde1":
+			print("hit")
+			entered_gate_tapioka_3.emit()
+
+	#order 2 signals
 	if collision != null:
 		var collider = collision.get_collider()
 		if collider.name == "lychee_port_2":
@@ -100,7 +120,7 @@ func _physics_process(delta):
 		var collider = collision.get_collider()
 		if collider.name == "milktea_port":
 			print("hit")
-			entered_gate_milktea.emit()
+			entered_gate_milktea_1.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
@@ -249,13 +269,13 @@ func _physics_process(delta):
 			entered_gate_syrup.emit()
 			
 			
-	if velocity.y < 0:
+	if velocity.y < 0:                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 		if visible_animation_player:
 			visible_animation_player.play("real")
-	
 
-	
-		
+
+#Order 1
+
 @onready var tom_sprite = $Tom
 @onready var blue_sprite = $Player_blue
 @onready var blue_animation_player = $Player_blue/AnimationPlayer
@@ -280,3 +300,108 @@ func _on_taro_farve_body_entered(_body):
 	taro_animation_player.play("taro_ani")
 	tea.teac = 'taro'
 	print(tea.teac)
+
+@onready var taro_lj_sprite = $Player_taro_lj
+@onready var taro_lj_ani = $Player_taro_lj/AnimationPlayer
+
+func _on_lj_body_entered(_body):
+	if tea.teac == 'taro' and tea.topping == 'empty':
+		print("Body entered")
+		taro_sprite.hide()
+		taro_lj_sprite.show()
+		taro_lj_ani.play("taro_lj_ani")
+		tea.teac = 'taro'
+		tea.topping ='lychee'
+		print(tea.teac, tea.topping)
+	if tea.teac == 'taro' and tea.topping == 'tapioka':
+		print("Body entered")
+		taro_t_sprite.hide()
+		taro_lj_sprite.show()
+		taro_lj_ani.play("taro_lj_ani")
+		tea.teac = 'taro'
+		tea.topping ='lychee'
+		print(tea.teac, tea.topping)
+
+@onready var taro_t_sprite = $Player_taro_t
+@onready var taro_t_ani = $Player_taro_t/taro_t_ani
+
+func _on_t_body_entered(_body):
+	if tea.teac == 'taro':
+		print("Body entered")
+		taro_sprite.hide()
+		taro_t_sprite.show()
+		taro_t_ani.play("taro_t_ani")
+		tea.teac = 'taro'
+		tea.topping ='tapioka'
+		print(tea.teac, tea.topping)
+	if tea.topping == 'lychee':
+		print("Body entered")
+		taro_lj_sprite.hide()
+		taro_t_sprite.show()
+		taro_t_ani.play("taro_t_ani")
+		tea.teac = 'taro'
+		tea.topping ='tapioka'
+		print(tea.teac, tea.topping)
+
+
+func _on_t_2_body_entered(_body):
+	print("Body entered")
+	taro_lj_sprite.hide()
+	taro_t_sprite.show()
+	taro_t_ani.play("taro_t_ani")
+	tea.teac = 'taro'
+	tea.topping ='tapioka'
+	print(tea.teac, tea.topping)
+
+
+func _on_kunde_1_body_entered(_body):
+	assert(get_tree().change_scene_to_file("res://Menu2.tscn") == OK)
+
+
+#Order 2
+@onready var honey_sprite = $Player_honey
+@onready var honey_ani = $Player_honey/honey_ani
+
+func _on_greenapple_farve_body_entered(_body):
+	if tea.teac == 'empty' and tea.topping == 'empty':
+		print("Body entered")
+		tom_sprite.hide()
+		honey_sprite.show()
+		honey_ani.play("honey_ani")
+		tea.teac = 'honey'
+		tea.topping ='empty'
+		print(tea.teac, tea.topping)
+
+	if tea.teac == 'milktea' and tea.topping == 'lychee':
+		print("Body entered")
+		milktea_lj_sprite.hide()
+		honey_lj_sprite.show()
+		honey_lj_ani.play("honey_lj_ani")
+		tea.teac = 'honey'
+		tea.topping ='lychee'
+		print(tea.teac, tea.topping)
+
+	if tea.teac == 'milktea' and tea.topping == 'empty':
+		print("Body entered")
+		milktea_sprite.hide()
+		honey_sprite.show()
+		honey_ani.play("honey_ani")
+		tea.teac = 'honey'
+		tea.topping ='empty'
+		print(tea.teac, tea.topping)
+		
+
+@onready var honey_lj_sprite = $Player_honey_lj
+@onready var honey_lj_ani = $Player_honey_lj/honey_lj_ani
+
+func _on_lj_2_body_exited(_body):
+	if tea.teac == 'honey' and tea.topping == 'empty':
+		print("Body entered")
+		honey_sprite.hide()
+		honey_lj_sprite.show()
+		tea.topping = 'lychee'
+
+
+
+	
+	

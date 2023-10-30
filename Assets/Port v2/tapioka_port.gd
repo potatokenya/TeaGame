@@ -11,14 +11,14 @@ func _process(_delta):
 	pass
 
 func close_port():
-	ap_tapioka.play("tapioka_port_closed")
+	ap_tapioka.play("tapioka_port_close")
 	tapioka_port_collision.set_deferred('disabled', false)
 
 
 
 func _on_player_v_2_entered_gate_tapioka():
 	print("tapioka_port")
-	if tea.teac == 'tapioka':
+	if tea.topping == 'tapioka':
 		ap_tapioka.play("tapioka_port_open")
 		print("tapioka open")
 		timer.start()

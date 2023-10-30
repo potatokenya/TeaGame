@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://6rfmtkkrtwp6"]
 
-[ext_resource path="res://Assets/farver og topping/Taro_farve.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://d2bn610n258ik" path="res://Assets/farver og topping/Taro_farve.png" id="1"]
 
 [node name="Taro_farve" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array( 16, 0, 16, 16, 8, 24, -8, 24, -16, 16, -16, 8, -16, 0, 0, -24 )
+polygon = PackedVector2Array(16, 0, 16, 16, 8, 24, -8, 24, -16, 16, -16, 8, -16, 0, 0, -24)

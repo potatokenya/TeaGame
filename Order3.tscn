@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bk206kockinas" path="res://Assets/Tiles/tile_6.png" id="15"]
 [ext_resource type="Texture2D" uid="uid://bnu60hajt5ure" path="res://Assets/tile_12.png" id="16"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/pomB.tscn" id="18"]
-[ext_resource type="PackedScene" path="res://Assets/farver v2/Taro_farve.tscn" id="19"]
+[ext_resource type="PackedScene" uid="uid://6rfmtkkrtwp6" path="res://Assets/farver v2/Taro_farve.tscn" id="19"]
 [ext_resource type="PackedScene" uid="uid://ctonfxy2048sl" path="res://Assets/farver v2/Blueberry_farve.tscn" id="20"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/GB.tscn" id="21"]
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Passion_farve.tscn" id="22"]

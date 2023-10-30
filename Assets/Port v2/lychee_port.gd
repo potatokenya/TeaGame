@@ -18,7 +18,7 @@ func close_port():
 
 func _on_player_v_2_entered_gate_lychee():
 	print("lychee_port")
-	if tea.teac == 'lychee':
+	if tea.topping == 'lychee':
 		ap_lychee.play("lychee_port_open")
 		print("lychee open")
 		timer.start()

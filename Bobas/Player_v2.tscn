@@ -1,9 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://cgtl46emwp6vh"]
+[gd_scene load_steps=31 format=3 uid="uid://cgtl46emwp6vh"]
 
 [ext_resource type="Texture2D" uid="uid://buy7jklwevldj" path="res://Assets/prøve.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://b8tocagew284n" path="res://Assets/bubbletea skygge/blueberry_skygge.png" id="2"]
 [ext_resource type="Script" path="res://Player_v2.gd" id="3"]
 [ext_resource type="Texture2D" uid="uid://bpxrf7vt1geyu" path="res://Assets/bubbletea skygge/Taro_skygge.png" id="4_wy1ci"]
+[ext_resource type="Texture2D" uid="uid://cv7pv10y4hwbj" path="res://Assets/bubbletea skygge/taro_jelly_skygge.png" id="5_q0fh7"]
+[ext_resource type="Texture2D" uid="uid://8tgq8wcj33of" path="res://Assets/bubbletea skygge/Taro_T_skygge.png" id="6_wpnb2"]
+[ext_resource type="Texture2D" uid="uid://bsebsv762fpcy" path="res://Assets/bubbletea skygge/green_skygge.png" id="7_52ljg"]
+[ext_resource type="Texture2D" uid="uid://dlmxl5dx4fto8" path="res://Assets/bubbletea skygge/green_jelly_skygge.png" id="8_v3mds"]
 
 [sub_resource type="Animation" id="13"]
 length = 0.001
@@ -102,6 +106,8 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_o0n8t"]
 resource_name = "taro_ani"
+length = 0.65
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -109,7 +115,7 @@ tracks/0/path = NodePath("taro:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
@@ -121,9 +127,164 @@ _data = {
 "taro_ani": SubResource("Animation_o0n8t")
 }
 
+[sub_resource type="Animation" id="Animation_fk526"]
+resource_name = "taro_lj_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_7qyoq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t1n42"]
+_data = {
+"RESET": SubResource("Animation_7qyoq"),
+"taro_lj_ani": SubResource("Animation_fk526")
+}
+
+[sub_resource type="Animation" id="Animation_vta0n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_t:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_27jvu"]
+resource_name = "taro_lj_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_t:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6tt86"]
+_data = {
+"RESET": SubResource("Animation_vta0n"),
+"taro_t_ani": SubResource("Animation_27jvu")
+}
+
+[sub_resource type="Animation" id="Animation_161jx"]
+resource_name = "honey_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honey:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_0i4ij"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honey:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rpknl"]
+_data = {
+"RESET": SubResource("Animation_0i4ij"),
+"honey_ani": SubResource("Animation_161jx")
+}
+
+[sub_resource type="Animation" id="Animation_kl8el"]
+resource_name = "honey_lj_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honey_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_e382f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honey_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oe04x"]
+_data = {
+"RESET": SubResource("Animation_e382f"),
+"honey_lj_ani": SubResource("Animation_kl8el")
+}
+
 [node name="Player_v2" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("3")
+move_speed = null
+vel = null
+newCharacterPath = null
 
 [node name="Tom" type="Sprite2D" parent="."]
 texture = ExtResource("1")
@@ -136,7 +297,6 @@ libraries = {
 }
 
 [node name="Tom_c" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 2)
 shape = SubResource("4")
 
@@ -171,3 +331,70 @@ shape = SubResource("4")
 libraries = {
 "": SubResource("AnimationLibrary_mv46p")
 }
+
+[node name="Player_taro_lj" type="Area2D" parent="."]
+visible = false
+
+[node name="taro_lj" type="Sprite2D" parent="Player_taro_lj"]
+texture = ExtResource("5_q0fh7")
+hframes = 2
+
+[node name="taro_lj_collision" type="CollisionShape2D" parent="Player_taro_lj"]
+position = Vector2(0, 3)
+shape = SubResource("4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player_taro_lj"]
+libraries = {
+"": SubResource("AnimationLibrary_t1n42")
+}
+
+[node name="Player_taro_t" type="Area2D" parent="."]
+visible = false
+
+[node name="taro_t" type="Sprite2D" parent="Player_taro_t"]
+texture = ExtResource("6_wpnb2")
+hframes = 2
+
+[node name="taro_t_collision" type="CollisionShape2D" parent="Player_taro_t"]
+position = Vector2(0, 3)
+shape = SubResource("4")
+
+[node name="taro_t_ani" type="AnimationPlayer" parent="Player_taro_t"]
+libraries = {
+"": SubResource("AnimationLibrary_6tt86")
+}
+
+[node name="Player_honey" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="honey" type="Sprite2D" parent="Player_honey"]
+texture = ExtResource("7_52ljg")
+hframes = 2
+
+[node name="honey_collision" type="CollisionShape2D" parent="Player_honey"]
+position = Vector2(0, 3)
+shape = SubResource("4")
+
+[node name="honey_ani" type="AnimationPlayer" parent="Player_honey"]
+libraries = {
+"": SubResource("AnimationLibrary_rpknl")
+}
+
+[node name="Player_honey_lj" type="StaticBody2D" parent="."]
+
+[node name="honey_lj" type="Sprite2D" parent="Player_honey_lj"]
+texture = ExtResource("8_v3mds")
+hframes = 2
+
+[node name="honey__lj_collision" type="CollisionShape2D" parent="Player_honey_lj"]
+position = Vector2(0, 3)
+shape = SubResource("4")
+
+[node name="honey_lj_ani" type="AnimationPlayer" parent="Player_honey_lj"]
+libraries = {
+"": SubResource("AnimationLibrary_oe04x")
+}
+
+[node name="Player_milktea" type="StaticBody2D" parent="."]
+
+[node name="Player_milktea_lj" type="StaticBody2D" parent="."]

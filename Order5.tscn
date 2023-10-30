@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" path="res://Assets/topping v2/T.tscn" id="20"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/GB.tscn" id="21"]
 [ext_resource type="PackedScene" path="res://Assets/farver v2/Passion_farve.tscn" id="22"]
-[ext_resource type="PackedScene" path="res://Assets/farver v2/Milktea_farve.tscn" id="23"]
+[ext_resource type="PackedScene" uid="uid://brfda1ogf3al6" path="res://Assets/farver v2/Milktea_farve.tscn" id="23"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nfajr"]
 texture = ExtResource("1")
