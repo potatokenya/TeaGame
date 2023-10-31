@@ -11,7 +11,7 @@ func _process(_delta):
 	pass
 
 func close_port():
-	ap_pom_2.play("pom_port_close_2")
+	ap_pom_2.play("pom_port_close")
 	pom_port_collision_2.set_deferred('disabled', false)
 
 

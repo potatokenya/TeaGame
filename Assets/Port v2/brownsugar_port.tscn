@@ -1,37 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://nbbbh1s24aju"]
+[gd_scene load_steps=9 format=3 uid="uid://nbbbh1s24aju"]
 
 [ext_resource type="Texture2D" uid="uid://c8t48kqqxo3ey" path="res://Assets/Opdelt porte/brownsugar_port_h.png" id="1_h0wtk"]
+[ext_resource type="Script" path="res://Assets/Port v2/brownsugar_port.gd" id="1_tberu"]
 [ext_resource type="Texture2D" uid="uid://d2388wjgfy2q6" path="res://Assets/Opdelt porte/brownsugar_port_v.png" id="2_cl7ds"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lt80k"]
 size = Vector2(67, 20)
-
-[sub_resource type="Animation" id="Animation_6xb42"]
-resource_name = "brownsugar_port_open"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("brownsugar_h:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(17, 2.08165e-12), Vector2(33, 2.08165e-12)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("brownsugar_v:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-13, 2.08165e-12), Vector2(-33, 2.08165e-12)]
-}
 
 [sub_resource type="Animation" id="Animation_1be8b"]
 length = 0.001
@@ -87,6 +61,33 @@ tracks/1/keys = {
 "values": [Vector2(-13, 2.08165e-12), Vector2(-33, 2.08165e-12)]
 }
 
+[sub_resource type="Animation" id="Animation_6xb42"]
+resource_name = "brownsugar_port_open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("brownsugar_h:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, 2.08165e-12), Vector2(33, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("brownsugar_v:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-13, 2.08165e-12), Vector2(-33, 2.08165e-12)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gscgc"]
 _data = {
 "RESET": SubResource("Animation_1be8b"),
@@ -95,6 +96,7 @@ _data = {
 }
 
 [node name="brownsugar_port" type="StaticBody2D"]
+script = ExtResource("1_tberu")
 
 [node name="brownsugar_h" type="Sprite2D" parent="."]
 position = Vector2(17, 2.08165e-12)
@@ -112,3 +114,6 @@ shape = SubResource("RectangleShape2D_lt80k")
 libraries = {
 "": SubResource("AnimationLibrary_gscgc")
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5

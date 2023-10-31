@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @onready var ap_passion_3 = $ap_passion_3
 @onready var timer = $Timer
-@onready var passion_port_collision_3 = $passion_port_collision
+@onready var passion_port_collision_3 = $passion_port_collision_3
 
 func _ready():
 	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=3 uid="uid://cgtl46emwp6vh"]
+[gd_scene load_steps=126 format=3 uid="uid://cgtl46emwp6vh"]
 
 [ext_resource type="Texture2D" uid="uid://buy7jklwevldj" path="res://Assets/prøve.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://b8tocagew284n" path="res://Assets/bubbletea skygge/blueberry_skygge.png" id="2"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://dywrp6hwl1mpu" path="res://Assets/bubbletea skygge/milktea_T_skygge.png" id="23_fepxo"]
 [ext_resource type="Texture2D" uid="uid://bsdybshdbakpe" path="res://Assets/bubbletea skygge/milktea_T_sirup_skygge.png" id="24_cie7l"]
 [ext_resource type="Texture2D" uid="uid://duvv6si3l10kg" path="res://Assets/bubbletea skygge/passion_pomB_sirup_skygge.png" id="25_0it8s"]
+[ext_resource type="Texture2D" uid="uid://q7b75577tgdt" path="res://Assets/bubbletea skygge/milktea_pomB_sirup_skygge.png" id="26_03120"]
+[ext_resource type="Texture2D" uid="uid://df3nswplbtkfj" path="res://Assets/bubbletea skygge/milktea_pomB_skygge.png" id="27_1sjur"]
 
 [sub_resource type="Animation" id="13"]
 length = 0.001
@@ -388,6 +390,21 @@ _data = {
 "milktea_lj_ani": SubResource("Animation_10dcd")
 }
 
+[sub_resource type="Animation" id="Animation_nus2x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_4lf2n"]
 resource_name = "blue_ani_2"
 length = 0.65
@@ -405,12 +422,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_nus2x"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4onmd"]
+_data = {
+"RESET": SubResource("Animation_nus2x"),
+"blue_ani_2": SubResource("Animation_4lf2n")
+}
+
+[sub_resource type="Animation" id="Animation_fja82"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("blue_2:frame")
+tracks/0/path = NodePath("taro_2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -418,12 +441,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4onmd"]
-_data = {
-"RESET": SubResource("Animation_nus2x"),
-"blue_ani_2": SubResource("Animation_4lf2n")
 }
 
 [sub_resource type="Animation" id="Animation_qdhvv"]
@@ -443,12 +460,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_fja82"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3np7l"]
+_data = {
+"RESET": SubResource("Animation_fja82"),
+"taro_ani_2": SubResource("Animation_qdhvv")
+}
+
+[sub_resource type="Animation" id="Animation_4n3ul"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("taro_2:frame")
+tracks/0/path = NodePath("taro_pom:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -456,12 +479,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3np7l"]
-_data = {
-"RESET": SubResource("Animation_fja82"),
-"taro_ani_2": SubResource("Animation_qdhvv")
 }
 
 [sub_resource type="Animation" id="Animation_didyb"]
@@ -481,12 +498,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_4n3ul"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gsyi"]
+_data = {
+"RESET": SubResource("Animation_4n3ul"),
+"taro_pom_ani": SubResource("Animation_didyb")
+}
+
+[sub_resource type="Animation" id="Animation_6po0h"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("taro_pom:frame")
+tracks/0/path = NodePath("taro_gb:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -494,12 +517,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gsyi"]
-_data = {
-"RESET": SubResource("Animation_4n3ul"),
-"taro_pom_ani": SubResource("Animation_didyb")
 }
 
 [sub_resource type="Animation" id="Animation_mf4iy"]
@@ -519,12 +536,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_6po0h"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_br3b1"]
+_data = {
+"RESET": SubResource("Animation_6po0h"),
+"taro_gb_ani": SubResource("Animation_mf4iy")
+}
+
+[sub_resource type="Animation" id="Animation_qr3qa"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("taro_gb:frame")
+tracks/0/path = NodePath("passion:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -532,12 +555,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_br3b1"]
-_data = {
-"RESET": SubResource("Animation_6po0h"),
-"taro_gb_ani": SubResource("Animation_mf4iy")
 }
 
 [sub_resource type="Animation" id="Animation_ib66c"]
@@ -557,12 +574,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_qr3qa"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j6r05"]
+_data = {
+"RESET": SubResource("Animation_qr3qa"),
+"passion_ani": SubResource("Animation_ib66c")
+}
+
+[sub_resource type="Animation" id="Animation_pgvpd"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("passion:frame")
+tracks/0/path = NodePath("passion_pom:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -570,12 +593,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_j6r05"]
-_data = {
-"RESET": SubResource("Animation_qr3qa"),
-"passion_ani": SubResource("Animation_ib66c")
 }
 
 [sub_resource type="Animation" id="Animation_mtr5v"]
@@ -595,12 +612,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_pgvpd"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_db3dy"]
+_data = {
+"RESET": SubResource("Animation_pgvpd"),
+"passiom_pom_ani": SubResource("Animation_mtr5v")
+}
+
+[sub_resource type="Animation" id="Animation_d3mpv"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("passion_pom:frame")
+tracks/0/path = NodePath("passion_gb:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -608,12 +631,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_db3dy"]
-_data = {
-"RESET": SubResource("Animation_pgvpd"),
-"passiom_pom_ani": SubResource("Animation_mtr5v")
 }
 
 [sub_resource type="Animation" id="Animation_wlv0b"]
@@ -633,12 +650,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_d3mpv"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qr5ng"]
+_data = {
+"RESET": SubResource("Animation_d3mpv"),
+"passion_gb_ani": SubResource("Animation_wlv0b")
+}
+
+[sub_resource type="Animation" id="Animation_d28nw"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("passion_gb:frame")
+tracks/0/path = NodePath("blue_pom:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -646,12 +669,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qr5ng"]
-_data = {
-"RESET": SubResource("Animation_d3mpv"),
-"passion_gb_ani": SubResource("Animation_wlv0b")
 }
 
 [sub_resource type="Animation" id="Animation_i13s7"]
@@ -669,21 +686,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_d28nw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("blue_pom:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ssa3s"]
@@ -730,6 +732,21 @@ _data = {
 "RESET": SubResource("Animation_7iyx0")
 }
 
+[sub_resource type="Animation" id="Animation_7li3q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_c654b"]
 resource_name = "pom_ani"
 length = 0.65
@@ -747,12 +764,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_7li3q"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fbvav"]
+_data = {
+"RESET": SubResource("Animation_7li3q"),
+"pom_ani": SubResource("Animation_c654b")
+}
+
+[sub_resource type="Animation" id="Animation_vbrts"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("pom:frame")
+tracks/0/path = NodePath("milktea_gb:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -760,12 +783,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fbvav"]
-_data = {
-"RESET": SubResource("Animation_7li3q"),
-"pom_ani": SubResource("Animation_c654b")
 }
 
 [sub_resource type="Animation" id="Animation_0rtoa"]
@@ -785,12 +802,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_vbrts"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yai0i"]
+_data = {
+"RESET": SubResource("Animation_vbrts"),
+"milktea_gb_ani": SubResource("Animation_0rtoa")
+}
+
+[sub_resource type="Animation" id="Animation_0bm6k"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("milktea_gb:frame")
+tracks/0/path = NodePath("strawberry_gb:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -798,12 +821,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_yai0i"]
-_data = {
-"RESET": SubResource("Animation_vbrts"),
-"milktea_gb_ani": SubResource("Animation_0rtoa")
 }
 
 [sub_resource type="Animation" id="Animation_tm8xw"]
@@ -823,12 +840,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_0bm6k"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x2ouu"]
+_data = {
+"RESET": SubResource("Animation_0bm6k"),
+"strawberry_gb_ani": SubResource("Animation_tm8xw")
+}
+
+[sub_resource type="Animation" id="Animation_t1idv"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("strawberry_gb:frame")
+tracks/0/path = NodePath("strawberry_pom:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -836,12 +859,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_x2ouu"]
-_data = {
-"RESET": SubResource("Animation_0bm6k"),
-"strawberry_gb_ani": SubResource("Animation_tm8xw")
 }
 
 [sub_resource type="Animation" id="Animation_uw7o6"]
@@ -861,12 +878,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_t1idv"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fqk5f"]
+_data = {
+"RESET": SubResource("Animation_t1idv"),
+"strawberry_pom_ani": SubResource("Animation_uw7o6")
+}
+
+[sub_resource type="Animation" id="Animation_2fbmj"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("strawberry_pom:frame")
+tracks/0/path = NodePath("passion_2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -874,12 +897,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fqk5f"]
-_data = {
-"RESET": SubResource("Animation_t1idv"),
-"strawberry_pom_ani": SubResource("Animation_uw7o6")
 }
 
 [sub_resource type="Animation" id="Animation_wo2hn"]
@@ -899,12 +916,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_2fbmj"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wfkg5"]
+_data = {
+"RESET": SubResource("Animation_2fbmj"),
+"passion_ani_2": SubResource("Animation_wo2hn")
+}
+
+[sub_resource type="Animation" id="Animation_lj6c7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("passion_2:frame")
+tracks/0/path = NodePath("passion_pom_2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -912,12 +935,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wfkg5"]
-_data = {
-"RESET": SubResource("Animation_2fbmj"),
-"passion_ani_2": SubResource("Animation_wo2hn")
 }
 
 [sub_resource type="Animation" id="Animation_qdbfr"]
@@ -937,12 +954,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_lj6c7"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n1g6n"]
+_data = {
+"RESET": SubResource("Animation_lj6c7"),
+"passion_pom_ani_2": SubResource("Animation_qdbfr")
+}
+
+[sub_resource type="Animation" id="Animation_bkyx8"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("passion_pom_2:frame")
+tracks/0/path = NodePath("passion_gb_2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -950,12 +973,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_n1g6n"]
-_data = {
-"RESET": SubResource("Animation_lj6c7"),
-"passion_pom_ani_2": SubResource("Animation_qdbfr")
 }
 
 [sub_resource type="Animation" id="Animation_psjqe"]
@@ -975,12 +992,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_bkyx8"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0g32j"]
+_data = {
+"RESET": SubResource("Animation_bkyx8"),
+"passion_gb_ani_2": SubResource("Animation_psjqe")
+}
+
+[sub_resource type="Animation" id="Animation_1w5et"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("passion_gb_2:frame")
+tracks/0/path = NodePath("passion_t:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -988,12 +1011,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0g32j"]
-_data = {
-"RESET": SubResource("Animation_bkyx8"),
-"passion_gb_ani_2": SubResource("Animation_psjqe")
 }
 
 [sub_resource type="Animation" id="Animation_1x0nb"]
@@ -1013,12 +1030,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_1w5et"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4bb5"]
+_data = {
+"RESET": SubResource("Animation_1w5et"),
+"passion_t_ani": SubResource("Animation_1x0nb")
+}
+
+[sub_resource type="Animation" id="Animation_rke1y"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("passion_t:frame")
+tracks/0/path = NodePath("milktea_t:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1026,12 +1049,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4bb5"]
-_data = {
-"RESET": SubResource("Animation_1w5et"),
-"passion_t_ani": SubResource("Animation_1x0nb")
 }
 
 [sub_resource type="Animation" id="Animation_mtdck"]
@@ -1051,12 +1068,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_rke1y"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7gv4m"]
+_data = {
+"RESET": SubResource("Animation_rke1y"),
+"milktea_t_ani": SubResource("Animation_mtdck")
+}
+
+[sub_resource type="Animation" id="Animation_udfam"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("milktea_t:frame")
+tracks/0/path = NodePath("brownsugar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1064,12 +1087,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7gv4m"]
-_data = {
-"RESET": SubResource("Animation_rke1y"),
-"milktea_t_ani": SubResource("Animation_mtdck")
 }
 
 [sub_resource type="Animation" id="Animation_lmquo"]
@@ -1089,12 +1106,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_udfam"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_efylh"]
+_data = {
+"RESET": SubResource("Animation_udfam"),
+"brownsugar_ani": SubResource("Animation_lmquo")
+}
+
+[sub_resource type="Animation" id="Animation_8xf2r"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("brownsugar:frame")
+tracks/0/path = NodePath("passion_bs:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1102,12 +1125,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_efylh"]
-_data = {
-"RESET": SubResource("Animation_udfam"),
-"brownsugar_ani": SubResource("Animation_lmquo")
 }
 
 [sub_resource type="Animation" id="Animation_cx8dm"]
@@ -1127,12 +1144,18 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_8xf2r"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_anlft"]
+_data = {
+"RESET": SubResource("Animation_8xf2r"),
+"passion_bs_ani": SubResource("Animation_cx8dm")
+}
+
+[sub_resource type="Animation" id="Animation_c0x6o"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("passion_bs:frame")
+tracks/0/path = NodePath("milktea_bs_pom:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1142,18 +1165,70 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_anlft"]
+[sub_resource type="Animation" id="Animation_xqehb"]
+resource_name = "milktea_bs_pom_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_bs_pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r1au4"]
 _data = {
-"RESET": SubResource("Animation_8xf2r"),
-"passion_bs_ani": SubResource("Animation_cx8dm")
+"RESET": SubResource("Animation_c0x6o"),
+"milktea_bs_pom_ani": SubResource("Animation_xqehb")
+}
+
+[sub_resource type="Animation" id="Animation_wt3rn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0rrct"]
+resource_name = "milktea_pom_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oy5ti"]
+_data = {
+"RESET": SubResource("Animation_wt3rn"),
+"milktea_pom_ani": SubResource("Animation_0rrct")
 }
 
 [node name="Player_v2" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("3")
-move_speed = null
-vel = null
-newCharacterPath = null
 
 [node name="Tom" type="Sprite2D" parent="."]
 texture = ExtResource("1")
@@ -1616,4 +1691,36 @@ shape = SubResource("4")
 [node name="passion_bs_ap" type="AnimationPlayer" parent="Player_passion_bs"]
 libraries = {
 "": SubResource("AnimationLibrary_anlft")
+}
+
+[node name="Player_milktea_bs_pom" type="Area2D" parent="."]
+visible = false
+
+[node name="milktea_bs_pom" type="Sprite2D" parent="Player_milktea_bs_pom"]
+texture = ExtResource("26_03120")
+hframes = 2
+
+[node name="milktea_bs_pom_c" type="CollisionShape2D" parent="Player_milktea_bs_pom"]
+position = Vector2(0, 7)
+shape = SubResource("4")
+
+[node name="milktea_bs_pom_ap" type="AnimationPlayer" parent="Player_milktea_bs_pom"]
+libraries = {
+"": SubResource("AnimationLibrary_r1au4")
+}
+
+[node name="Player_milktea_pom" type="Area2D" parent="."]
+visible = false
+
+[node name="milktea_pom" type="Sprite2D" parent="Player_milktea_pom"]
+texture = ExtResource("27_1sjur")
+hframes = 2
+
+[node name="milktea_pom_c" type="CollisionShape2D" parent="Player_milktea_pom"]
+position = Vector2(0, 7)
+shape = SubResource("4")
+
+[node name="milktea_pom_ap" type="AnimationPlayer" parent="Player_milktea_pom"]
+libraries = {
+"": SubResource("AnimationLibrary_oy5ti")
 }

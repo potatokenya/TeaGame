@@ -557,7 +557,7 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ok0w2"]
 texture = ExtResource("5")
 texture_region_size = Vector2i(64, 64)
-0:0/next_alternative_id = 8
+0:0/next_alternative_id = 9
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -602,6 +602,9 @@ texture_region_size = Vector2i(64, 64)
 0:0/7/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/7/physics_layer_0/angular_velocity = 0.0
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
+0:0/8 = 8
+0:0/8/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/8/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bpfbo"]
 texture = ExtResource("6")
@@ -694,7 +697,7 @@ position = Vector2(31, 483)
 position = Vector2(94.9999, 291)
 
 [node name="pom_port_3" parent="." instance=ExtResource("6_aqjnu")]
-position = Vector2(672, 285)
+position = Vector2(670, 285)
 
 [node name="milktea_port_2" parent="." instance=ExtResource("7_ewr2d")]
 position = Vector2(871, 415)
@@ -703,37 +706,37 @@ rotation = 1.5708
 [node name="milktea_port_3" parent="." instance=ExtResource("8_im4qw")]
 position = Vector2(799, 192)
 
-[node name="GB" parent="." instance=ExtResource("20")]
+[node name="GB2" parent="." instance=ExtResource("20")]
 position = Vector2(608, 544)
 
-[node name="Milktea_farve" parent="." instance=ExtResource("19")]
+[node name="Milktea_farve2" parent="." instance=ExtResource("19")]
 position = Vector2(812, 415)
 
-[node name="pomB" parent="." instance=ExtResource("17")]
+[node name="pomB2" parent="." instance=ExtResource("17")]
 position = Vector2(172, 415)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Kunde4" type="Area2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Kunde4"]
 position = Vector2(576, 184)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("12")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kunde4"]
 position = Vector2(576, 184)
 scale = Vector2(0.25, 0.25)
 polygon = PackedVector2Array(51, -259.1, 51, -257.8, 72, -247.8, 72, -246.5, 89, -234.5, 89, -233.4, 103, -220.4, 103, -218.3, 120, -197.2, 120, -195, 129, -179, 129, -175.9, 134, -162.3, 134, 28.5, 96.1, 28.5, 83, 32.1, 83, 30.4, 55, 28.6, 55, 32.1, 66, 87.3, 66, 149.5, 63.2, 149.5, 42, 151.3, 42, 234.5, 43.6, 234.5, 61, 245.4, 61, 249.6, 59.7, 258.5, 57.6, 258.5, 48.6, 264.5, 10.2, 264.5, 5, 263, 5, 261.4, -1, 256.3, -3.3, 256.5, -13.7, 264.5, -51.2, 264.5, -59, 261.9, -59, 260.2, -65, 253.2, -65, 248.8, -57, 238.5, -54.1, 238.5, -42, 235, -42, 151.3, -65, 149.3, -65, 88.3, -53.5, 28.5, -78, 28.5, -93, 32, -93, 30.4, -134, 28.5, -134, -165.6, -129.6, -184.5, -128.3, -184.5, -119.3, -204.5, -118.1, -204.5, -108.1, -219.5, -106.9, -219.5, -90.9, -236.5, -88.7, -236.5, -75.7, -247.5, -73.5, -247.5, -56.5, -257.5, -53.3, -257.5, -29.7, -264.5, 29, -264.5)
 
-[node name="Player_v2" parent="." instance=ExtResource("2_n1eho")]
-position = Vector2(375, 419)
-
 [node name="Strawberry_farve" parent="." instance=ExtResource("16")]
 position = Vector2(896, 96)
+
+[node name="Player_v2" parent="." instance=ExtResource("2_n1eho")]
+position = Vector2(375, 419)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("8")
 format = 2
-layer_0/tile_data = PackedInt32Array(65535, 0, 393216, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 196608, 6, 5, 0, 7, 3, 196608, 8, 3, 196608, 9, 3, 196608, 10, 3, 196608, 11, 3, 196608, 12, 3, 196608, 13, 3, 196608, 14, 3, 196608, 15, 3, 196608, 16, 3, 393216, 131071, 5, 0, 65536, 3, 196608, 65537, 3, 196608, 65538, 3, 196608, 65539, 3, 196608, 65540, 3, 196608, 65541, 3, 196608, 65542, 7, 327680, 65547, 1, 393216, 65552, 3, 393216, 196607, 3, 327680, 131078, 1, 327680, 131083, 1, 393216, 131085, 4, 393216, 131086, 4, 0, 131088, 3, 393216, 262143, 3, 327680, 196614, 1, 393216, 196619, 1, 393216, 196621, 4, 196608, 196622, 4, 327680, 196624, 3, 393216, 327679, 8, 0, 262144, 2, 0, 262146, 2, 196608, 262147, 10, 327680, 262150, 10, 393216, 262151, 1, 196608, 262152, 1, 196608, 262153, 2, 0, 262155, 1, 393216, 262160, 3, 393216, 393215, 6, 196608, 327683, 1, 327680, 327691, 10, 393216, 327692, 1, 196608, 327693, 2, 0, 327696, 3, 393216, 458751, 6, 196608, 393219, 1, 393216, 393232, 3, 393216, 524287, 6, 196608, 458753, 2, 196608, 458754, 1, 196608, 458755, 10, 196608, 458760, 2, 196608, 458761, 1, 196608, 458762, 1, 196608, 458763, 1, 196608, 458764, 1, 0, 458765, 2, 0, 458768, 3, 393216, 589823, 6, 196608, 524304, 3, 393216, 655359, 5, 393216, 589824, 6, 327680, 589825, 6, 327680, 589826, 3, 0, 589827, 6, 327680, 589828, 6, 327680, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 5, 196608)
+layer_0/tile_data = PackedInt32Array(65535, 0, 393216, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 196608, 6, 5, 0, 7, 3, 196608, 8, 3, 196608, 9, 3, 196608, 10, 3, 196608, 11, 8, 327680, 12, 3, 196608, 13, 3, 196608, 14, 3, 196608, 15, 3, 196608, 16, 3, 393216, 131071, 5, 0, 65536, 3, 196608, 65537, 3, 196608, 65538, 3, 196608, 65539, 3, 196608, 65540, 3, 196608, 65541, 3, 196608, 65542, 7, 327680, 65547, 1, 393216, 65552, 3, 393216, 196607, 3, 327680, 131078, 1, 327680, 131083, 1, 393216, 131085, 4, 393216, 131086, 4, 0, 131088, 3, 393216, 262143, 3, 327680, 196614, 1, 393216, 196619, 1, 393216, 196621, 4, 196608, 196622, 4, 327680, 196624, 3, 393216, 327679, 8, 0, 262144, 2, 0, 262146, 2, 196608, 262147, 10, 327680, 262150, 10, 393216, 262151, 1, 196608, 262152, 1, 196608, 262153, 2, 0, 262155, 1, 393216, 262160, 3, 393216, 393215, 6, 196608, 327683, 1, 327680, 327691, 10, 393216, 327692, 1, 196608, 327693, 2, 0, 327696, 3, 393216, 458751, 6, 196608, 393219, 1, 393216, 393232, 3, 393216, 524287, 6, 196608, 458753, 2, 196608, 458754, 1, 196608, 458755, 10, 196608, 458760, 2, 196608, 458761, 1, 196608, 458762, 1, 196608, 458763, 1, 196608, 458764, 1, 0, 458765, 2, 0, 458768, 3, 393216, 589823, 6, 196608, 524304, 3, 393216, 655359, 5, 393216, 589824, 6, 327680, 589825, 6, 327680, 589826, 3, 0, 589827, 6, 327680, 589828, 6, 327680, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 5, 196608)
 
 [node name="ColorRect4" type="ColorRect" parent="."]
 offset_left = 38.0
@@ -764,6 +767,11 @@ position = Vector2(496, 112)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("11")
 
+[connection signal="body_entered" from="GB2" to="Player_v2" method="_on_gb_2_body_entered"]
+[connection signal="body_entered" from="Milktea_farve2" to="Player_v2" method="_on_milktea_farve_2_body_entered"]
+[connection signal="body_entered" from="pomB2" to="Player_v2" method="_on_pom_b_2_body_entered"]
+[connection signal="body_entered" from="Kunde4" to="Player_v2" method="_on_kunde_4_body_entered"]
+[connection signal="body_entered" from="Strawberry_farve" to="Player_v2" method="_on_strawberry_farve_body_entered"]
 [connection signal="entered_gate_GB_3" from="Player_v2" to="GB_port_3" method="_on_player_v_2_entered_gate_gb_3"]
 [connection signal="entered_gate_GB_4" from="Player_v2" to="GB_port_4" method="_on_player_v_2_entered_gate_gb_4"]
 [connection signal="entered_gate_GB_5" from="Player_v2" to="GB_port_5" method="_on_player_v_2_entered_gate_gb_5"]

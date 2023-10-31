@@ -275,7 +275,7 @@ func _physics_process(delta):
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "syrup":
+		if collider.name == "brownsugar_port":
 			print("hit")
 			entered_gate_syrup.emit()
 			
@@ -582,13 +582,22 @@ func _on_passion_farve_body_entered(_body):
 
 func _on_gb_body_entered(_body):
 	if tea.teac == 'taro' and tea.topping == 'pom':
+		print("Body entered")
 		taro_pom_sprite.hide()
 		taro_gb_sprite.show()
 		taro_gb_ani.play('taro_gb_ani')
 		tea.teac = 'taro'
 		tea.topping = 'GB'
 		print(tea.teac, tea.topping)
-
+	
+	if tea.teac == 'passion' and tea.topping == 'pom':
+		print("Body entered")
+		passion_pom_sprite.hide()
+		passion_gb_sprite.show()
+		passion_gb_ani.play('passion_gb_ani')
+		tea.teac = 'passion'
+		tea.topping = 'GB'
+		print(tea.teac, tea.topping)
 
 func _on_kunde_3_body_entered(_body):
 	assert(get_tree().change_scene_to_file("res://Menu4.tscn") == OK)
@@ -603,16 +612,277 @@ func _on_kunde_3_body_entered(_body):
 @onready var pom_sprite = $Player_pom
 @onready var pom_ani = $Player_pom/pom_ap
 
-func _on_gb_2_body_entered(body):
+func _on_gb_2_body_entered(_body):
 	if tea.teac == 'empty' and tea.topping == 'empty':
+		print("Body entered")
 		tom_sprite.hide()
 		gb_sprite.show()
 		gb_ani.play('GB_ani')
 		tea.teac = 'empty'
 		tea.topping = 'GB'
 		print(tea.teac, tea.topping)
+	
+	if tea.teac == 'empty' and tea.topping == 'pom':
+		print("Body entered")
+		pom_sprite.hide()
+		gb_sprite.show()
+		gb_ani.play('GB_ani')
+		tea.teac = 'empty'
+		tea.topping = 'GB'
+		print(tea.teac, tea.topping)
+		
 
 @onready var milktea_gb_sprite = $Player_milktea_gb
-@onready var 
-func _on_milktea_farve_2_body_entered(body):
-	pass # Replace with function body.
+@onready var milktea_gb_ani = $Player_milktea_gb/milktea_gb_ap
+
+func _on_milktea_farve_2_body_entered(_body):
+	if tea.teac == 'empty' and tea.topping == 'GB':
+		print("Body entered")
+		gb_sprite.hide()
+		milktea_gb_sprite.show()
+		milktea_gb_ani.play('milktea_gb_ani')
+		tea.teac = 'milktea'
+		tea.topping = 'GB'
+		print(tea.teac, tea.topping)
+		
+
+@onready var strawberry_gb_sprite = $Player_strawberry_gb
+@onready var strawberry_gb_ani = $Player_strawberry_gb/strawberry_gb_ap
+@onready var strawberry_pom_sprite = $Player_strawberry_pom
+@onready var strawberry_pom_ani = $Player_strawberry_pom/strawberry_pom_ap
+
+func _on_strawberry_farve_body_entered(_body):
+	if tea.teac == 'milktea' and tea.topping == 'GB':
+		print("Body entered")
+		milktea_gb_sprite.hide()
+		strawberry_gb_sprite.show()
+		strawberry_gb_ani.play('strawberry_gb_ani')
+		tea.teac = 'strawberry'
+		tea.topping = 'GB'
+		print(tea.teac, tea.topping)
+
+
+func _on_pom_b_2_body_entered(_body):
+	if tea.teac == 'empty' and tea.topping == 'GB':
+		print("Body entered")
+		gb_sprite.hide()
+		pom_sprite.show()
+		pom_ani.play('pom_ani')
+		tea.teac = 'empty'
+		tea.topping = 'pom'
+		print(tea.teac, tea.topping)
+		
+	if tea.teac == 'strawberry' and tea.topping == 'GB':
+		print("Body entered")
+		strawberry_gb_sprite.hide()
+		strawberry_pom_sprite.show()
+		strawberry_pom_ani.play('strawberry_pom_ani')
+		tea.teac = 'strawberry'
+		tea.topping = 'pom'
+		print(tea.teac, tea.topping)
+		
+
+func _on_kunde_4_body_entered(_body):
+	assert(get_tree().change_scene_to_file("res://Menu5.tscn") == OK)
+	tea.teac = 'empty'
+	tea.topping = 'empty'
+
+
+
+
+#order 5
+@onready var passion_sprite_2 = $Player_passion_2
+@onready var passion_ani_2 = $Player_passion_2/passion_ap_2
+
+
+
+func _on_passion_farve_2_body_entered(_body):
+	if tea.teac == 'empty' and tea.topping == 'empty':
+		print("Body entered")
+		tom_sprite.hide()
+		passion_sprite_2.show()
+		passion_ani_2.play('passion_ani_2')
+		tea.teac = 'passion'
+		tea.topping = 'empty'
+		print(tea.teac, tea.topping)
+
+@onready var passion_gb_sprite_2 = $Player_passion_gb_2
+@onready var passion_gb_ani_2 = $Player_passion_gb_2/passion_gb_ap_2
+
+@onready var passion_pom_sprite_2 = $Player_passion_pom_2
+@onready var passion_pom_ani_2 = $Player_passion_pom_2/passion_pom_ap_2
+
+@onready var passion_t_sprite = $Player_passion_t
+@onready var passion_t_ani = $Player_passion_t/passion_t_ap
+
+func _on_pom_b_3_body_entered(_body):
+	if tea.teac == 'passion' and tea.topping == 'empty':
+		print("Body entered")
+		passion_sprite_2.hide()
+		passion_pom_sprite_2.show()
+		passion_pom_ani_2.play('passion_pom_ani_2')
+		tea.teac = 'passion'
+		tea.topping ='pom'
+		print(tea.teac, tea.topping)
+	
+	if tea.teac == 'passion' and tea.topping == 'GB':
+		print("Body entered")
+		passion_gb_sprite_2.hide()
+		passion_pom_sprite_2.show()
+		passion_pom_ani_2.play('passion_pom_ani_2')
+		tea.teac = 'passion'
+		tea.topping ='pom'
+		print(tea.teac, tea.topping)
+	
+	if tea.teac == 'passion' and tea.topping == 'tapioka':
+		print("Body entered")
+		passion_t_sprite.hide()
+		passion_pom_sprite_2.show()
+		passion_pom_ani_2.play('passion_pom_ani_2')
+		tea.teac = 'passion'
+		tea.topping ='pom'
+		print(tea.teac, tea.topping)
+
+
+
+func _on_gb_3_body_entered(_body):
+	if tea.teac == 'passion' and tea.topping == 'empty':
+		print("Body entered")
+		passion_sprite_2.hide()
+		passion_gb_sprite_2.show()
+		passion_gb_ani_2.play('passion_gb_ani_2')
+		tea.teac = 'passion'
+		tea.topping ='GB'
+		print(tea.teac, tea.topping)
+	
+	if tea.teac == 'passion' and tea.topping == 'pom':
+		print("Body entered")
+		passion_pom_sprite_2.hide()
+		passion_gb_sprite_2.show()
+		passion_gb_ani_2.play('passion_gb_ani_2')
+		tea.teac = 'passion'
+		tea.topping ='GB'
+		print(tea.teac, tea.topping)
+	
+	if tea.teac == 'passion' and tea.topping == 'tapioka':
+		print("Body entered")
+		passion_t_sprite.hide()
+		passion_gb_sprite_2.show()
+		passion_gb_ani_2.play('passion_gb_ani_2')
+		tea.teac = 'passion'
+		tea.topping ='GB'
+		print(tea.teac, tea.topping)
+
+
+func _on_t_3_body_entered(_body):
+	if tea.teac == 'passion' and tea.topping == 'pom':
+		print("Body entered")
+		passion_pom_sprite_2.hide()
+		passion_t_sprite.show()
+		passion_t_ani.play('passion_t_ani')
+		tea.teac = 'passion'
+		tea.topping ='tapioka'
+		print(tea.teac, tea.topping)
+
+@onready var milktea_t_sprite = $Player_milktea_t
+@onready var milktea_t_ani = $Player_milktea_t/milktea_t_ap
+
+@onready var brownsugar_sprite = $Player_brownsugar
+@onready var brownsugar_ani = $Player_brownsugar/brownsugar_ap
+
+@onready var passion_bs_sprite = $Player_passion_bs
+@onready var passion_bs_ani = $Player_passion_bs/passion_bs_ap
+
+@onready var milktea_bs_pom_sprite = $Player_milktea_bs_pom
+@onready var milktea_bs_pom_ani = $Player_milktea_bs_pom/milktea_bs_pom_ap
+
+@onready var milktea_pom_sprite = $Player_milktea_pom
+@onready var milktea_pom_ani = $Player_milktea_pom/milktea_pom_ap
+
+
+func _on_milktea_farve_3_body_entered(_body):
+	if tea.teac == 'passion' and tea.topping == 'pom' and tea.sirup == 'empty':
+		print("Body entered")
+		passion_pom_sprite_2.hide()
+		milktea_pom_sprite.show()
+		milktea_pom_ani.play('milktea_pom_ani')
+		tea.teac = 'milktea'
+		tea.topping ='pom'
+		print(tea.teac, tea.topping)
+
+	if tea.teac == 'passion' and tea.topping == 'tapioka' and tea.sirup == 'empty':
+		print("Body entered")
+		passion_t_sprite.hide()
+		milktea_t_sprite.show()
+		milktea_t_ani.play('milktea_t_ani')
+		tea.teac = 'milktea'
+		tea.topping ='tapioka'
+		print(tea.teac, tea.topping)
+		
+	if tea.teac == 'passion' and tea.topping == 'pom' and tea.sirup == 'bs':
+		print("Body entered")
+		passion_bs_sprite.hide()
+		milktea_bs_pom_sprite.show()
+		milktea_bs_pom_ani.play('milktea_bs_pom_ani')
+		tea.teac = 'milktea'
+		tea.topping ='pom'
+		tea.sirup = 'bs'
+		print(tea.teac, tea.topping)
+
+	if tea.teac == 'passion' and tea.topping == 'tapioka' and tea.sirup == 'bs':
+		print("Body entered")
+		passion_bs_ani.hide()
+		brownsugar_sprite.show()
+		brownsugar_ani.play('brownsugar_ani')
+		tea.teac = 'milktea'
+		tea.topping ='tapioka'
+		tea.sirup = 'bs'
+		print(tea.teac, tea.topping)
+		
+
+func _on_syrup_body_entered(_body):
+	if tea.teac == 'passion' and tea.topping == 'pom':
+		print("Body entered")
+		passion_pom_sprite_2.hide()
+		passion_bs_sprite.show()
+		passion_bs_ani.play('passion_bs_ani')
+		tea.teac = 'passion'
+		tea.topping ='pom'
+		tea.sirup = 'bs'
+		print(tea.teac, tea.topping,tea.sirup)
+
+	if tea.teac == 'passion' and tea.topping == 'tapioka':
+		print("Body entered")
+		passion_t_sprite.hide()
+		passion_bs_sprite.show()
+		passion_bs_ani.play('passion_bs_ani')
+		tea.teac = 'passion'
+		tea.topping ='tapioka'
+		tea.sirup = 'bs'
+		print(tea.teac, tea.topping, tea.sirup)
+		
+	if tea.teac == 'milktea' and tea.topping == 'pom':
+		print("Body entered")
+		milktea_pom_sprite.hide()
+		milktea_bs_pom_sprite.show()
+		milktea_bs_pom_ani.play('milktea_bs_pom_ani')
+		tea.teac = 'milktea'
+		tea.topping ='pom'
+		tea.sirup = 'bs'
+		print(tea.teac, tea.topping,tea.sirup)
+
+	if tea.teac == 'milktea' and tea.topping == 'tapioka':
+		print("Body entered")
+		milktea_t_sprite.hide()
+		brownsugar_sprite.show()
+		brownsugar_ani.play('brownsugar_ani')
+		tea.teac = 'milktea'
+		tea.topping ='tapioka'
+		tea.sirup = 'bs'
+		print(tea.teac, tea.topping, tea.sirup)
+
+
+func _on_kunde_5_body_entered(_body):
+	assert(get_tree().change_scene_to_file("res://Menu6.tscn") == OK)
+	tea.teac = 'empty'
+	tea.topping = 'empty'

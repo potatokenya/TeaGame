@@ -1,7 +1,7 @@
 extends StaticBody2D
-@onready var ap_pom_3 = $ap_pom_3
+@onready var ap_strawberry_2 = $ap_strawberry_2
 @onready var timer = $Timer
-@onready var pom_port_collision_3 = $pom_port_collision_3
+@onready var strawberry_port_collision_2 = $strawberry_port_collision_2
 
 func _ready():
 	pass
@@ -11,22 +11,22 @@ func _process(_delta):
 	pass
 
 func close_port():
-	ap_pom_3.play("pom_port_close_3")
-	pom_port_collision_3.set_deferred('disabled', false)
+	ap_strawberry_2.play("strawberry_port_close_2")
+	strawberry_port_collision_2.set_deferred('disabled', false)
 
 
 
 func _on_player_v_2_entered_gate_pom_3():
-	print("pom_port_3")
-	if tea.topping == 'pom':
-		ap_pom_3.play("pom_port_open_3")
-		print("pom open_3")
+	print("strawberry_port_2")
+	if tea.teac == 'strawberry':
+		ap_strawberry_2.play("strawberry_port_open_2")
+		print("strawberry open_2")
 		timer.start()
 		timer.autostart = false
 		timer.one_shot = true
-		pom_port_collision_3.set_deferred('disabled', true)
-		$pom_port_collision_3.disabled = true
+		strawberry_port_collision_2.set_deferred('disabled', true)
+		$strawberry_port_collision_2.disabled = true
 	else:
-		$pom_port_collision_3.disabled = false
-		pom_port_collision_3.set_deferred('disabled', false)
+		$strawberry_port_collision_2.disabled = false
+		strawberry_port_collision_2.set_deferred('disabled', false)
 		

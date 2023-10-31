@@ -11,7 +11,7 @@ func _process(_delta):
 	pass
 
 func close_port():
-	ap_tapioka_2.play("tapioka_port_closed_2")
+	ap_tapioka_2.play("tapioka_port_close_2")
 	tapioka_port_collision_2.set_deferred('disabled', false)
 
 
