@@ -743,7 +743,7 @@ position = Vector2(800, 351)
 rotation = 1.5708
 
 [node name="lychee_port_2" parent="." instance=ExtResource("2_4sbt7")]
-position = Vector2(801, 541)
+position = Vector2(801, 544)
 rotation = 1.5708
 
 [node name="milktea_port_1" parent="." instance=ExtResource("22_qfthi")]

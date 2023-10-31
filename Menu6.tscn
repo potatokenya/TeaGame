@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dl67jp05817d"]
+[gd_scene load_steps=16 format=3 uid="uid://dl67jp05817d"]
 
 [ext_resource type="Texture2D" uid="uid://e3u1kis0pmbb" path="res://Assets/Bobas/Strawberry_pomB.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://s8r7edgd8qg1" path="res://Assets/Bobas/Milktea_T_syrup.png" id="2"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://cj73hk4yuhny4" path="res://Assets/Bobas/Passion_GB.png" id="7"]
 [ext_resource type="FontFile" path="res://Assets/Font/new_dynamicfont.tres" id="8"]
 [ext_resource type="FontFile" uid="uid://dbssmbvashbgp" path="res://Assets/Font/dynamicfont.tres" id="9"]
+[ext_resource type="Script" path="res://Back_btn.gd" id="10_4pis1"]
+[ext_resource type="Texture2D" uid="uid://cfd6j7ih2hftc" path="res://Assets/Great_work.png" id="11_njlrx"]
+[ext_resource type="Script" path="res://GreatWork.gd" id="12_8oh5x"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0.937255, 0.937255, 0.937255, 1)
@@ -33,6 +36,20 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44gsg"]
+bg_color = Color(0.807843, 0.647059, 0.972549, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.321569, 0.282353, 0.282353, 0.6)
+shadow_size = 6
 
 [node name="Menu6" type="Node2D"]
 
@@ -264,3 +281,26 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9")
 theme_override_font_sizes/font_size = 30
 text = "Order list"
+
+[node name="Back_btn2" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 184.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("9")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_44gsg")
+text = "BACK"
+script = ExtResource("10_4pis1")
+
+[node name="GreatWork" type="Sprite2D" parent="."]
+position = Vector2(459, 343)
+texture = ExtResource("11_njlrx")
+script = ExtResource("12_8oh5x")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="pressed" from="Back_btn2" to="Back_btn2" method="_on_Back_btn_pressed"]
+[connection signal="timeout" from="Timer" to="GreatWork" method="_on_timer_timeout"]

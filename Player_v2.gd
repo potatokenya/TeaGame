@@ -831,7 +831,7 @@ func _on_milktea_farve_3_body_entered(_body):
 
 	if tea.teac == 'passion' and tea.topping == 'tapioka' and tea.sirup == 'bs':
 		print("Body entered")
-		passion_bs_ani.hide()
+		passion_bs_sprite.hide()
 		brownsugar_sprite.show()
 		brownsugar_ani.play('brownsugar_ani')
 		tea.teac = 'milktea'

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5421q7hgwylh"]
+
+[ext_resource type="AudioStream" uid="uid://r41qd15e7uxf" path="res://good-night-160166.mp3" id="1_f7ehl"]
+
+[node name="Background_musiccccc" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_f7ehl")
+autoplay = true

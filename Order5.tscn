@@ -736,7 +736,7 @@ position = Vector2(864, 421)
 position = Vector2(672, 228)
 
 [node name="pom_port_6" parent="." instance=ExtResource("3_wp4vf")]
-position = Vector2(288, 222)
+position = Vector2(288, 224)
 rotation = 1.5708
 
 [node name="passion_port_3" parent="." instance=ExtResource("4_2k5f7")]
