@@ -24,7 +24,7 @@
 [ext_resource type="FontFile" path="res://Assets/Font/new_dynamicfont.tres" id="14"]
 [ext_resource type="Texture2D" uid="uid://daj75dpjmigih" path="res://Assets/Tiles/tile_2.png" id="15"]
 [ext_resource type="Texture2D" uid="uid://bk206kockinas" path="res://Assets/Tiles/tile_6.png" id="16"]
-[ext_resource type="PackedScene" path="res://Assets/topping v2/Syrup.tscn" id="17"]
+[ext_resource type="PackedScene" uid="uid://b1ril6kjnd8ry" path="res://Assets/topping v2/Syrup.tscn" id="17"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/pomB.tscn" id="18"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/T.tscn" id="20"]
 [ext_resource type="PackedScene" path="res://Assets/topping v2/GB.tscn" id="21"]
@@ -752,6 +752,36 @@ position = Vector2(158, 286)
 position = Vector2(353, 353)
 rotation = 1.5708
 
+[node name="Passion_farve" parent="." instance=ExtResource("22")]
+position = Vector2(864, 224)
+
+[node name="pomB" parent="." instance=ExtResource("18")]
+position = Vector2(928, 552)
+
+[node name="Syrup" parent="." instance=ExtResource("17")]
+position = Vector2(224, 552)
+
+[node name="GB" parent="." instance=ExtResource("21")]
+position = Vector2(488, 96)
+
+[node name="Milktea_farve" parent="." instance=ExtResource("23")]
+position = Vector2(32, 480)
+
+[node name="T" parent="." instance=ExtResource("20")]
+position = Vector2(32, 168)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(632, 488)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(632, 488)
+scale = Vector2(0.25, 0.25)
+polygon = PackedVector2Array(51, -259.1, 51, -257.8, 72, -247.8, 72, -246.5, 89, -234.5, 89, -233.4, 103, -220.4, 103, -218.3, 120, -197.2, 120, -195, 129, -179, 129, -175.9, 134, -162.3, 134, 28.5, 96.1, 28.5, 83, 32.1, 83, 30.4, 55, 28.6, 55, 32.1, 66, 87.3, 66, 149.5, 63.2, 149.5, 42, 151.3, 42, 234.5, 43.6, 234.5, 61, 245.4, 61, 249.6, 59.7, 258.5, 57.6, 258.5, 48.6, 264.5, 10.2, 264.5, 5, 263, 5, 261.4, -1, 256.3, -3.3, 256.5, -13.7, 264.5, -51.2, 264.5, -59, 261.9, -59, 260.2, -65, 253.2, -65, 248.8, -57, 238.5, -54.1, 238.5, -42, 235, -42, 151.3, -65, 149.3, -65, 88.3, -53.5, 28.5, -78, 28.5, -93, 32, -93, 30.4, -134, 28.5, -134, -165.6, -129.6, -184.5, -128.3, -184.5, -119.3, -204.5, -118.1, -204.5, -108.1, -219.5, -106.9, -219.5, -90.9, -236.5, -88.7, -236.5, -75.7, -247.5, -73.5, -247.5, -56.5, -257.5, -53.3, -257.5, -29.7, -264.5, 29, -264.5)
+
 [node name="Player_v2" parent="." instance=ExtResource("1_xexpy")]
 position = Vector2(961, 129)
 
@@ -788,36 +818,6 @@ text = "Order 4: Brownsugar with tapioca"
 position = Vector2(720, 424)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("11")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(632, 488)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("12")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-position = Vector2(632, 488)
-scale = Vector2(0.25, 0.25)
-polygon = PackedVector2Array(51, -259.1, 51, -257.8, 72, -247.8, 72, -246.5, 89, -234.5, 89, -233.4, 103, -220.4, 103, -218.3, 120, -197.2, 120, -195, 129, -179, 129, -175.9, 134, -162.3, 134, 28.5, 96.1, 28.5, 83, 32.1, 83, 30.4, 55, 28.6, 55, 32.1, 66, 87.3, 66, 149.5, 63.2, 149.5, 42, 151.3, 42, 234.5, 43.6, 234.5, 61, 245.4, 61, 249.6, 59.7, 258.5, 57.6, 258.5, 48.6, 264.5, 10.2, 264.5, 5, 263, 5, 261.4, -1, 256.3, -3.3, 256.5, -13.7, 264.5, -51.2, 264.5, -59, 261.9, -59, 260.2, -65, 253.2, -65, 248.8, -57, 238.5, -54.1, 238.5, -42, 235, -42, 151.3, -65, 149.3, -65, 88.3, -53.5, 28.5, -78, 28.5, -93, 32, -93, 30.4, -134, 28.5, -134, -165.6, -129.6, -184.5, -128.3, -184.5, -119.3, -204.5, -118.1, -204.5, -108.1, -219.5, -106.9, -219.5, -90.9, -236.5, -88.7, -236.5, -75.7, -247.5, -73.5, -247.5, -56.5, -257.5, -53.3, -257.5, -29.7, -264.5, 29, -264.5)
-
-[node name="T" parent="." instance=ExtResource("20")]
-position = Vector2(32, 168)
-
-[node name="GB" parent="T" instance=ExtResource("21")]
-position = Vector2(456, -72)
-
-[node name="Milktea_farve" parent="T" instance=ExtResource("23")]
-position = Vector2(0, 312)
-
-[node name="Syrup" parent="T" instance=ExtResource("17")]
-position = Vector2(192, 384)
-
-[node name="Passion_farve" parent="T/Syrup" instance=ExtResource("22")]
-position = Vector2(640, -328)
-
-[node name="pomB" parent="T/Syrup" instance=ExtResource("18")]
-position = Vector2(704, 0)
 
 [connection signal="entered_gate_passion_3" from="Player_v2" to="passion_port_3" method="_on_player_v_2_entered_gate_passion_3"]
 [connection signal="entered_gate_passion_4" from="Player_v2" to="passion_port_4" method="_on_player_v_2_entered_gate_passion_4"]

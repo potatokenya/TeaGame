@@ -18,7 +18,7 @@ func close_port():
 
 func _on_player_v_2_entered_gate_tapioka_2():
 	print("tapioka_port_2")
-	if tea.teac == 'tapioka_2':
+	if tea.topping == 'tapioka':
 		ap_tapioka_2.play("tapioka_port_open_2")
 		print("tapioka open_2")
 		timer.start()

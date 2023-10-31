@@ -19,7 +19,7 @@ func close_port():
 
 func _on_player_v_2_entered_gate_gb_3():
 	print("GB_port_3")
-	if tea.teac == 'GB_3':
+	if tea.topping == 'GB':
 		ap_GB_3.play("GB_port_open_3")
 		print("GB open_3")
 		timer.start()

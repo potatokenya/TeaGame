@@ -18,7 +18,7 @@ func close_port():
 
 func _on_player_v_2_entered_gate_pom_6():
 	print("pom_port_6")
-	if tea.teac == 'pom_6':
+	if tea.topping == 'pom':
 		ap_pom_6.play("pom_port_open_6")
 		print("pom open")
 		timer.start()

@@ -19,7 +19,7 @@ func close_port():
 
 func _on_player_v_2_entered_gate_passion_3():
 	print("passion_port_3")
-	if tea.teac == 'passion_3':
+	if tea.teac == 'passion':
 		ap_passion_3.play("passion_port_open_3")
 		print("passion open_3")
 		timer.start()

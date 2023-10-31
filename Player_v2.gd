@@ -179,38 +179,38 @@ func _physics_process(delta):
 	#order 4
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "GB_3":
+		if collider.name == "GB_port_3":
 			print("hit")
 			entered_gate_GB_3.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "GB_4":
+		if collider.name == "GB_port_4":
 			print("hit")
 			entered_gate_GB_4.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "GB_5":
+		if collider.name == "GB_port_5":
 			print("hit")
 			entered_gate_GB_5.emit()
 			
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "strawberry":
+		if collider.name == "strawberry_port":
 			print("hit")
 			entered_gate_strawberry.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "pom_2":
+		if collider.name == "pom_port_2":
 			print("hit")
 			entered_gate_pom_2.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "pom_3":
+		if collider.name == "pom_port_3":
 			print("hit")
 			entered_gate_pom_3.emit()
 			
@@ -227,45 +227,49 @@ func _physics_process(delta):
 			entered_gate_milktea_3.emit()
 			
 			
+
+
+
+#order 5
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "pom_4":
+		if collider.name == "pom_port_4":
 			print("hit")
 			entered_gate_pom_4.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "pom_5":
+		if collider.name == "pom_port_5":
 			print("hit")
 			entered_gate_pom_5.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "pom_6":
+		if collider.name == "pom_port_6":
 			print("hit")
 			entered_gate_pom_6.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "passion_3":
+		if collider.name == "passion_port_3":
 			print("hit")
 			entered_gate_passion_3.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "passion_4":
+		if collider.name == "passion_port_4":
 			print("hit")
 			entered_gate_passion_4.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "passion_5":
+		if collider.name == "passion_port_5":
 			print("hit")
 			entered_gate_passion_5.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "tapioka_2":
+		if collider.name == "tapioka_port_2":
 			print("hit")
 			entered_gate_tapioka_2.emit()
 			
@@ -281,6 +285,10 @@ func _physics_process(delta):
 			visible_animation_player.play("real")
 		
 	if velocity.y > 0:                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+		if visible_animation_player:
+			visible_animation_player.play("real")
+	
+	if velocity.y == 0:                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 		if visible_animation_player:
 			visible_animation_player.play("real")
 
@@ -587,3 +595,24 @@ func _on_kunde_3_body_entered(_body):
 	tea.teac = 'empty'
 	tea.topping = 'empty'
 
+
+
+#order 4
+@onready var gb_sprite = $Player_gb
+@onready var gb_ani = $Player_gb/GB_ap
+@onready var pom_sprite = $Player_pom
+@onready var pom_ani = $Player_pom/pom_ap
+
+func _on_gb_2_body_entered(body):
+	if tea.teac == 'empty' and tea.topping == 'empty':
+		tom_sprite.hide()
+		gb_sprite.show()
+		gb_ani.play('GB_ani')
+		tea.teac = 'empty'
+		tea.topping = 'GB'
+		print(tea.teac, tea.topping)
+
+@onready var milktea_gb_sprite = $Player_milktea_gb
+@onready var 
+func _on_milktea_farve_2_body_entered(body):
+	pass # Replace with function body.

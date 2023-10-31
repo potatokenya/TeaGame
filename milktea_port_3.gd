@@ -19,7 +19,7 @@ func close_port():
 
 func _on_player_v_2_entered_gate_milktea_3():
 	print("milktea_port_3")
-	if tea.teac == 'milktea_3':
+	if tea.teac == 'milktea':
 		ap_milktea_3.play("milktea_port_open_3")
 		print("milktea open_3")
 		timer.start()
