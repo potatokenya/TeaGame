@@ -756,12 +756,12 @@ position = Vector2(96, 418)
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="KundeMilktea" type="Sprite2D" parent="Area2D"]
-position = Vector2(139, 289)
+position = Vector2(135, 235)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-position = Vector2(140, 289)
+position = Vector2(135, 235)
 scale = Vector2(0.25, 0.25)
 polygon = PackedVector2Array(51, -259.1, 51, -257.8, 72, -247.8, 72, -246.5, 89, -234.5, 89, -233.4, 103, -220.4, 103, -218.3, 120, -197.2, 120, -195, 129, -179, 129, -175.9, 134, -162.3, 134, 28.5, 96.1, 28.5, 83, 32.1, 83, 30.4, 55, 28.6, 55, 32.1, 66, 87.3, 66, 149.5, 63.2, 149.5, 42, 151.3, 42, 234.5, 43.6, 234.5, 61, 245.4, 61, 249.6, 59.7, 258.5, 57.6, 258.5, 48.6, 264.5, 10.2, 264.5, 5, 263, 5, 261.4, -1, 256.3, -3.3, 256.5, -13.7, 264.5, -51.2, 264.5, -59, 261.9, -59, 260.2, -65, 253.2, -65, 248.8, -57, 238.5, -54.1, 238.5, -42, 235, -42, 151.3, -65, 149.3, -65, 88.3, -53.5, 28.5, -78, 28.5, -93, 32, -93, 30.4, -134, 28.5, -134, -165.6, -129.6, -184.5, -128.3, -184.5, -119.3, -204.5, -118.1, -204.5, -108.1, -219.5, -106.9, -219.5, -90.9, -236.5, -88.7, -236.5, -75.7, -247.5, -73.5, -247.5, -56.5, -257.5, -53.3, -257.5, -29.7, -264.5, 29, -264.5)
 
@@ -797,7 +797,7 @@ theme_override_fonts/font = ExtResource("13")
 text = "Order 2: Milktea with jelly"
 
 [node name="Level2Talebobble" type="Sprite2D" parent="."]
-position = Vector2(56, 183)
+position = Vector2(41, 172)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("10")
 

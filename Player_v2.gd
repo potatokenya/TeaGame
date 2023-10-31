@@ -102,6 +102,8 @@ func _physics_process(delta):
 			print("hit")
 			entered_gate_tapioka_3.emit()
 
+
+
 	#order 2 signals
 	if collision != null:
 		var collider = collision.get_collider()
@@ -144,34 +146,37 @@ func _physics_process(delta):
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "pom":
+		if collider.name == "pom_port":
 			print("hit")
 			entered_gate_pom.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "passion":
+		if collider.name == "passion_port":
 			print("hit")
 			entered_gate_passion.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "passion_2":
+		if collider.name == "passion_port_2":
 			print("hit")
 			entered_gate_passion_2.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "GB":
+		if collider.name == "GB_port":
 			print("hit")
 			entered_gate_GB.emit()
 			
 	if collision != null:
 		var collider = collision.get_collider()
-		if collider.name == "GB_2":
+		if collider.name == "GB_port_2":
 			print("hit")
 			entered_gate_GB_2.emit()
-			
+
+
+
+	#order 4
 	if collision != null:
 		var collider = collision.get_collider()
 		if collider.name == "GB_3":
@@ -274,6 +279,10 @@ func _physics_process(delta):
 	if velocity.y < 0:                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 		if visible_animation_player:
 			visible_animation_player.play("real")
+		
+	if velocity.y > 0:                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+		if visible_animation_player:
+			visible_animation_player.play("real")
 
 
 #Order 1
@@ -362,6 +371,9 @@ func _on_kunde_1_body_entered(_body):
 	tea.topping = 'empty'
 	visible_animation_player.play("real")
 
+
+
+
 #Order 2
 @onready var honey_sprite = $Player_honey
 @onready var honey_ani = $Player_honey/honey_ani
@@ -441,16 +453,21 @@ func _on_milktea_farve_body_entered(_body):
 		print(tea.teac, tea.topping)
 
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	assert(get_tree().change_scene_to_file("res://Menu3.tscn") == OK)
 	tea.teac = 'empty'
 	tea.topping = 'empty'
 
+
+
+
 #order 3 :3
 @onready var blue_sprite_2 = $Player_blue_2
 @onready var blue_ani_2 = $Player_blue_2/blue_ap_2
+@onready var blue_pom_sprite = $Player_blue_pom
+@onready var blue_pom_ani = $Player_blue_pom/blue_pom_ap
 
-func _on_blueberry_farve_2_body_entered(body):
+func _on_blueberry_farve_2_body_entered(_body):
 	if tea.teac == 'empty' and tea.topping == 'empty':
 		print("Body entered")
 		tom_sprite.hide()
@@ -470,8 +487,8 @@ func _on_blueberry_farve_2_body_entered(body):
 	if tea.teac == 'taro' and tea.topping == 'pom':
 		print("Body entered")
 		taro_pom_sprite.hide()
-		blue_sprite_2.show()
-		blue_ani_2.play('blue_ani_2')
+		blue_pom_sprite.show()
+		blue_pom_ani.play('blue_pom_ani')
 		tea.teac = 'blue'
 		tea.topping = 'pom'
 		print(tea.teac, tea.topping)
@@ -482,7 +499,7 @@ func _on_blueberry_farve_2_body_entered(body):
 @onready var taro_pom_sprite = $Player_taro_pom
 @onready var taro_pom_ani = $Player_taro_pom/taro_pom_ap
 
-func _on_taro_farve_2_body_entered(body):
+func _on_taro_farve_2_body_entered(_body):
 	if tea.teac == 'empty' and tea.topping == 'empty':
 		print("Body entered")
 		tom_sprite.hide()
@@ -505,7 +522,7 @@ func _on_taro_farve_2_body_entered(body):
 @onready var passion_pom_sprite = $Player_passion_pom
 @onready var passion_pom_ani = $Player_passion_pom/passion_pom_ap
 
-func _on_pom_b_body_entered(body):
+func _on_pom_b_body_entered(_body):
 	if tea.teac == 'taro' and tea.topping == 'empty':
 		print("Body entered")
 		taro_sprite_2.hide()
@@ -525,7 +542,7 @@ func _on_pom_b_body_entered(body):
 		print(tea.teac, tea.topping)
 
 
-func _on_passion_farve_body_entered(body):
+func _on_passion_farve_body_entered(_body):
 	if tea.teac == 'blue' and tea.topping == 'empty':
 		print("Body entered")
 		blue_sprite_2.hide()
@@ -534,15 +551,39 @@ func _on_passion_farve_body_entered(body):
 		tea.teac = 'passion'
 		tea.topping = 'empty'
 		print(tea.teac, tea.topping)
+	if tea.teac == 'taro' and tea.topping == 'GB':
+		taro_gb_sprite.hide()
+		passion_gb_sprite.show()
+		passion_gb_ani.play('passion_gb_ani')
+		tea.teac = 'passion'
+		tea.topping = 'GB'
+		print(tea.teac, tea.topping)
+	if tea.teac == 'blue' and tea.topping == 'pom':
+		print("Body entered")
+		blue_pom_sprite.hide()
+		passion_pom_sprite.show()
+		passion_pom_ani.play('passion_pom_ani')
+		tea.teac = 'passion'
+		tea.topping = 'pom'
+		print(tea.teac, tea.topping)
 
 @onready var taro_gb_sprite = $Player_taro_gb
 @onready var taro_gb_ani = $Player_taro_gb/taro_gb_ap
+@onready var passion_gb_sprite = $Player_passion_gb
+@onready var passion_gb_ani = $Player_passion_gb/passion_gb_ap
 
-func _on_gb_body_entered(body):
+func _on_gb_body_entered(_body):
 	if tea.teac == 'taro' and tea.topping == 'pom':
 		taro_pom_sprite.hide()
 		taro_gb_sprite.show()
 		taro_gb_ani.play('taro_gb_ani')
 		tea.teac = 'taro'
-		tea.topping = 'gb'
+		tea.topping = 'GB'
 		print(tea.teac, tea.topping)
+
+
+func _on_kunde_3_body_entered(_body):
+	assert(get_tree().change_scene_to_file("res://Menu4.tscn") == OK)
+	tea.teac = 'empty'
+	tea.topping = 'empty'
+

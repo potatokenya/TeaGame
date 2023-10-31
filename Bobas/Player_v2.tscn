@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://cgtl46emwp6vh"]
+[gd_scene load_steps=73 format=3 uid="uid://cgtl46emwp6vh"]
 
 [ext_resource type="Texture2D" uid="uid://buy7jklwevldj" path="res://Assets/prøve.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://b8tocagew284n" path="res://Assets/bubbletea skygge/blueberry_skygge.png" id="2"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://ysi4n0mnfhog" path="res://Assets/bubbletea skygge/Passion_skygge.png" id="13_l0unx"]
 [ext_resource type="Texture2D" uid="uid://dbli231xjw73r" path="res://Assets/bubbletea skygge/passion_pomB_skygge.png" id="14_p1pe2"]
 [ext_resource type="Texture2D" uid="uid://bvhpdpl7yojxh" path="res://Assets/bubbletea skygge/Passion_GB_skygge.png" id="15_h67ts"]
+[ext_resource type="Texture2D" uid="uid://bk2gi6h4sg8w2" path="res://Assets/bubbletea skygge/blueberry_pom_skygge.png" id="16_myh45"]
 
 [sub_resource type="Animation" id="13"]
 length = 0.001
@@ -644,6 +645,44 @@ _data = {
 "passion_gb_ani": SubResource("Animation_wlv0b")
 }
 
+[sub_resource type="Animation" id="Animation_i13s7"]
+resource_name = "blue_pom_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_d28nw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ssa3s"]
+_data = {
+"RESET": SubResource("Animation_d28nw"),
+"blue_pom_ani": SubResource("Animation_i13s7")
+}
+
 [node name="Player_v2" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("3")
@@ -895,4 +934,19 @@ shape = SubResource("4")
 [node name="passion_gb_ap" type="AnimationPlayer" parent="Player_passion_gb"]
 libraries = {
 "": SubResource("AnimationLibrary_qr5ng")
+}
+
+[node name="Player_blue_pom" type="Area2D" parent="."]
+visible = false
+
+[node name="blue_pom" type="Sprite2D" parent="Player_blue_pom"]
+texture = ExtResource("16_myh45")
+hframes = 2
+
+[node name="blue_pom_c" type="CollisionShape2D" parent="Player_blue_pom"]
+shape = SubResource("4")
+
+[node name="blue_pom_ap" type="AnimationPlayer" parent="Player_blue_pom"]
+libraries = {
+"": SubResource("AnimationLibrary_ssa3s")
 }

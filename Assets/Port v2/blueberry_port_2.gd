@@ -18,7 +18,7 @@ func close_port():
 
 func _on_player_v_2_entered_gate_blueberry_2():
 	print("blueberry_port_2")
-	if tea.teac == 'blueberry':
+	if tea.teac == 'blue':
 		ap_blueberry_2.play("blueberry_port_open_2")
 		print("blueberry open")
 		timer.start()
