@@ -15,10 +15,9 @@ func close_port():
 	lychee_port_collision_3.set_deferred('disabled', false)
 
 
-
 func _on_player_v_2_entered_gate_lychee_3():
 	print("lychee_port_3")
-	if tea.teac == 'lychee':
+	if tea.topping == 'lychee':
 		ap_lychee_3.play("lychee_port_open_3")
 		print("lychee open_3")
 		timer.start()
@@ -29,4 +28,3 @@ func _on_player_v_2_entered_gate_lychee_3():
 	else:
 		$lychee_port_collision_3.disabled = false
 		lychee_port_collision_3.set_deferred('disabled', false)
-		

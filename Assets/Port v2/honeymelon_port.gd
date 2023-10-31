@@ -14,11 +14,9 @@ func close_port():
 	ap_honeymelon.play("honeymelon_port_close")
 	honeymelon_port_collision.set_deferred('disabled', false)
 
-
-
 func _on_player_v_2_entered_gate_honeymelon():
 	print("honeymelon_port")
-	if tea.teac == 'honeymelon':
+	if tea.teac == 'honey':
 		ap_honeymelon.play("honeymelon_port_open")
 		print("honeymelon open")
 		timer.start()
@@ -29,8 +27,3 @@ func _on_player_v_2_entered_gate_honeymelon():
 	else:
 		$honeymelon_port_collision.disabled = false
 		honeymelon_port_collision.set_deferred('disabled', false)
-		
-
-
-func _on_player_v_2_entered_gate_lychee_2():
-	pass # Replace with function body.

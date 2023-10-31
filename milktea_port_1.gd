@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 
 @onready var ap_milktea = $ap_milktea_1
 @onready var timer = $Timer
@@ -16,7 +16,6 @@ func close_port():
 	milktea_port_collision.set_deferred('disabled', false)
 
 
-
 func _on_player_v_2_entered_gate_milktea_1():
 	print("milktea_port_1")
 	if tea.teac == 'milktea':
@@ -30,4 +29,3 @@ func _on_player_v_2_entered_gate_milktea_1():
 	else:
 		$milktea_port_collision_1.disabled = false
 		milktea_port_collision.set_deferred('disabled', false)
-		

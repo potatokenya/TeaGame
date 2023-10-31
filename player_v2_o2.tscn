@@ -1,0 +1,296 @@
+[gd_scene load_steps=27 format=3 uid="uid://ba1v336gkh355"]
+
+[ext_resource type="Script" path="res://player_v2_o2.gd" id="1_l8h8h"]
+[ext_resource type="Texture2D" uid="uid://buy7jklwevldj" path="res://Assets/prøve.png" id="2_e3o2n"]
+[ext_resource type="Texture2D" uid="uid://bsebsv762fpcy" path="res://Assets/bubbletea skygge/green_skygge.png" id="3_50vml"]
+[ext_resource type="Texture2D" uid="uid://dlmxl5dx4fto8" path="res://Assets/bubbletea skygge/green_jelly_skygge.png" id="4_epu3s"]
+[ext_resource type="Texture2D" uid="uid://c0e02h7ilg66w" path="res://Assets/bubbletea skygge/milktea_skygge.png" id="5_w2yp3"]
+[ext_resource type="Texture2D" uid="uid://rvl2b6fkk65x" path="res://Assets/bubbletea skygge/milktea_jelly_skygge.png" id="6_kkhp7"]
+
+[sub_resource type="Animation" id="Animation_1uukw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_5l6qj"]
+resource_name = "tom_ani_2"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t343j"]
+_data = {
+"RESET": SubResource("Animation_1uukw"),
+"tom_ani_2": SubResource("Animation_5l6qj")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w6v41"]
+radius = 13.0
+height = 54.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4wmx1"]
+radius = 13.0
+height = 56.0
+
+[sub_resource type="Animation" id="Animation_0i4ij"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honey:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_161jx"]
+resource_name = "honey_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honey:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rpknl"]
+_data = {
+"RESET": SubResource("Animation_0i4ij"),
+"honey_ani": SubResource("Animation_161jx")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0vd1k"]
+radius = 13.0
+height = 56.0
+
+[sub_resource type="Animation" id="Animation_e382f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honey_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_kl8el"]
+resource_name = "honey_lj_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honey_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oe04x"]
+_data = {
+"RESET": SubResource("Animation_e382f"),
+"honey_lj_ani": SubResource("Animation_kl8el")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qxtgd"]
+radius = 13.0
+height = 58.0
+
+[sub_resource type="Animation" id="Animation_lvt74"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_tgv7t"]
+resource_name = "milktea_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yln22"]
+_data = {
+"RESET": SubResource("Animation_lvt74"),
+"milktea_ani": SubResource("Animation_tgv7t")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vbdki"]
+radius = 13.0
+height = 56.0
+
+[sub_resource type="Animation" id="Animation_sivrt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_10dcd"]
+resource_name = "milktea_lj_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tjkx2"]
+_data = {
+"RESET": SubResource("Animation_sivrt"),
+"milktea_lj_ani": SubResource("Animation_10dcd")
+}
+
+[node name="Player_v2_o2" type="CharacterBody2D"]
+script = ExtResource("1_l8h8h")
+
+[node name="tom2" type="Sprite2D" parent="."]
+texture = ExtResource("2_e3o2n")
+hframes = 2
+
+[node name="tom_ani_2" type="AnimationPlayer" parent="tom2"]
+libraries = {
+"": SubResource("AnimationLibrary_t343j")
+}
+
+[node name="tom_c_2" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_w6v41")
+
+[node name="Player_honey" type="Area2D" parent="."]
+visible = false
+
+[node name="honey" type="Sprite2D" parent="Player_honey"]
+texture = ExtResource("3_50vml")
+hframes = 2
+
+[node name="honey_collision" type="CollisionShape2D" parent="Player_honey"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_4wmx1")
+
+[node name="honey_ani" type="AnimationPlayer" parent="Player_honey"]
+libraries = {
+"": SubResource("AnimationLibrary_rpknl")
+}
+
+[node name="Player_honey_lj" type="Area2D" parent="."]
+visible = false
+
+[node name="honey_lj" type="Sprite2D" parent="Player_honey_lj"]
+texture = ExtResource("4_epu3s")
+hframes = 2
+
+[node name="honey__lj_collision" type="CollisionShape2D" parent="Player_honey_lj"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_0vd1k")
+
+[node name="honey_lj_ani" type="AnimationPlayer" parent="Player_honey_lj"]
+libraries = {
+"": SubResource("AnimationLibrary_oe04x")
+}
+
+[node name="Player_milktea" type="Area2D" parent="."]
+visible = false
+
+[node name="milktea" type="Sprite2D" parent="Player_milktea"]
+texture = ExtResource("5_w2yp3")
+hframes = 2
+
+[node name="milktea_collision" type="CollisionShape2D" parent="Player_milktea"]
+shape = SubResource("CapsuleShape2D_qxtgd")
+
+[node name="milktea_ani" type="AnimationPlayer" parent="Player_milktea"]
+libraries = {
+"": SubResource("AnimationLibrary_yln22")
+}
+
+[node name="Player_milktea_lj" type="Area2D" parent="."]
+visible = false
+
+[node name="milktea_lj" type="Sprite2D" parent="Player_milktea_lj"]
+texture = ExtResource("6_kkhp7")
+hframes = 2
+
+[node name="milktea__lj_collision" type="CollisionShape2D" parent="Player_milktea_lj"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_vbdki")
+
+[node name="milktea_lj_ani" type="AnimationPlayer" parent="Player_milktea_lj"]
+libraries = {
+"": SubResource("AnimationLibrary_tjkx2")
+}

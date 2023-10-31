@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=14 format=3]
 
-[ext_resource path="res://Assets/prøve.png" type="Texture2D" id=1]
-[ext_resource path="res://Assets/bubbletea skygge/blueberry_skygge.png" type="Texture2D" id=2]
-[ext_resource path="res://Tom_kup.gd" type="Script" id=3]
-[ext_resource path="res://Assets/farver v2/Blueberry_farve.gd" type="Script" id=4]
+[ext_resource type="Texture2D" uid="uid://buy7jklwevldj" path="res://Assets/prøve.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b8tocagew284n" path="res://Assets/bubbletea skygge/blueberry_skygge.png" id="2"]
+[ext_resource type="Script" path="res://Bobas/Tom_kup.gd" id="3"]
+[ext_resource type="Script" path="res://Assets/farver v2/Blueberry_farve.gd" id="4"]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 16.0

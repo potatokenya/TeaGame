@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cgtl46emwp6vh"]
+[gd_scene load_steps=69 format=3 uid="uid://cgtl46emwp6vh"]
 
 [ext_resource type="Texture2D" uid="uid://buy7jklwevldj" path="res://Assets/prøve.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://b8tocagew284n" path="res://Assets/bubbletea skygge/blueberry_skygge.png" id="2"]
@@ -6,8 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://bpxrf7vt1geyu" path="res://Assets/bubbletea skygge/Taro_skygge.png" id="4_wy1ci"]
 [ext_resource type="Texture2D" uid="uid://cv7pv10y4hwbj" path="res://Assets/bubbletea skygge/taro_jelly_skygge.png" id="5_q0fh7"]
 [ext_resource type="Texture2D" uid="uid://8tgq8wcj33of" path="res://Assets/bubbletea skygge/Taro_T_skygge.png" id="6_wpnb2"]
-[ext_resource type="Texture2D" uid="uid://bsebsv762fpcy" path="res://Assets/bubbletea skygge/green_skygge.png" id="7_52ljg"]
-[ext_resource type="Texture2D" uid="uid://dlmxl5dx4fto8" path="res://Assets/bubbletea skygge/green_jelly_skygge.png" id="8_v3mds"]
+[ext_resource type="Texture2D" uid="uid://bsebsv762fpcy" path="res://Assets/bubbletea skygge/green_skygge.png" id="7_m6jbf"]
+[ext_resource type="Texture2D" uid="uid://dlmxl5dx4fto8" path="res://Assets/bubbletea skygge/green_jelly_skygge.png" id="8_gw5yj"]
+[ext_resource type="Texture2D" uid="uid://c0e02h7ilg66w" path="res://Assets/bubbletea skygge/milktea_skygge.png" id="9_vw05m"]
+[ext_resource type="Texture2D" uid="uid://rvl2b6fkk65x" path="res://Assets/bubbletea skygge/milktea_jelly_skygge.png" id="10_7qhli"]
+[ext_resource type="Texture2D" uid="uid://ct1am85csbwy0" path="res://Assets/bubbletea skygge/taro_pomB_skygge.png" id="11_bf46f"]
+[ext_resource type="Texture2D" uid="uid://ny0g0kaurcnu" path="res://Assets/bubbletea skygge/taro_GB_skygge.png" id="12_3aofe"]
+[ext_resource type="Texture2D" uid="uid://ysi4n0mnfhog" path="res://Assets/bubbletea skygge/Passion_skygge.png" id="13_l0unx"]
+[ext_resource type="Texture2D" uid="uid://dbli231xjw73r" path="res://Assets/bubbletea skygge/passion_pomB_skygge.png" id="14_p1pe2"]
+[ext_resource type="Texture2D" uid="uid://bvhpdpl7yojxh" path="res://Assets/bubbletea skygge/Passion_GB_skygge.png" id="15_h67ts"]
 
 [sub_resource type="Animation" id="13"]
 length = 0.001
@@ -127,6 +134,21 @@ _data = {
 "taro_ani": SubResource("Animation_o0n8t")
 }
 
+[sub_resource type="Animation" id="Animation_7qyoq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_fk526"]
 resource_name = "taro_lj_ani"
 length = 0.65
@@ -142,21 +164,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_7qyoq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("taro_lj:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t1n42"]
@@ -203,6 +210,25 @@ _data = {
 "taro_t_ani": SubResource("Animation_27jvu")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6jwlf"]
+radius = 13.0
+height = 56.0
+
+[sub_resource type="Animation" id="Animation_0i4ij"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("honey:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_161jx"]
 resource_name = "honey_ani"
 length = 0.65
@@ -220,12 +246,22 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_0i4ij"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rpknl"]
+_data = {
+"RESET": SubResource("Animation_0i4ij"),
+"honey_ani": SubResource("Animation_161jx")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jfkum"]
+radius = 13.0
+height = 56.0
+
+[sub_resource type="Animation" id="Animation_e382f"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("honey:frame")
+tracks/0/path = NodePath("honey_lj:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -233,12 +269,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rpknl"]
-_data = {
-"RESET": SubResource("Animation_0i4ij"),
-"honey_ani": SubResource("Animation_161jx")
 }
 
 [sub_resource type="Animation" id="Animation_kl8el"]
@@ -258,12 +288,22 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_e382f"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oe04x"]
+_data = {
+"RESET": SubResource("Animation_e382f"),
+"honey_lj_ani": SubResource("Animation_kl8el")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1458"]
+radius = 13.0
+height = 58.0
+
+[sub_resource type="Animation" id="Animation_lvt74"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("honey_lj:frame")
+tracks/0/path = NodePath("milktea:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -273,18 +313,340 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_oe04x"]
+[sub_resource type="Animation" id="Animation_tgv7t"]
+resource_name = "milktea_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yln22"]
 _data = {
-"RESET": SubResource("Animation_e382f"),
-"honey_lj_ani": SubResource("Animation_kl8el")
+"RESET": SubResource("Animation_lvt74"),
+"milktea_ani": SubResource("Animation_tgv7t")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sv7e2"]
+radius = 13.0
+height = 56.0
+
+[sub_resource type="Animation" id="Animation_sivrt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_10dcd"]
+resource_name = "milktea_lj_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("milktea_lj:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tjkx2"]
+_data = {
+"RESET": SubResource("Animation_sivrt"),
+"milktea_lj_ani": SubResource("Animation_10dcd")
+}
+
+[sub_resource type="Animation" id="Animation_4lf2n"]
+resource_name = "blue_ani_2"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_nus2x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4onmd"]
+_data = {
+"RESET": SubResource("Animation_nus2x"),
+"blue_ani_2": SubResource("Animation_4lf2n")
+}
+
+[sub_resource type="Animation" id="Animation_qdhvv"]
+resource_name = "taro_ani_2"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_fja82"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3np7l"]
+_data = {
+"RESET": SubResource("Animation_fja82"),
+"taro_ani_2": SubResource("Animation_qdhvv")
+}
+
+[sub_resource type="Animation" id="Animation_didyb"]
+resource_name = "taro_pom_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_4n3ul"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gsyi"]
+_data = {
+"RESET": SubResource("Animation_4n3ul"),
+"taro_pom_ani": SubResource("Animation_didyb")
+}
+
+[sub_resource type="Animation" id="Animation_mf4iy"]
+resource_name = "taro_gb_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_gb:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_6po0h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("taro_gb:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_br3b1"]
+_data = {
+"RESET": SubResource("Animation_6po0h"),
+"taro_gb_ani": SubResource("Animation_mf4iy")
+}
+
+[sub_resource type="Animation" id="Animation_ib66c"]
+resource_name = "passion_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("passion:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_qr3qa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("passion:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j6r05"]
+_data = {
+"RESET": SubResource("Animation_qr3qa"),
+"passion_ani": SubResource("Animation_ib66c")
+}
+
+[sub_resource type="Animation" id="Animation_mtr5v"]
+resource_name = "passiom_pom_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("passion_pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_pgvpd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("passion_pom:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_db3dy"]
+_data = {
+"RESET": SubResource("Animation_pgvpd"),
+"passiom_pom_ani": SubResource("Animation_mtr5v")
+}
+
+[sub_resource type="Animation" id="Animation_wlv0b"]
+resource_name = "passion_gb_ani"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("passion_gb:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_d3mpv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("passion_gb:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qr5ng"]
+_data = {
+"RESET": SubResource("Animation_d3mpv"),
+"passion_gb_ani": SubResource("Animation_wlv0b")
 }
 
 [node name="Player_v2" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("3")
-move_speed = null
-vel = null
-newCharacterPath = null
 
 [node name="Tom" type="Sprite2D" parent="."]
 texture = ExtResource("1")
@@ -364,37 +726,173 @@ libraries = {
 "": SubResource("AnimationLibrary_6tt86")
 }
 
-[node name="Player_honey" type="StaticBody2D" parent="."]
+[node name="Player_honey" type="Area2D" parent="."]
 visible = false
 
 [node name="honey" type="Sprite2D" parent="Player_honey"]
-texture = ExtResource("7_52ljg")
+texture = ExtResource("7_m6jbf")
 hframes = 2
 
 [node name="honey_collision" type="CollisionShape2D" parent="Player_honey"]
 position = Vector2(0, 3)
-shape = SubResource("4")
+shape = SubResource("CapsuleShape2D_6jwlf")
 
 [node name="honey_ani" type="AnimationPlayer" parent="Player_honey"]
 libraries = {
 "": SubResource("AnimationLibrary_rpknl")
 }
 
-[node name="Player_honey_lj" type="StaticBody2D" parent="."]
+[node name="Player_honey_lj" type="Area2D" parent="."]
+visible = false
 
 [node name="honey_lj" type="Sprite2D" parent="Player_honey_lj"]
-texture = ExtResource("8_v3mds")
+texture = ExtResource("8_gw5yj")
 hframes = 2
 
 [node name="honey__lj_collision" type="CollisionShape2D" parent="Player_honey_lj"]
 position = Vector2(0, 3)
-shape = SubResource("4")
+shape = SubResource("CapsuleShape2D_jfkum")
 
 [node name="honey_lj_ani" type="AnimationPlayer" parent="Player_honey_lj"]
 libraries = {
 "": SubResource("AnimationLibrary_oe04x")
 }
 
-[node name="Player_milktea" type="StaticBody2D" parent="."]
+[node name="Player_milktea" type="Area2D" parent="."]
+visible = false
 
-[node name="Player_milktea_lj" type="StaticBody2D" parent="."]
+[node name="milktea" type="Sprite2D" parent="Player_milktea"]
+texture = ExtResource("9_vw05m")
+hframes = 2
+
+[node name="milktea_collision" type="CollisionShape2D" parent="Player_milktea"]
+shape = SubResource("CapsuleShape2D_m1458")
+
+[node name="milktea_ani" type="AnimationPlayer" parent="Player_milktea"]
+libraries = {
+"": SubResource("AnimationLibrary_yln22")
+}
+
+[node name="Player_milktea_lj" type="Area2D" parent="."]
+visible = false
+
+[node name="milktea_lj" type="Sprite2D" parent="Player_milktea_lj"]
+texture = ExtResource("10_7qhli")
+hframes = 2
+
+[node name="milktea__lj_collision" type="CollisionShape2D" parent="Player_milktea_lj"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_sv7e2")
+
+[node name="milktea_lj_ani" type="AnimationPlayer" parent="Player_milktea_lj"]
+libraries = {
+"": SubResource("AnimationLibrary_tjkx2")
+}
+
+[node name="Player_blue_2" type="Area2D" parent="."]
+visible = false
+
+[node name="blue_2" type="Sprite2D" parent="Player_blue_2"]
+texture = ExtResource("2")
+hframes = 2
+
+[node name="blue_c_2" type="CollisionShape2D" parent="Player_blue_2"]
+shape = SubResource("4")
+
+[node name="blue_ap_2" type="AnimationPlayer" parent="Player_blue_2"]
+libraries = {
+"": SubResource("AnimationLibrary_4onmd")
+}
+
+[node name="Player_taro_2" type="Area2D" parent="."]
+visible = false
+
+[node name="taro_2" type="Sprite2D" parent="Player_taro_2"]
+texture = ExtResource("4_wy1ci")
+hframes = 2
+
+[node name="taro_c_2" type="CollisionShape2D" parent="Player_taro_2"]
+position = Vector2(0, 3)
+shape = SubResource("4")
+
+[node name="taro_ap_2" type="AnimationPlayer" parent="Player_taro_2"]
+libraries = {
+"": SubResource("AnimationLibrary_3np7l")
+}
+
+[node name="Player_taro_pom" type="Area2D" parent="."]
+visible = false
+
+[node name="taro_pom" type="Sprite2D" parent="Player_taro_pom"]
+texture = ExtResource("11_bf46f")
+hframes = 2
+
+[node name="taro_pom_c" type="CollisionShape2D" parent="Player_taro_pom"]
+position = Vector2(0, 3)
+shape = SubResource("4")
+
+[node name="taro_pom_ap" type="AnimationPlayer" parent="Player_taro_pom"]
+libraries = {
+"": SubResource("AnimationLibrary_1gsyi")
+}
+
+[node name="Player_taro_gb" type="Area2D" parent="."]
+visible = false
+
+[node name="taro_gb" type="Sprite2D" parent="Player_taro_gb"]
+texture = ExtResource("12_3aofe")
+hframes = 2
+
+[node name="taro_gb_c" type="CollisionShape2D" parent="Player_taro_gb"]
+position = Vector2(0, 3)
+shape = SubResource("4")
+
+[node name="taro_gb_ap" type="AnimationPlayer" parent="Player_taro_gb"]
+libraries = {
+"": SubResource("AnimationLibrary_br3b1")
+}
+
+[node name="Player_passion" type="Area2D" parent="."]
+visible = false
+
+[node name="passion" type="Sprite2D" parent="Player_passion"]
+texture = ExtResource("13_l0unx")
+hframes = 2
+
+[node name="passion_c" type="CollisionShape2D" parent="Player_passion"]
+shape = SubResource("4")
+
+[node name="passion_ap" type="AnimationPlayer" parent="Player_passion"]
+libraries = {
+"": SubResource("AnimationLibrary_j6r05")
+}
+
+[node name="Player_passion_pom" type="Area2D" parent="."]
+visible = false
+
+[node name="passion_pom" type="Sprite2D" parent="Player_passion_pom"]
+texture = ExtResource("14_p1pe2")
+hframes = 2
+
+[node name="passion_pom_c" type="CollisionShape2D" parent="Player_passion_pom"]
+shape = SubResource("4")
+
+[node name="passion_pom_ap" type="AnimationPlayer" parent="Player_passion_pom"]
+libraries = {
+"": SubResource("AnimationLibrary_db3dy")
+}
+
+[node name="Player_passion_gb" type="Area2D" parent="."]
+visible = false
+
+[node name="passion_gb" type="Sprite2D" parent="Player_passion_gb"]
+texture = ExtResource("15_h67ts")
+hframes = 2
+
+[node name="passion_gb_c" type="CollisionShape2D" parent="Player_passion_gb"]
+shape = SubResource("4")
+
+[node name="passion_gb_ap" type="AnimationPlayer" parent="Player_passion_gb"]
+libraries = {
+"": SubResource("AnimationLibrary_qr5ng")
+}
