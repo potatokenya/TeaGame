@@ -1,22 +1,17 @@
 res://default_env.tres
-res://Order4.tscn
+res://Front_page.tscn
 res://Assets/Port v2/milktea_port.gd
 res://Assets/Port v2/taro_port.gd
-res://Player_v2.gd
-res://Order5.tscn
+res://Button1.gd
+res://Menu.tscn
+res://Menu2.tscn
+res://Menu3.tscn
+res://Menu4.tscn
+res://Menu5.tscn
+res://Menu6.tscn
+res://Tutorial.tscn
 res://Order1-test.tscn
 res://Order2-test.tscn
 res://Order3.tscn
-res://Bobas/Player_v2.tscn
-res://Assets/Port v2/pom_port_2.tscn
-res://Assets/Port v2/passion_port_3.tscn
-res://Assets/Port v2/brownsugar_port.tscn
-res://Assets/Port v2/passion_port_5.tscn
-res://Assets/Port v2/passion_port_5.gd
-res://Assets/Port v2/tapioka_port_2.gd
-res://Assets/Port v2/tapioka_port_2.tscn
-res://Menu.tscn
-res://Menu6.tscn
-res://background_music.tscn
-res://Button1.gd
-res://GreatWork.gd
+res://Order4.tscn
+res://Order5.tscn

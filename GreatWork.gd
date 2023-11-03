@@ -1,7 +1,6 @@
-extends Sprite2D
+extends TextureRect
 
 
 func _on_timer_timeout():
 	queue_free()
-	
 	

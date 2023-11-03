@@ -374,7 +374,7 @@ func _on_t_2_body_entered(_body):
 
 
 func _on_kunde_1_body_entered(_body):
-	assert(get_tree().change_scene_to_file("res://Menu2.tscn") == OK)
+	get_tree().change_scene_to_file("res://Menu2.tscn")
 	tea.teac = 'empty'
 	tea.topping = 'empty'
 	visible_animation_player.play("real")
@@ -462,7 +462,7 @@ func _on_milktea_farve_body_entered(_body):
 
 
 func _on_area_2d_body_entered(_body):
-	assert(get_tree().change_scene_to_file("res://Menu3.tscn") == OK)
+	get_tree().change_scene_to_file("res://Menu3.tscn")
 	tea.teac = 'empty'
 	tea.topping = 'empty'
 
@@ -600,7 +600,7 @@ func _on_gb_body_entered(_body):
 		print(tea.teac, tea.topping)
 
 func _on_kunde_3_body_entered(_body):
-	assert(get_tree().change_scene_to_file("res://Menu4.tscn") == OK)
+	get_tree().change_scene_to_file("res://Menu4.tscn")
 	tea.teac = 'empty'
 	tea.topping = 'empty'
 
@@ -683,7 +683,7 @@ func _on_pom_b_2_body_entered(_body):
 		
 
 func _on_kunde_4_body_entered(_body):
-	assert(get_tree().change_scene_to_file("res://Menu5.tscn") == OK)
+	get_tree().change_scene_to_file("res://Menu5.tscn")
 	tea.teac = 'empty'
 	tea.topping = 'empty'
 
@@ -883,6 +883,6 @@ func _on_syrup_body_entered(_body):
 
 
 func _on_kunde_5_body_entered(_body):
-	assert(get_tree().change_scene_to_file("res://Menu6.tscn") == OK)
+	get_tree().change_scene_to_file("res://Menu6.tscn")
 	tea.teac = 'empty'
 	tea.topping = 'empty'

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3hcr7i0pm2dn"]
+[gd_scene load_steps=9 format=3 uid="uid://c3hcr7i0pm2dn"]
 
 [ext_resource type="Texture2D" uid="uid://xfwavb1ltatd" path="res://Assets/keyboard_arrows.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dt36eei0rxuvi" path="res://Assets/Baggrund.png" id="2"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dbssmbvashbgp" path="res://Assets/Font/dynamicfont.tres" id="4"]
 [ext_resource type="Texture2D" uid="uid://d6rwv5llq7sa" path="res://Assets/Menu.png" id="5"]
 [ext_resource type="Script" path="res://Back_btn.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://bivlf25847i15" path="res://Assets/wasd.png" id="7_8jq5f"]
 
 [sub_resource type="StyleBoxFlat" id="3"]
 bg_color = Color(0.807843, 0.647059, 0.972549, 1)
@@ -21,14 +22,19 @@ corner_radius_bottom_left = 10
 shadow_color = Color(0.321569, 0.282353, 0.282353, 0.6)
 shadow_size = 6
 
-[node name="Tutorial" type="Node2D"]
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="Baggrund" type="Sprite2D" parent="."]
-position = Vector2(512, 300)
+[node name="Baggrund" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 1026.0
+offset_bottom = 601.0
 scale = Vector2(0.998051, 0.998336)
 texture = ExtResource("2")
 
 [node name="Order list" type="Label" parent="."]
+layout_mode = 0
 offset_left = 432.0
 offset_top = 32.0
 offset_right = 497.0
@@ -39,6 +45,7 @@ theme_override_font_sizes/font_size = 40
 text = "Tutorial"
 
 [node name="Back_btn" type="Button" parent="."]
+layout_mode = 0
 offset_left = 32.0
 offset_top = 32.0
 offset_right = 184.0
@@ -49,31 +56,49 @@ theme_override_styles/normal = SubResource("3")
 text = "BACK"
 script = ExtResource("6")
 
-[node name="KeyboardArrows" type="Sprite2D" parent="."]
-position = Vector2(264, 144)
+[node name="KeyboardArrows" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 88.0
+offset_right = 869.0
+offset_bottom = 521.0
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 379.0
-offset_top = 136.0
-offset_right = 847.0
-offset_bottom = 156.0
+layout_mode = 0
+offset_left = 246.0
+offset_top = 96.0
+offset_right = 775.0
+offset_bottom = 119.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
-text = "Use your keyboard arrows to go up, down, left and right."
+text = "Use your keyboard arrows or wasd to go up, down, left and right."
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 201.0
-offset_top = 229.0
-offset_right = 826.0
-offset_bottom = 249.0
+layout_mode = 0
+offset_left = 181.0
+offset_top = 239.0
+offset_right = 840.0
+offset_bottom = 262.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3")
 text = "Get the right order to the costomers. Get the right tea and toppings :) Good luck!"
 
-[node name="Menu" type="Sprite2D" parent="."]
-position = Vector2(513, 429)
+[node name="Menu" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 280.0
+offset_right = 812.0
+offset_bottom = 581.0
 texture = ExtResource("5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 125.0
+offset_right = 694.0
+offset_bottom = 230.0
+texture = ExtResource("7_8jq5f")
 
 [connection signal="pressed" from="Back_btn" to="Back_btn" method="_on_Back_btn_pressed"]
